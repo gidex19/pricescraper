@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Comparison || Home </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/regular.min.js" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{% static 'my_app/css/main.css' %}">
+    <link rel="stylesheet" href="#">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid" >
+        <div class="m-4 nav-div" >
+            <nav style="background-color: #2a1947;" class="navbar navbar-expand-lg navbar-dark fixed-top  p-3">
+                <div class="container-fluid">
+                    <!-- <a href="#" class="navbar-brand">
+                        <img src="/examples/images/logo.svg" height="28" >
+                    </a> -->
+                    <button type="button" style=" background-color: black;" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span  class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarCollapse">
+        
+                        <div class="navbar-nav ">
+                            <a href="#" class="nav-item nav-link active bold-anchor mr-2">HOME</a>
+                            <a href="#" class="nav-item nav-link bold-anchor mr-2 ">CATEGORIES</a>
+                            <a href="#" class="nav-item nav-link bold-anchor mr-2">SEARCH</a>
+                            <a href="#" class="nav-item nav-link bold-anchor mr-2">SAVED-PRODUCTS</a>
+                            <a href="#" class=" nav-item nav-link bold-anchor mr-2 ">NOTIFICATIONS</a>
+                            
+                        </div>
+                       
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+
+    {% block header %}
+    {% endblock header %}
+
+    {% block main-content %}
+
+    {% endblock main-content %}
+
+
+
+    <footer>
+        <div class="container-fluid" style="background-color: #2a1947;">
+            <div class="row m-auto" >
+                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mx-auto" >
+                    <div class="" style="padding: 40px 2px;">
+                        <p class="footer-header-p green-text" style=" font-size: 14px; font-weight: bold;">ABOUT THE CHURCH</p>
+                        <p class="white-text">
+                            We are a people of Intimacy, the Koinonia that keeps us in the Will of God, who's our Father and Values Relationship above Service.
+                        </p>
+                    </div>
+    
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mx-auto" >
+                    <div class="m-auto" style="padding: 40px 2px;">
+                        <p class="footer-header-p green-text" style=" font-size: 14px; font-weight: bold;">CONNECT TO US</p>
+                        <a class="mr-3" style="color: white;" target="_blank" href="#" class="text-center m-auto "><i class="fas fa-envelope fa-2x"></i></a>
+                        <a class="mr-3" style="color: white;" target="_blank" href="#" class="text-center m-auto "><i class="fab fa-instagram fa-2x"></i></a>
+                        <a class="mr-3" style="color: white;" target="_blank" href="#" class="text-center m-auto "><i class="fab fa-facebook fa-2x"></i></a>
+                        <a class="mr-3" style="color: white;" target="_blank" href="#" class="text-center m-auto "><i class="fab fa-tiktok fa-2x"></i></a>
+                        <p class="white-text mt-3">
+                            Intimate Vessels' Church Conference Centre
+                            27 Oby Okoli Avenue, Awka
+                            Anambra, Nigeria
+                        </p>
+                        <p class="white-text">
+                            <span><i class="fas fa-phone-alt"></i></span> +234 8124 482 256
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mx-auto" >
+                    <div class="m-auto" style="padding: 40px 2px;">
+                        <p class="footer-header-p green-text" style="font-size: 14px; font-weight: bold;">QUICK LINKS</p>
+                        <a class="mr-3 anchor-block" style="color: white;"  href="#" class="text-center m-auto ">HOME</a>
+                        <a class="mr-3 anchor-block" style="color: white;"  href="#" class="text-center m-auto ">MINISTRIES</a>
+                        <a class="mr-3 anchor-block" style="color: white;" href="#" class="text-center m-auto ">DEVOTIONAL</a>
+                        <a class="mr-3 anchor-block" style="color: white;" href="#" class="text-center m-auto ">BRANCHES</a>
+                        <a class="mr-3 anchor-block" style="color: white;" href="#" class="text-center m-auto ">ABOUT</a>
+                        
+                    
+                    </div>
+    
+    
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mx-auto" >
+                    <div class="m-auto" style="padding: 40px 2px;">
+                        <p class="footer-header-p green-text" style= "font-size: 14px; font-weight: bold;">MISSION</p>
+                        <p class="white-text">
+                            To raise believers into a place of intimacy and yieldedness with the holyspirit. 
+                            Where believers will know God for themselves 
+                        </p> 
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </footer>
+    <script src="https://kit.fontawesome.com/882e7752e2.js" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    </body>
+    </html>

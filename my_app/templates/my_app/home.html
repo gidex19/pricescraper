@@ -1,0 +1,110 @@
+{% extends 'my_app/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block header %}
+
+<header class="bg-light">
+    <img class="bg-img" src="{% static 'my_app/images/home-header.jpg' %}">
+    <section class="hero-section col-11 col-sm-11 col-md-5 col-lg-5  ">
+        <h1 class="header-text" style="font-weight: bolder; color: white; z-index: 20;"> Compare product prices</h1>
+        <p class=" text-white mb-4">compare product over multiple ecommerce stores for optimal shopping decisons</p>
+        <div class="mt-4 col-12">
+            <a href="#" class="button-large-dark ">Get Started </a>
+            <a href="#" class="button-large-transparent ml-1">Sermons</a>
+        </div>
+        <!-- <p class="mt-4 white-text">Keee<i style="color: white;" class="fas fa-long-arrow-alt-right"></i></p> -->
+    </section>
+</header>
+
+{% endblock header %}
+
+{% block main-content %}
+
+<div class="container bg-dark" style="height: 10vh; ">
+    <div class="row ">
+        <div class="col-11 ">
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<div class="container mt-4 mb-4">
+    <div class="row d-flex justify-content-center">
+        <div class="col-8 bg-dark m-auto">
+            <form method="POST" class="p-4">
+                <div>
+                    
+                    <span>{{ form|crispy }}
+                    {% csrf_token %}
+                    <button type="submit"  class="built search-icon"> <i class="fa fa-search"></i> </button></span>
+                    <!-- <div class="d-flex justify-content-center px-5">
+                        <div class="search"><input type="text" class="search-input" placeholder="Search..." name="sinput"> <a
+                                 type="submit" class="search-icon"> <i class="fa fa-search"></i> </a> </div>
+                    </div> -->
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="container  mt-4 mb-4">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-9">
+            <div class="card p-4 mt-3">
+                <h3 class="heading mt-5 text-center">Hi! Want to Search??</h3>
+                <div class="d-flex justify-content-center px-5">
+                    <div class="search"><input type="text" class="search-input" placeholder="Search..." name=""> <a
+                            href="#" class="search-icon"> <i class="fa fa-search"></i> </a> </div>
+                </div>
+                <div class="row mt-4 g-1 px-4 mb-5">
+                    <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center"> <img
+                                src="https://i.imgur.com/Mb8kaPV.png" width="50">
+                            <div class="text-center mg-text"> <span class="mg-text">Account</span> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center"> <img
+                                src="https://i.imgur.com/ueLEPGq.png" width="50">
+                            <div class="text-center mg-text"> <span class="mg-text">Payments</span> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center"> <img
+                                src="https://i.imgur.com/tmqv0Eq.png" width="50">
+                            <div class="text-center mg-text"> <span class="mg-text">Delivery</span> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center"> <img
+                                src="https://i.imgur.com/D0Sm15i.png" width="50">
+                            <div class="text-center mg-text"> <span class="mg-text">Product</span> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center"> <img
+                                src="https://i.imgur.com/Z7BJ8Po.png" width="50">
+                            <div class="text-center mg-text"> <span class="mg-text">Return</span> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="card-inner p-3 d-flex flex-column align-items-center"> <img
+                                src="https://i.imgur.com/YLsQrn3.png" width="50">
+                            <div class="text-center mg-text"> <span class="mg-text">Guarantee</span> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock main-content %}
