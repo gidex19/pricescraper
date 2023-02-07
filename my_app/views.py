@@ -8,7 +8,7 @@ import re
 
 def getHTML(link):
     response = requests.get(link)
-    print("scraping HTML...")
+    print("scraping HTML......")
     # print(response.text.pre)
     doc = BeautifulSoup(response.text, "html.parser" )
     print(doc.prettify())
