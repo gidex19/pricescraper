@@ -29,7 +29,7 @@ def getHTMLkonga(link):
         print(item['rating'])
         print(item['image_thumbnail_path'])
         print("===============================================================")
-        print("     ")
+        print("      ")
     # print(check)
     return soup.find('script', {"id": "__NEXT_DATA__"})
     # return soup.prettify("utf-8")
