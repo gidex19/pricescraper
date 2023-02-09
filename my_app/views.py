@@ -7,7 +7,7 @@ import json
 
 # Create your views here.
 
-def getHTML(link):
+def getHTMLkonga(link):
     response = requests.get(link)
     print("scraping HTML......")
     # print(response.text.pre)
@@ -27,12 +27,18 @@ def getHTML(link):
         print(item['price'])
         print(item['description'])
         print(item['rating'])
+        print(item['image_thumbnail_path'])
         print("===============================================================")
         print("     ")
     # print(check)
     return soup.find('script', {"id": "__NEXT_DATA__"})
     # return soup.prettify("utf-8")
 
+def getHTMLjumia(link):
+    response = requests.get(link)
+    soup = BeautifulSoup(response.text, "html.parser")
+    print(soup.text)
+    
 
 
 
@@ -54,7 +60,7 @@ def home(request):
             # print(rdata)
             # print(data)
             # j = getHTML(jumia_purl)
-            k = getHTML(konga_purl)
+            k = getHTMLkonga(konga_purl)
             print("form submitted")
             # print(k)
             # with open('konga.html', 'wb') as f:
