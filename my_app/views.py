@@ -28,7 +28,7 @@ def getHTML(link):
         print(item['description'])
         print(item['rating'])
         print("===============================================================")
-        print("     ")
+        print("      ")
     # print(check)
     return soup.find('script', {"id": "__NEXT_DATA__"})
     # return soup.prettify("utf-8")
