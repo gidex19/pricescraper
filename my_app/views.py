@@ -38,7 +38,7 @@ def getHTMLjumia(link):
     response = requests.get(link)
     soup = BeautifulSoup(response.text, "html.parser")
     # print("printing all script tags")
-    # scripts_tags = soup.find_all('script')
+    # scripts_tags = soup.find_all('article')
     # print(scripts_tags[3].string)
     # print(soup.text)
     # return soup.text
