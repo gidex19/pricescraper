@@ -38,6 +38,7 @@ def getHTMLjumia(link):
     response = requests.get(link)
     soup = BeautifulSoup(response.text, "html.parser")
     print(soup.text)
+    return soup.text
     
 
 
@@ -60,8 +61,9 @@ def home(request):
             # print(rdata)
             # print(data)
             # j = getHTML(jumia_purl)
-            k = getHTMLkonga(konga_purl)
+            # k = getHTMLkonga(konga_purl)
             print("form submitted")
+            getHTMLjumia(jumia_purl)
             # print(k)
             # with open('konga.html', 'wb') as f:
             #     f.write(k)
