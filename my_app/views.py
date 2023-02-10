@@ -31,15 +31,29 @@ def getHTMLkonga(link):
         print("===============================================================")
         print("      ")
     # print(check)
-    return soup.find('script', {"id": "__NEXT_DATA__"})
+    return soup.find('script', {"id": "__NEXT_DATA__"}).finc
     # return soup.prettify("utf-8")
 
 def getHTMLjumia(link):
     response = requests.get(link)
     soup = BeautifulSoup(response.text, "html.parser")
     # print("printing all script tags")
-    # scripts_tags = soup.find_all('article')
+    article_tags = soup.find_all('article', {"class": "c-prd"})[:10]
     # print(scripts_tags[3].string)
+    for item in article_tags:
+        print("--------------------------------------------")
+        url = "https://www.jumia.com.ng" + item.findChild("a", {"class": "core"}).get("href")
+        image_url = item.findChild("div", {"class", "img-c"}).findChild("img", {"class": "img"}).get("data-src") 
+        product_name = item.findChild("div", {"class", "info"}).findChild("h3", {"class": "name"}).text 
+        product_price = item.findChild("div", {"class", "info"}).findChild("div", {"class": "prc"}).text
+        # old_price = item.findChild("div", {"class", "info"}).findChild("div", {"class": "s-prc-w"}).findChild("div", {"class": "old"}).text
+
+        print(url)
+        print(image_url)
+        print(product_name)
+        print(product_price)
+        print("--------------------------------------------")
+    print(len(article_tags))
     # print(soup.text)
     # return soup.text
     return soup.prettify("utf-8")
@@ -71,10 +85,10 @@ def home(request):
             #     f.write(k)
             #     f.close()
             #     print("konga file saved")
-            with open('jumia.html', 'wb') as f:
-                f.write(j)
-                f.close()    
-                print("jumia file saved")
+            # with open('jumia.html', 'wb') as f:
+            #     f.write(j)
+            #     f.close()    
+            #     print("jumia file saved")
     else:
         form = SearchForm()        
     return render(request, 'my_app/home.html', {'form': form})
