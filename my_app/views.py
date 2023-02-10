@@ -37,10 +37,12 @@ def getHTMLkonga(link):
 def getHTMLjumia(link):
     response = requests.get(link)
     soup = BeautifulSoup(response.text, "html.parser")
-    print(soup.text)
-    return soup.text
-    
-
+    # print("printing all script tags")
+    # scripts_tags = soup.find_all('script')
+    # print(scripts_tags[3].string)
+    # print(soup.text)
+    # return soup.text
+    return soup.prettify("utf-8")
 
 
 # getHTML("https://www.jumia.com.ng/catalog/?q=tecno+camon+19")
@@ -60,7 +62,7 @@ def home(request):
             konga_purl = konga_url + konga_search_string
             # print(rdata)
             # print(data)
-            # j = getHTML(jumia_purl)
+            j = getHTMLjumia(jumia_purl)
             # k = getHTMLkonga(konga_purl)
             print("form submitted")
             getHTMLjumia(jumia_purl)
@@ -69,10 +71,10 @@ def home(request):
             #     f.write(k)
             #     f.close()
             #     print("konga file saved")
-            # with open('jumia.html', 'wb') as f:
-            #     f.write(j)
-            #     f.close()    
-            #     print("jumia file saved")
+            with open('jumia.html', 'wb') as f:
+                f.write(j)
+                f.close()    
+                print("jumia file saved")
     else:
         form = SearchForm()        
     return render(request, 'my_app/home.html', {'form': form})

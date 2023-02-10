@@ -18,13 +18,13 @@
             "pageKey": "catalog_searchResults",
             "sponsored": {
                 "apiKey": "6a0e466294c8bb7a7296f24091283d9ad07566eff92b6dda9bbdb8136517b753CPM",
-                "userId": "837534243735995170663e36926d220b",
+                "userId": "704430518786758967263e624716225f",
                 "pageId": "redmi note 11",
                 "pageType": "search"
             }
         }
     },
-    "csrfToken": "5fc33f1ad6709462e741d2de4963f951",
+    "csrfToken": "daf6ec1844f216021a4cb3227813046e",
     "user": {
         "id": ""
     },
@@ -44,24 +44,24 @@
     },
     "lastSearch": {
         "skus": [
+            "XI363MP2MC5GHNAFAMZ",
+            "XI363MP23CF9DNAFAMZ",
             "XI363MP0LT0VNNAFAMZ",
+            "XI363MP1QNWUHNAFAMZ",
             "XI363MP2EUXSHNAFAMZ",
-            "XI363MP2QQLO8NAFAMZ",
-            "XI363MP37NWHINAFAMZ",
-            "XI363MP4OS99QNAFAMZ",
-            "XI363MP44O3OQNAFAMZ",
             "XI363MP0FCS8BNAFAMZ",
-            "XI363MP2J5GYUNAFAMZ",
+            "XI363MP2QQLO8NAFAMZ",
             "XI363MP18L36FNAFAMZ",
+            "XI363MP4OS99QNAFAMZ",
             "XI363MP4UM0FPNAFAMZ",
             "XI363EA2POMPYNAFAMZ",
+            "XI363MP37NWHINAFAMZ",
+            "XI363MP1RO60BNAFAMZ",
             "XI363MP019II3NAFAMZ",
-            "XI363MP2CVCTCNAFAMZ",
-            "XI363EA2N7245NAFAMZ",
-            "XI363MP2IBLX0NAFAMZ"
+            "XI363MP19UV48NAFAMZ"
         ],
         "url": "/catalog/?q=redmi+note+11",
-        "query": "redmi note 11" 
+        "query": "redmi note 11"
     },
     "addToCart": {
         "common": {
@@ -110,6 +110,126 @@
     },
     "products": [
         {
+            "sku": "XI363MP2MC5GHNAFAMZ",
+            "name": "Redmi Note 11, 4GB/128GB Memory - Graphite Gray",
+            "displayName": "XIAOMI Redmi Note 11, 4GB/128GB Memory - Graphite Gray",
+            "brand": "XIAOMI",
+            "sellerId": 335380,
+            "isShopExpress": true,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "136501.00",
+                "price": "₦ 136,501",
+                "priceEuro": "275.33",
+                "taxEuro": "19.21",
+                "oldPrice": "₦ 165,000",
+                "oldPriceEuro": "332.81",
+                "discount": "17%"
+            },
+            "tags": "BF22|Boost|FDYJE|INF_98|JMALL|TBOOST",
+            "rating": {
+                "average": 4.5,
+                "totalRatings": 12
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/58/4508491/1.jpg?5461",
+            "url": "/xiaomi-redmi-note-11-4gb128gb-memory-graphite-gray-194805485.html",
+            "badges": {
+                "main": {
+                    "name": "Official Store",
+                    "identifier": "JMALL",
+                    "url": "/all-products/?tag=JMALL"
+                },
+                "campaign": {
+                    "name": "FDYJE",
+                    "identifier": "FDYJE",
+                    "image": "https://ng.jumia.is/badges/fdyje/3/138x18.png?8589",
+                    "url": "/all-products/?tag=FDYJE"
+                }
+            },
+            "isBuyable": true,
+            "shopExpress": {
+                "title": "Express Shipping"
+            },
+            "simples": [
+                {
+                    "sku": "XI363MP2MC5GHNAFAMZ-300126881",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP2MC5GHNAFAMZ-300126881&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "136501.00",
+                        "price": "₦ 136,501",
+                        "priceEuro": "275.33",
+                        "taxEuro": "19.21",
+                        "oldPrice": "₦ 165,000",
+                        "oldPriceEuro": "332.81",
+                        "discount": "17%"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP2MC5GHNAFAMZ-300126881"
+        },
+        {
+            "sku": "XI363MP23CF9DNAFAMZ",
+            "name": "Redmi Note 11, 6GB/128GB Memory - Graphite Gray",
+            "displayName": "XIAOMI Redmi Note 11, 6GB/128GB Memory - Graphite Gray",
+            "brand": "XIAOMI",
+            "sellerId": 335380,
+            "isShopExpress": true,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "148953.00",
+                "price": "₦ 148,953",
+                "priceEuro": "300.44",
+                "taxEuro": "20.96",
+                "oldPrice": "₦ 195,000",
+                "oldPriceEuro": "393.32",
+                "discount": "24%"
+            },
+            "tags": "BF22|Boost|FDYJE|INF_98|JMALL|TBOOST",
+            "rating": {
+                "average": 4.8,
+                "totalRatings": 8
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/26/5508491/1.jpg?5613",
+            "url": "/xiaomi-redmi-note-11-6gb128gb-memory-graphite-gray-194805562.html",
+            "badges": {
+                "main": {
+                    "name": "Official Store",
+                    "identifier": "JMALL",
+                    "url": "/all-products/?tag=JMALL"
+                },
+                "campaign": {
+                    "name": "FDYJE",
+                    "identifier": "FDYJE",
+                    "image": "https://ng.jumia.is/badges/fdyje/3/138x18.png?8589",
+                    "url": "/all-products/?tag=FDYJE"
+                }
+            },
+            "isBuyable": true,
+            "shopExpress": {
+                "title": "Express Shipping"
+            },
+            "simples": [
+                {
+                    "sku": "XI363MP23CF9DNAFAMZ-300127150",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP23CF9DNAFAMZ-300127150&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "148953.00",
+                        "price": "₦ 148,953",
+                        "priceEuro": "300.44",
+                        "taxEuro": "20.96",
+                        "oldPrice": "₦ 195,000",
+                        "oldPriceEuro": "393.32",
+                        "discount": "24%"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP23CF9DNAFAMZ-300127150"
+        },
+        {
             "sku": "XI363MP0LT0VNNAFAMZ",
             "name": "Redmi Note 11s - 6.43\" (8GB RAM, 128GB ROM) Android 11 (108/8/2/2)MP + 16MP Selfie - 4G - Dual - 5000mAh - Graphite Gray",
             "displayName": "XIAOMI Redmi Note 11s - 6.43\" (8GB RAM, 128GB ROM) Android 11 (108/8/2/2)MP + 16MP Selfie - 4G - Dual - 5000mAh - Graphite Gray",
@@ -117,13 +237,13 @@
             "sellerId": 1939,
             "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
             "prices": {
-                "rawPrice": "182990.00",
-                "price": "₦ 182,990",
-                "priceEuro": "371.78",
-                "taxEuro": "25.94",
+                "rawPrice": "180000.00",
+                "price": "₦ 180,000",
+                "priceEuro": "363.06",
+                "taxEuro": "25.33",
                 "oldPrice": "₦ 190,000",
-                "oldPriceEuro": "386.02",
-                "discount": "4%"
+                "oldPriceEuro": "383.23",
+                "discount": "5%"
             },
             "tags": "CP_MT136|CP_MT139|CP_MT143|JA22|JA22_1|JMALL",
             "rating": {
@@ -147,17 +267,72 @@
                     "isBuyable": true,
                     "name": "",
                     "prices": {
-                        "rawPrice": "182990.00",
-                        "price": "₦ 182,990",
-                        "priceEuro": "371.78",
-                        "taxEuro": "25.94",
+                        "rawPrice": "180000.00",
+                        "price": "₦ 180,000",
+                        "priceEuro": "363.06",
+                        "taxEuro": "25.33",
                         "oldPrice": "₦ 190,000",
-                        "oldPriceEuro": "386.02",
-                        "discount": "4%"
+                        "oldPriceEuro": "383.23",
+                        "discount": "5%"
                     }
                 }
             ],
             "selectedVariation": "XI363MP0LT0VNNAFAMZ-136085024"
+        },
+        {
+            "sku": "XI363MP1QNWUHNAFAMZ",
+            "name": "Redmi Note 11 Pro, 6GB/128GB Memory - Graphite Gray",
+            "displayName": "XIAOMI Redmi Note 11 Pro, 6GB/128GB Memory - Graphite Gray",
+            "brand": "XIAOMI",
+            "sellerId": 335380,
+            "isShopExpress": true,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "195411.00",
+                "price": "₦ 195,411",
+                "priceEuro": "394.15",
+                "taxEuro": "27.50",
+                "oldPrice": "₦ 225,000",
+                "oldPriceEuro": "453.83",
+                "discount": "13%"
+            },
+            "tags": "Boost|FDYJE|TBOOST",
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/05/2518491/1.jpg?2717",
+            "url": "/xiaomi-redmi-note-11-pro-6gb128gb-memory-graphite-gray-194815250.html",
+            "badges": {
+                "campaign": {
+                    "name": "FDYJE",
+                    "identifier": "FDYJE",
+                    "image": "https://ng.jumia.is/badges/fdyje/3/138x18.png?8589",
+                    "url": "/all-products/?tag=FDYJE"
+                }
+            },
+            "isBuyable": true,
+            "shopExpress": {
+                "title": "Express Shipping"
+            },
+            "simples": [
+                {
+                    "sku": "XI363MP1QNWUHNAFAMZ-300161805",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP1QNWUHNAFAMZ-300161805&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "195411.00",
+                        "price": "₦ 195,411",
+                        "priceEuro": "394.15",
+                        "taxEuro": "27.50",
+                        "oldPrice": "₦ 225,000",
+                        "oldPriceEuro": "453.83",
+                        "discount": "13%"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP1QNWUHNAFAMZ-300161805"
         },
         {
             "sku": "XI363MP2EUXSHNAFAMZ",
@@ -170,16 +345,16 @@
             "prices": {
                 "rawPrice": "149000.00",
                 "price": "₦ 149,000",
-                "priceEuro": "302.72",
-                "taxEuro": "21.12",
+                "priceEuro": "300.54",
+                "taxEuro": "20.97",
                 "oldPrice": "₦ 170,000",
-                "oldPriceEuro": "345.39",
+                "oldPriceEuro": "342.89",
                 "discount": "12%"
             },
             "tags": "Boost|CP_MT114|FDYJE",
             "rating": {
-                "average": 5,
-                "totalRatings": 2
+                "average": 4.7,
+                "totalRatings": 3
             },
             "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/45/8904491/1.jpg?4471",
             "url": "/xiaomi-redmi-note-11-snapdragon-680-50mp-camera-194409854.html",
@@ -204,10 +379,10 @@
                     "prices": {
                         "rawPrice": "149000.00",
                         "price": "₦ 149,000",
-                        "priceEuro": "302.72",
-                        "taxEuro": "21.12",
+                        "priceEuro": "300.54",
+                        "taxEuro": "20.97",
                         "oldPrice": "₦ 170,000",
-                        "oldPriceEuro": "345.39",
+                        "oldPriceEuro": "342.89",
                         "discount": "12%"
                     }
                 },
@@ -219,15 +394,51 @@
                     "prices": {
                         "rawPrice": "160000.00",
                         "price": "₦ 160,000",
-                        "priceEuro": "325.07",
-                        "taxEuro": "22.68",
+                        "priceEuro": "322.72",
+                        "taxEuro": "22.52",
                         "oldPrice": "₦ 170,000",
-                        "oldPriceEuro": "345.39",
+                        "oldPriceEuro": "342.89",
                         "discount": "6%"
                     }
                 }
             ],
             "variationSelection": true
+        },
+        {
+            "sku": "XI363MP0FCS8BNAFAMZ",
+            "name": "Redmi Note 11, 6.43-Inch 4GB RAM,128GB ROM Android 11 (50MP + 8MP + 2MP + 2MP) + 13MP Dual SIM - Graphite Gray",
+            "displayName": "XIAOMI Redmi Note 11, 6.43-Inch 4GB RAM,128GB ROM Android 11 (50MP + 8MP + 2MP + 2MP) + 13MP Dual SIM - Graphite Gray",
+            "brand": "XIAOMI",
+            "sellerId": 2104,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "150000.00",
+                "price": "₦ 150,000",
+                "priceEuro": "302.55",
+                "taxEuro": "21.11"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/25/790699/1.jpg?2007",
+            "url": "/xiaomi-redmi-note-11-6.43-inch-4gb-ram128gb-rom-android-11-50mp-8mp-2mp-2mp-13mp-dual-sim-graphite-gray-99609752.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP0FCS8BNAFAMZ-136697653",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP0FCS8BNAFAMZ-136697653&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "150000.00",
+                        "price": "₦ 150,000",
+                        "priceEuro": "302.55",
+                        "taxEuro": "21.11"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP0FCS8BNAFAMZ-136697653"
         },
         {
             "sku": "XI363MP2QQLO8NAFAMZ",
@@ -239,10 +450,10 @@
             "prices": {
                 "rawPrice": "142500.00",
                 "price": "₦ 142,500",
-                "priceEuro": "289.52",
-                "taxEuro": "20.20",
+                "priceEuro": "287.43",
+                "taxEuro": "20.05",
                 "oldPrice": "₦ 195,000",
-                "oldPriceEuro": "396.18",
+                "oldPriceEuro": "393.32",
                 "discount": "27%"
             },
             "tags": "Boost|CP_MT144|CP_MT148|CP_MT149|CP_MT150",
@@ -262,214 +473,15 @@
                     "prices": {
                         "rawPrice": "142500.00",
                         "price": "₦ 142,500",
-                        "priceEuro": "289.52",
-                        "taxEuro": "20.20",
+                        "priceEuro": "287.43",
+                        "taxEuro": "20.05",
                         "oldPrice": "₦ 195,000",
-                        "oldPriceEuro": "396.18",
+                        "oldPriceEuro": "393.32",
                         "discount": "27%"
                     }
                 }
             ],
             "selectedVariation": "XI363MP2QQLO8NAFAMZ-167825901"
-        },
-        {
-            "sku": "XI363MP37NWHINAFAMZ",
-            "name": "Redmi Note 11 Pro -6.67\"(8GB RAM, 128GB ROM) Android 11(108/8/2/2)MP + 16MP Selfie - 4G - 5000mAh - Graphite Gray",
-            "displayName": "XIAOMI Redmi Note 11 Pro -6.67\"(8GB RAM, 128GB ROM) Android 11(108/8/2/2)MP + 16MP Selfie - 4G - 5000mAh - Graphite Gray",
-            "brand": "XIAOMI",
-            "sellerId": 247703,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "217000.00",
-                "price": "₦ 217,000",
-                "priceEuro": "440.88",
-                "taxEuro": "30.76",
-                "oldPrice": "₦ 260,000",
-                "oldPriceEuro": "528.24",
-                "discount": "17%"
-            },
-            "tags": "Boost",
-            "rating": {
-                "average": 4.6,
-                "totalRatings": 16
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/94/2710301/1.jpg?0135",
-            "url": "/xiaomi-redmi-note-11-pro-6.678gb-ram-128gb-rom-android-11108822mp-16mp-selfie-4g-5000mah-graphite-gray-103017249.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP37NWHINAFAMZ-140828664",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP37NWHINAFAMZ-140828664&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "",
-                    "prices": {
-                        "rawPrice": "217000.00",
-                        "price": "₦ 217,000",
-                        "priceEuro": "440.88",
-                        "taxEuro": "30.76",
-                        "oldPrice": "₦ 260,000",
-                        "oldPriceEuro": "528.24",
-                        "discount": "17%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP37NWHINAFAMZ-140828664"
-        },
-        {
-            "sku": "XI363MP4OS99QNAFAMZ",
-            "name": "Redmi Note 11 Pro+ 5G, 6.67'' 8GB  256GB ROM - Phantom White",
-            "displayName": "XIAOMI Redmi Note 11 Pro+ 5G, 6.67'' 8GB  256GB ROM - Phantom White",
-            "brand": "XIAOMI",
-            "sellerId": 376490,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "275000.00",
-                "price": "₦ 275,000",
-                "priceEuro": "558.72",
-                "taxEuro": "38.98",
-                "oldPrice": "₦ 330,000",
-                "oldPriceEuro": "670.46",
-                "discount": "17%"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/83/4938702/1.jpg?4172",
-            "url": "/xiaomi-redmi-note-11-pro-5g-6.67-8gb-256gb-rom-phantom-white-207839438.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP4OS99QNAFAMZ-321099694",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP4OS99QNAFAMZ-321099694&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "",
-                    "prices": {
-                        "rawPrice": "275000.00",
-                        "price": "₦ 275,000",
-                        "priceEuro": "558.72",
-                        "taxEuro": "38.98",
-                        "oldPrice": "₦ 330,000",
-                        "oldPriceEuro": "670.46",
-                        "discount": "17%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP4OS99QNAFAMZ-321099694"
-        },
-        {
-            "sku": "XI363MP44O3OQNAFAMZ",
-            "name": "Redmi Note 11 Pro+ 5G, 6.67'' 8GB  256GB ROM  Phantom White",
-            "displayName": "XIAOMI Redmi Note 11 Pro+ 5G, 6.67'' 8GB  256GB ROM  Phantom White",
-            "brand": "XIAOMI",
-            "sellerId": 237483,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "275000.00",
-                "price": "₦ 275,000",
-                "priceEuro": "558.72",
-                "taxEuro": "38.98"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/49/7076902/1.jpg?0228",
-            "url": "/xiaomi-redmi-note-11-pro-5g-6.67-8gb-256gb-rom-phantom-white-209670794.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP44O3OQNAFAMZ-323419733",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP44O3OQNAFAMZ-323419733&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "",
-                    "prices": {
-                        "rawPrice": "275000.00",
-                        "price": "₦ 275,000",
-                        "priceEuro": "558.72",
-                        "taxEuro": "38.98"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP44O3OQNAFAMZ-323419733"
-        },
-        {
-            "sku": "XI363MP0FCS8BNAFAMZ",
-            "name": "Redmi Note 11, 6.43-Inch 4GB RAM,128GB ROM Android 11 (50MP + 8MP + 2MP + 2MP) + 13MP Dual SIM - Graphite Gray",
-            "displayName": "XIAOMI Redmi Note 11, 6.43-Inch 4GB RAM,128GB ROM Android 11 (50MP + 8MP + 2MP + 2MP) + 13MP Dual SIM - Graphite Gray",
-            "brand": "XIAOMI",
-            "sellerId": 2104,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "150000.00",
-                "price": "₦ 150,000",
-                "priceEuro": "304.76",
-                "taxEuro": "21.26"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/25/790699/1.jpg?2007",
-            "url": "/xiaomi-redmi-note-11-6.43-inch-4gb-ram128gb-rom-android-11-50mp-8mp-2mp-2mp-13mp-dual-sim-graphite-gray-99609752.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP0FCS8BNAFAMZ-136697653",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP0FCS8BNAFAMZ-136697653&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "",
-                    "prices": {
-                        "rawPrice": "150000.00",
-                        "price": "₦ 150,000",
-                        "priceEuro": "304.76",
-                        "taxEuro": "21.26"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP0FCS8BNAFAMZ-136697653"
-        },
-        {
-            "sku": "XI363MP2J5GYUNAFAMZ",
-            "name": "Redmi Note 11 Pro -6.67 (6GB RAM, 128GB ROM) - Gray",
-            "displayName": "XIAOMI Redmi Note 11 Pro -6.67 (6GB RAM, 128GB ROM) - Gray",
-            "brand": "XIAOMI",
-            "sellerId": 247703,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "204000.00",
-                "price": "₦ 204,000",
-                "priceEuro": "414.47",
-                "taxEuro": "28.92",
-                "oldPrice": "₦ 250,000",
-                "oldPriceEuro": "507.93",
-                "discount": "18%"
-            },
-            "rating": {
-                "average": 5,
-                "totalRatings": 1
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/53/1003261/1.jpg?5507",
-            "url": "/xiaomi-redmi-note-11-pro-6.67-6gb-ram-128gb-rom-gray-162300135.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP2J5GYUNAFAMZ-241690902",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP2J5GYUNAFAMZ-241690902&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "",
-                    "prices": {
-                        "rawPrice": "204000.00",
-                        "price": "₦ 204,000",
-                        "priceEuro": "414.47",
-                        "taxEuro": "28.92",
-                        "oldPrice": "₦ 250,000",
-                        "oldPriceEuro": "507.93",
-                        "discount": "18%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP2J5GYUNAFAMZ-241690902"
         },
         {
             "sku": "XI363MP18L36FNAFAMZ",
@@ -481,10 +493,10 @@
             "prices": {
                 "rawPrice": "182590.00",
                 "price": "₦ 182,590",
-                "priceEuro": "370.97",
-                "taxEuro": "25.88",
+                "priceEuro": "368.29",
+                "taxEuro": "25.69",
                 "oldPrice": "₦ 185,000",
-                "oldPriceEuro": "375.87",
+                "oldPriceEuro": "373.15",
                 "discount": "1%"
             },
             "tags": "CP_MT136|CP_MT139|CP_MT143|JA22|JA22_1",
@@ -504,15 +516,57 @@
                     "prices": {
                         "rawPrice": "182590.00",
                         "price": "₦ 182,590",
-                        "priceEuro": "370.97",
-                        "taxEuro": "25.88",
+                        "priceEuro": "368.29",
+                        "taxEuro": "25.69",
                         "oldPrice": "₦ 185,000",
-                        "oldPriceEuro": "375.87",
+                        "oldPriceEuro": "373.15",
                         "discount": "1%"
                     }
                 }
             ],
             "selectedVariation": "XI363MP18L36FNAFAMZ-137105577"
+        },
+        {
+            "sku": "XI363MP4OS99QNAFAMZ",
+            "name": "Redmi Note 11 Pro+ 5G, 6.67'' 8GB  256GB ROM - Phantom White",
+            "displayName": "XIAOMI Redmi Note 11 Pro+ 5G, 6.67'' 8GB  256GB ROM - Phantom White",
+            "brand": "XIAOMI",
+            "sellerId": 376490,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "270000.00",
+                "price": "₦ 270,000",
+                "priceEuro": "544.60",
+                "taxEuro": "38.00",
+                "oldPrice": "₦ 330,000",
+                "oldPriceEuro": "665.62",
+                "discount": "18%"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/83/4938702/1.jpg?4172",
+            "url": "/xiaomi-redmi-note-11-pro-5g-6.67-8gb-256gb-rom-phantom-white-207839438.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP4OS99QNAFAMZ-321099694",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP4OS99QNAFAMZ-321099694&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "270000.00",
+                        "price": "₦ 270,000",
+                        "priceEuro": "544.60",
+                        "taxEuro": "38.00",
+                        "oldPrice": "₦ 330,000",
+                        "oldPriceEuro": "665.62",
+                        "discount": "18%"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP4OS99QNAFAMZ-321099694"
         },
         {
             "sku": "XI363MP4UM0FPNAFAMZ",
@@ -524,10 +578,10 @@
             "prices": {
                 "rawPrice": "283500.00",
                 "price": "₦ 283,500",
-                "priceEuro": "575.99",
-                "taxEuro": "40.19",
+                "priceEuro": "571.83",
+                "taxEuro": "39.89",
                 "oldPrice": "₦ 339,500",
-                "oldPriceEuro": "689.76",
+                "oldPriceEuro": "684.78",
                 "discount": "16%"
             },
             "rating": {
@@ -546,10 +600,10 @@
                     "prices": {
                         "rawPrice": "283500.00",
                         "price": "₦ 283,500",
-                        "priceEuro": "575.99",
-                        "taxEuro": "40.19",
+                        "priceEuro": "571.83",
+                        "taxEuro": "39.89",
                         "oldPrice": "₦ 339,500",
-                        "oldPriceEuro": "689.76",
+                        "oldPriceEuro": "684.78",
                         "discount": "16%"
                     }
                 }
@@ -566,10 +620,10 @@
             "prices": {
                 "rawPrice": "3600.00",
                 "price": "₦ 3,600",
-                "priceEuro": "7.31",
+                "priceEuro": "7.26",
                 "taxEuro": "0.51",
                 "oldPrice": "₦ 7,000",
-                "oldPriceEuro": "14.22",
+                "oldPriceEuro": "14.12",
                 "discount": "49%"
             },
             "tags": "XMAS|XMAS22_11",
@@ -589,15 +643,101 @@
                     "prices": {
                         "rawPrice": "3600.00",
                         "price": "₦ 3,600",
-                        "priceEuro": "7.31",
+                        "priceEuro": "7.26",
                         "taxEuro": "0.51",
                         "oldPrice": "₦ 7,000",
-                        "oldPriceEuro": "14.22",
+                        "oldPriceEuro": "14.12",
                         "discount": "49%"
                     }
                 }
             ],
             "selectedVariation": "XI363EA2POMPYNAFAMZ-171768637"
+        },
+        {
+            "sku": "XI363MP37NWHINAFAMZ",
+            "name": "Redmi Note 11 Pro -6.67\"(8GB RAM, 128GB ROM) Android 11(108/8/2/2)MP + 16MP Selfie - 4G - 5000mAh - Graphite Gray",
+            "displayName": "XIAOMI Redmi Note 11 Pro -6.67\"(8GB RAM, 128GB ROM) Android 11(108/8/2/2)MP + 16MP Selfie - 4G - 5000mAh - Graphite Gray",
+            "brand": "XIAOMI",
+            "sellerId": 247703,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "217000.00",
+                "price": "₦ 217,000",
+                "priceEuro": "437.69",
+                "taxEuro": "30.54",
+                "oldPrice": "₦ 260,000",
+                "oldPriceEuro": "524.43",
+                "discount": "17%"
+            },
+            "tags": "Boost",
+            "rating": {
+                "average": 4.6,
+                "totalRatings": 17
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/94/2710301/1.jpg?0135",
+            "url": "/xiaomi-redmi-note-11-pro-6.678gb-ram-128gb-rom-android-11108822mp-16mp-selfie-4g-5000mah-graphite-gray-103017249.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP37NWHINAFAMZ-140828664",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP37NWHINAFAMZ-140828664&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "217000.00",
+                        "price": "₦ 217,000",
+                        "priceEuro": "437.69",
+                        "taxEuro": "30.54",
+                        "oldPrice": "₦ 260,000",
+                        "oldPriceEuro": "524.43",
+                        "discount": "17%"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP37NWHINAFAMZ-140828664"
+        },
+        {
+            "sku": "XI363MP1RO60BNAFAMZ",
+            "name": "Redmi Note 11 Pro - 6.67\" (8GB RAM, 128GB ROM) Android 11 (108/8/2/2)MP + 16MP Selfie - 4G - 5000mAh - Graphite Gray",
+            "displayName": "XIAOMI Redmi Note 11 Pro - 6.67\" (8GB RAM, 128GB ROM) Android 11 (108/8/2/2)MP + 16MP Selfie - 4G - 5000mAh - Graphite Gray",
+            "brand": "XIAOMI",
+            "sellerId": 366669,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "290000.00",
+                "price": "₦ 290,000",
+                "priceEuro": "584.94",
+                "taxEuro": "40.81",
+                "oldPrice": "₦ 360,000",
+                "oldPriceEuro": "726.13",
+                "discount": "19%"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/06/9433391/1.jpg?7616",
+            "url": "/xiaomi-redmi-note-11-pro-6.67-8gb-ram-128gb-rom-android-11-108822mp-16mp-selfie-4g-5000mah-graphite-gray-193334960.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP1RO60BNAFAMZ-295174922",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP1RO60BNAFAMZ-295174922&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "Gray",
+                    "prices": {
+                        "rawPrice": "290000.00",
+                        "price": "₦ 290,000",
+                        "priceEuro": "584.94",
+                        "taxEuro": "40.81",
+                        "oldPrice": "₦ 360,000",
+                        "oldPriceEuro": "726.13",
+                        "discount": "19%"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP1RO60BNAFAMZ-295174922",
+            "variationSelection": true
         },
         {
             "sku": "XI363MP019II3NAFAMZ",
@@ -609,10 +749,10 @@
             "prices": {
                 "rawPrice": "183000.00",
                 "price": "₦ 183,000",
-                "priceEuro": "371.80",
-                "taxEuro": "25.94",
+                "priceEuro": "369.12",
+                "taxEuro": "25.75",
                 "oldPrice": "₦ 210,000",
-                "oldPriceEuro": "426.66",
+                "oldPriceEuro": "423.58",
                 "discount": "13%"
             },
             "rating": {
@@ -635,429 +775,15 @@
                     "prices": {
                         "rawPrice": "183000.00",
                         "price": "₦ 183,000",
-                        "priceEuro": "371.80",
-                        "taxEuro": "25.94",
+                        "priceEuro": "369.12",
+                        "taxEuro": "25.75",
                         "oldPrice": "₦ 210,000",
-                        "oldPriceEuro": "426.66",
+                        "oldPriceEuro": "423.58",
                         "discount": "13%"
                     }
                 }
             ],
             "selectedVariation": "XI363MP019II3NAFAMZ-136514232"
-        },
-        {
-            "sku": "XI363MP2CVCTCNAFAMZ",
-            "name": "Redmi Note 10S 6.43\" (8GB RAM, 128GB ROM) Android 11 (64/8/2/2)MP + 13MP Selfie - Dual SIM - 4G - 5000mAh - Pebble White",
-            "displayName": "XIAOMI Redmi Note 10S 6.43\" (8GB RAM, 128GB ROM) Android 11 (64/8/2/2)MP + 13MP Selfie - Dual SIM - 4G - 5000mAh - Pebble White",
-            "brand": "XIAOMI",
-            "sellerId": 366669,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "220000.00",
-                "price": "₦ 220,000",
-                "priceEuro": "446.98",
-                "taxEuro": "31.18",
-                "oldPrice": "₦ 320,000",
-                "oldPriceEuro": "650.15",
-                "discount": "31%"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/42/5506881/1.jpg?2563",
-            "url": "/xiaomi-redmi-note-10s-6.43-8gb-ram-128gb-rom-android-11-64822mp-13mp-selfie-dual-sim-4g-5000mah-pebble-white-188605524.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP2CVCTCNAFAMZ-283618878",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP2CVCTCNAFAMZ-283618878&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "...White",
-                    "prices": {
-                        "rawPrice": "220000.00",
-                        "price": "₦ 220,000",
-                        "priceEuro": "446.98",
-                        "taxEuro": "31.18",
-                        "oldPrice": "₦ 320,000",
-                        "oldPriceEuro": "650.15",
-                        "discount": "31%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP2CVCTCNAFAMZ-283618878",
-            "variationSelection": true
-        },
-        {
-            "sku": "XI363EA2N7245NAFAMZ",
-            "name": "Redmi Note 11/11s 4G 360 Front And Back Transparent Case",
-            "displayName": "XIAOMI Redmi Note 11/11s 4G 360 Front And Back Transparent Case",
-            "brand": "XIAOMI",
-            "sellerId": 279256,
-            "categories": "Phones & Tablets/Accessories/Cases/Cases",
-            "prices": {
-                "rawPrice": "2400.00",
-                "price": "₦ 2,400",
-                "priceEuro": "4.88",
-                "taxEuro": "0.34",
-                "oldPrice": "₦ 6,000",
-                "oldPriceEuro": "12.19",
-                "discount": "60%"
-            },
-            "rating": {
-                "average": 5,
-                "totalRatings": 1
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/8928531/1.jpg?0778",
-            "url": "/xiaomi-redmi-note-1111s-4g-360-front-and-back-transparent-case-135829895.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363EA2N7245NAFAMZ-186087594",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA2N7245NAFAMZ-186087594&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "",
-                    "prices": {
-                        "rawPrice": "2400.00",
-                        "price": "₦ 2,400",
-                        "priceEuro": "4.88",
-                        "taxEuro": "0.34",
-                        "oldPrice": "₦ 6,000",
-                        "oldPriceEuro": "12.19",
-                        "discount": "60%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363EA2N7245NAFAMZ-186087594"
-        },
-        {
-            "sku": "XI363MP2IBLX0NAFAMZ",
-            "name": "Redmi Note 11 - 4GB RAM - 64GB ROM - Dual SIM - Blue",
-            "displayName": "XIAOMI Redmi Note 11 - 4GB RAM - 64GB ROM - Dual SIM - Blue",
-            "brand": "XIAOMI",
-            "sellerId": 343,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "165000.00",
-                "price": "₦ 165,000",
-                "priceEuro": "335.23",
-                "taxEuro": "23.39"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/51/7070601/1.jpg?4905",
-            "url": "/xiaomi-redmi-note-11-4gb-ram-64gb-rom-dual-sim-blue-106070715.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP2IBLX0NAFAMZ-144945481",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP2IBLX0NAFAMZ-144945481&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "",
-                    "prices": {
-                        "rawPrice": "165000.00",
-                        "price": "₦ 165,000",
-                        "priceEuro": "335.23",
-                        "taxEuro": "23.39"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP2IBLX0NAFAMZ-144945481"
-        },
-        {
-            "sku": "XI363MP4ECGMXNAFAMZ",
-            "name": "Redmi Note 10 Pro, 6.67-Inch 8GB RAM, 256GB ROM Android 11 (108MP + 8MP + 5MP + 2MP) + 16MP Dual SIM - Glacier Blue",
-            "displayName": "XIAOMI Redmi Note 10 Pro, 6.67-Inch 8GB RAM, 256GB ROM Android 11 (108MP + 8MP + 5MP + 2MP) + 16MP Dual SIM - Glacier Blue",
-            "brand": "XIAOMI",
-            "sellerId": 376490,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "210000.00",
-                "price": "₦ 210,000",
-                "priceEuro": "426.66",
-                "taxEuro": "29.77",
-                "oldPrice": "₦ 240,000",
-                "oldPriceEuro": "487.61",
-                "discount": "13%"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/65/9607612/1.jpg?4251",
-            "url": "/xiaomi-redmi-note-10-pro-6.67-inch-8gb-ram-256gb-rom-android-11-108mp-8mp-5mp-2mp-16mp-dual-sim-glacier-blue-216706956.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP4ECGMXNAFAMZ-334311391",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP4ECGMXNAFAMZ-334311391&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "",
-                    "prices": {
-                        "rawPrice": "210000.00",
-                        "price": "₦ 210,000",
-                        "priceEuro": "426.66",
-                        "taxEuro": "29.77",
-                        "oldPrice": "₦ 240,000",
-                        "oldPriceEuro": "487.61",
-                        "discount": "13%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP4ECGMXNAFAMZ-334311391"
-        },
-        {
-            "sku": "XI363MP35DAQSNAFAMZ",
-            "name": "Redmi Note 11 - 6GB RAM -128GB ROM - Dual SIM - Blue",
-            "displayName": "XIAOMI Redmi Note 11 - 6GB RAM -128GB ROM - Dual SIM - Blue",
-            "brand": "XIAOMI",
-            "sellerId": 343,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "199000.00",
-                "price": "₦ 199,000",
-                "priceEuro": "404.31",
-                "taxEuro": "28.21"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/90/4170601/1.jpg?5985",
-            "url": "/xiaomi-redmi-note-11-6gb-ram-128gb-rom-dual-sim-blue-106071409.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP35DAQSNAFAMZ-144946210",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP35DAQSNAFAMZ-144946210&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "",
-                    "prices": {
-                        "rawPrice": "199000.00",
-                        "price": "₦ 199,000",
-                        "priceEuro": "404.31",
-                        "taxEuro": "28.21"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP35DAQSNAFAMZ-144946210"
-        },
-        {
-            "sku": "SA948MP3VUEOTNAFAMZ",
-            "name": "Redmi Note 10Pro, 6.67\" (8GB RAM , 256GB ROM) Android 11 (108/8/5/2)MP + 16MP Selfie - 4G LTE - Dual Sim - 5020mAh - Onyx Gray",
-            "displayName": "XIAOMI Redmi Note 10Pro, 6.67\" (8GB RAM , 256GB ROM) Android 11 (108/8/5/2)MP + 16MP Selfie - 4G LTE - Dual Sim - 5020mAh - Onyx Gray",
-            "brand": "XIAOMI",
-            "sellerId": 155923,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "300000.00",
-                "price": "₦ 300,000",
-                "priceEuro": "609.51",
-                "taxEuro": "42.52",
-                "oldPrice": "₦ 350,000",
-                "oldPriceEuro": "711.10",
-                "discount": "14%"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/34/8853412/1.jpg?7403",
-            "url": "/xiaomi-redmi-note-10pro-6.67-8gb-ram-256gb-rom-android-11-108852mp-16mp-selfie-4g-lte-dual-sim-5020mah-onyx-gray-214358843.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "SA948MP3VUEOTNAFAMZ-331658576",
-                    "loginUrl": "/customer/account/login/?tkWl=SA948MP3VUEOTNAFAMZ-331658576&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "...Gray",
-                    "prices": {
-                        "rawPrice": "300000.00",
-                        "price": "₦ 300,000",
-                        "priceEuro": "609.51",
-                        "taxEuro": "42.52",
-                        "oldPrice": "₦ 350,000",
-                        "oldPriceEuro": "711.10",
-                        "discount": "14%"
-                    }
-                }
-            ],
-            "selectedVariation": "SA948MP3VUEOTNAFAMZ-331658576",
-            "variationSelection": true
-        },
-        {
-            "sku": "XI363MP1RO60BNAFAMZ",
-            "name": "Redmi Note 11 Pro - 6.67\" (8GB RAM, 128GB ROM) Android 11 (108/8/2/2)MP + 16MP Selfie - 4G - 5000mAh - Graphite Gray",
-            "displayName": "XIAOMI Redmi Note 11 Pro - 6.67\" (8GB RAM, 128GB ROM) Android 11 (108/8/2/2)MP + 16MP Selfie - 4G - 5000mAh - Graphite Gray",
-            "brand": "XIAOMI",
-            "sellerId": 366669,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "290000.00",
-                "price": "₦ 290,000",
-                "priceEuro": "589.20",
-                "taxEuro": "41.11",
-                "oldPrice": "₦ 360,000",
-                "oldPriceEuro": "731.41",
-                "discount": "19%"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/06/9433391/1.jpg?7616",
-            "url": "/xiaomi-redmi-note-11-pro-6.67-8gb-ram-128gb-rom-android-11-108822mp-16mp-selfie-4g-5000mah-graphite-gray-193334960.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP1RO60BNAFAMZ-295174922",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP1RO60BNAFAMZ-295174922&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Gray",
-                    "prices": {
-                        "rawPrice": "290000.00",
-                        "price": "₦ 290,000",
-                        "priceEuro": "589.20",
-                        "taxEuro": "41.11",
-                        "oldPrice": "₦ 360,000",
-                        "oldPriceEuro": "731.41",
-                        "discount": "19%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP1RO60BNAFAMZ-295174922",
-            "variationSelection": true
-        },
-        {
-            "sku": "XI363MP0V3O6PNAFAMZ",
-            "name": "Redmi Note 10 Pro, 6.67-Inch 8GB RAM, 128GB ROM Android 11 (108MP + 8MP + 5MP + 2MP) + 16MP Dual SIM - Onyx Gray",
-            "displayName": "XIAOMI Redmi Note 10 Pro, 6.67-Inch 8GB RAM, 128GB ROM Android 11 (108MP + 8MP + 5MP + 2MP) + 16MP Dual SIM - Onyx Gray",
-            "brand": "XIAOMI",
-            "sellerId": 260660,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "230000.00",
-                "price": "₦ 230,000",
-                "priceEuro": "467.29",
-                "taxEuro": "32.60",
-                "oldPrice": "₦ 300,000",
-                "oldPriceEuro": "609.51",
-                "discount": "23%"
-            },
-            "tags": "Boost",
-            "rating": {
-                "average": 4.6,
-                "totalRatings": 5
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/52/239409/1.jpg?4325",
-            "url": "/redmi-note-10-pro-6.67-inch-8gb-ram-128gb-rom-android-11-108mp-8mp-5mp-2mp-16mp-dual-sim-onyx-gray-xiaomi-mpg1638471.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP0V3O6PNAFAMZ-122646314",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP0V3O6PNAFAMZ-122646314&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "",
-                    "prices": {
-                        "rawPrice": "230000.00",
-                        "price": "₦ 230,000",
-                        "priceEuro": "467.29",
-                        "taxEuro": "32.60",
-                        "oldPrice": "₦ 300,000",
-                        "oldPriceEuro": "609.51",
-                        "discount": "23%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP0V3O6PNAFAMZ-122646314"
-        },
-        {
-            "sku": "XI363MP0ZJNQLNAFAMZ",
-            "name": "Redmi Note 11 - 6.5\" (64GB ROM,4GB RAM)-  Android 11 (50MP/8MP/2MP/MP)+ 13MP Selfie - Dual Sim-4G LTE - 5000mAh- Gray",
-            "displayName": "XIAOMI Redmi Note 11 - 6.5\" (64GB ROM,4GB RAM)-  Android 11 (50MP/8MP/2MP/MP)+ 13MP Selfie - Dual Sim-4G LTE - 5000mAh- Gray",
-            "brand": "XIAOMI",
-            "sellerId": 317412,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "194999.00",
-                "price": "₦ 194,999",
-                "priceEuro": "396.18",
-                "taxEuro": "27.64",
-                "oldPrice": "₦ 199,999",
-                "oldPriceEuro": "406.34",
-                "discount": "3%"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/703789/1.jpg?9217",
-            "url": "/xiaomi-redmi-note-11-6.5-64gb-rom4gb-ram-android-11-50mp8mp2mpmp-13mp-selfie-dual-sim-4g-lte-5000mah-gray-98730795.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP0ZJNQLNAFAMZ-135411630",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP0ZJNQLNAFAMZ-135411630&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Graphite Gray",
-                    "prices": {
-                        "rawPrice": "194999.00",
-                        "price": "₦ 194,999",
-                        "priceEuro": "396.18",
-                        "taxEuro": "27.64",
-                        "oldPrice": "₦ 199,999",
-                        "oldPriceEuro": "406.34",
-                        "discount": "3%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP0ZJNQLNAFAMZ-135411630",
-            "variationSelection": true
-        },
-        {
-            "sku": "XI363MP2IF460NAFAMZ",
-            "name": "Redmi Note 11s - 6.43\" (8GB RAM, 128GB ROM) Android 11 (108/8/2/2)MP + 16MP Selfie - 4G - Dual - 5000mAh - Twilight Blue",
-            "displayName": "XIAOMI Redmi Note 11s - 6.43\" (8GB RAM, 128GB ROM) Android 11 (108/8/2/2)MP + 16MP Selfie - 4G - Dual - 5000mAh - Twilight Blue",
-            "brand": "XIAOMI",
-            "sellerId": 317412,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "279999.00",
-                "price": "₦ 279,999",
-                "priceEuro": "568.88",
-                "taxEuro": "39.69",
-                "oldPrice": "₦ 350,000",
-                "oldPriceEuro": "711.10",
-                "discount": "20%"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/51/8706801/1.jpg?1022",
-            "url": "/xiaomi-redmi-note-11s-6.43-8gb-ram-128gb-rom-android-11-108822mp-16mp-selfie-4g-dual-5000mah-twilight-blue-108607815.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP2IF460NAFAMZ-149700222",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP2IF460NAFAMZ-149700222&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Verified",
-                    "prices": {
-                        "rawPrice": "279999.00",
-                        "price": "₦ 279,999",
-                        "priceEuro": "568.88",
-                        "taxEuro": "39.69",
-                        "oldPrice": "₦ 350,000",
-                        "oldPriceEuro": "711.10",
-                        "discount": "20%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP2IF460NAFAMZ-149700222",
-            "variationSelection": true
         },
         {
             "sku": "XI363MP19UV48NAFAMZ",
@@ -1069,10 +795,10 @@
             "prices": {
                 "rawPrice": "205000.00",
                 "price": "₦ 205,000",
-                "priceEuro": "416.50",
-                "taxEuro": "29.06",
+                "priceEuro": "413.49",
+                "taxEuro": "28.85",
                 "oldPrice": "₦ 250,000",
-                "oldPriceEuro": "507.93",
+                "oldPriceEuro": "504.26",
                 "discount": "18%"
             },
             "tags": "CP_MT34|CP_UN294|CP_UN295",
@@ -1092,10 +818,10 @@
                     "prices": {
                         "rawPrice": "205000.00",
                         "price": "₦ 205,000",
-                        "priceEuro": "416.50",
-                        "taxEuro": "29.06",
+                        "priceEuro": "413.49",
+                        "taxEuro": "28.85",
                         "oldPrice": "₦ 250,000",
-                        "oldPriceEuro": "507.93",
+                        "oldPriceEuro": "504.26",
                         "discount": "18%"
                     }
                 }
@@ -1104,127 +830,46 @@
             "variationSelection": true
         },
         {
-            "sku": "XI363MP1XIFHLNAFAMZ",
-            "name": "Redmi Note 11, 6.43\" (6GB+128GB) Dual SIM -Twilight Blue",
-            "displayName": "XIAOMI Redmi Note 11, 6.43\" (6GB+128GB) Dual SIM -Twilight Blue",
+            "sku": "XI363MP4ECGMXNAFAMZ",
+            "name": "Redmi Note 10 Pro, 6.67-Inch 8GB RAM, 256GB ROM Android 11 (108MP + 8MP + 5MP + 2MP) + 16MP Dual SIM - Glacier Blue",
+            "displayName": "XIAOMI Redmi Note 10 Pro, 6.67-Inch 8GB RAM, 256GB ROM Android 11 (108MP + 8MP + 5MP + 2MP) + 16MP Dual SIM - Glacier Blue",
             "brand": "XIAOMI",
-            "sellerId": 359057,
+            "sellerId": 376490,
             "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
             "prices": {
-                "rawPrice": "208000.00",
-                "price": "₦ 208,000",
-                "priceEuro": "422.60",
-                "taxEuro": "29.48"
+                "rawPrice": "210000.00",
+                "price": "₦ 210,000",
+                "priceEuro": "423.58",
+                "taxEuro": "29.55",
+                "oldPrice": "₦ 240,000",
+                "oldPriceEuro": "484.09",
+                "discount": "13%"
             },
             "rating": {
                 "average": 0,
                 "totalRatings": 0
             },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/16/7533851/1.jpg?8794",
-            "url": "/xiaomi-redmi-note-11-6.43-6gb128gb-dual-sim-twilight-blue-158335761.html",
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/65/9607612/1.jpg?4251",
+            "url": "/xiaomi-redmi-note-10-pro-6.67-inch-8gb-ram-256gb-rom-android-11-108mp-8mp-5mp-2mp-16mp-dual-sim-glacier-blue-216706956.html",
             "isBuyable": true,
             "simples": [
                 {
-                    "sku": "XI363MP1XIFHLNAFAMZ-232962805",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP1XIFHLNAFAMZ-232962805&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "sku": "XI363MP4ECGMXNAFAMZ-334311391",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP4ECGMXNAFAMZ-334311391&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
                     "isBuyable": true,
                     "name": "",
                     "prices": {
-                        "rawPrice": "208000.00",
-                        "price": "₦ 208,000",
-                        "priceEuro": "422.60",
-                        "taxEuro": "29.48"
+                        "rawPrice": "210000.00",
+                        "price": "₦ 210,000",
+                        "priceEuro": "423.58",
+                        "taxEuro": "29.55",
+                        "oldPrice": "₦ 240,000",
+                        "oldPriceEuro": "484.09",
+                        "discount": "13%"
                     }
                 }
             ],
-            "selectedVariation": "XI363MP1XIFHLNAFAMZ-232962805"
-        },
-        {
-            "sku": "XI363MP2M3MQJNAFAMZ",
-            "name": "Redmi Note 11 Pro+ - 6.67\" (8GB RAM, 256GB ROM) Android 11 (108/8/2)MP + 16MP Selfie - 5G - Dual - 4500mAh - Forest Green",
-            "displayName": "XIAOMI Redmi Note 11 Pro+ - 6.67\" (8GB RAM, 256GB ROM) Android 11 (108/8/2)MP + 16MP Selfie - 5G - Dual - 4500mAh - Forest Green",
-            "brand": "XIAOMI",
-            "sellerId": 366669,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "400000.00",
-                "price": "₦ 400,000",
-                "priceEuro": "812.68",
-                "taxEuro": "56.70",
-                "oldPrice": "₦ 490,000",
-                "oldPriceEuro": "995.54",
-                "discount": "18%"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/58/0533391/1.jpg?7614",
-            "url": "/xiaomi-redmi-note-11-pro-6.67-8gb-ram-256gb-rom-android-11-10882mp-16mp-selfie-5g-dual-4500mah-forest-green-193335085.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP2M3MQJNAFAMZ-295175512",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP2M3MQJNAFAMZ-295175512&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "...Green",
-                    "prices": {
-                        "rawPrice": "400000.00",
-                        "price": "₦ 400,000",
-                        "priceEuro": "812.68",
-                        "taxEuro": "56.70",
-                        "oldPrice": "₦ 490,000",
-                        "oldPriceEuro": "995.54",
-                        "discount": "18%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP2M3MQJNAFAMZ-295175512",
-            "variationSelection": true
-        },
-        {
-            "sku": "XI363MP0FEL1NNAFAMZ",
-            "name": "Redmi Note 11s - 6.43\" (128GB ROM,8GB RAM) Android 11 (108/8/2/2)MP + 16MP Selfie - 4G - Dual - 5000mAh - Twilight Blue",
-            "displayName": "XIAOMI Redmi Note 11s - 6.43\" (128GB ROM,8GB RAM) Android 11 (108/8/2/2)MP + 16MP Selfie - 4G - Dual - 5000mAh - Twilight Blue",
-            "brand": "XIAOMI",
-            "sellerId": 317412,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "249999.00",
-                "price": "₦ 249,999",
-                "priceEuro": "507.92",
-                "taxEuro": "35.44",
-                "oldPrice": "₦ 375,000",
-                "oldPriceEuro": "761.89",
-                "discount": "33%"
-            },
-            "tags": "CP_MT144",
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/25/874699/1.jpg?8042",
-            "url": "/xiaomi-redmi-note-11s-6.43-128gb-rom8gb-ram-android-11-108822mp-16mp-selfie-4g-dual-5000mah-twilight-blue-99647852.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP0FEL1NNAFAMZ-136738348",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP0FEL1NNAFAMZ-136738348&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Verified001",
-                    "prices": {
-                        "rawPrice": "249999.00",
-                        "price": "₦ 249,999",
-                        "priceEuro": "507.92",
-                        "taxEuro": "35.44",
-                        "oldPrice": "₦ 375,000",
-                        "oldPriceEuro": "761.89",
-                        "discount": "33%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP0FEL1NNAFAMZ-136738348",
-            "variationSelection": true
+            "selectedVariation": "XI363MP4ECGMXNAFAMZ-334311391"
         },
         {
             "sku": "GE779EA30FKCCNAFAMZ",
@@ -1237,10 +882,10 @@
             "prices": {
                 "rawPrice": "1900.00",
                 "price": "₦ 1,900",
-                "priceEuro": "3.86",
+                "priceEuro": "3.83",
                 "taxEuro": "0.27",
                 "oldPrice": "₦ 3,500",
-                "oldPriceEuro": "7.11",
+                "oldPriceEuro": "7.06",
                 "discount": "46%"
             },
             "tags": "JA22",
@@ -1264,15 +909,215 @@
                     "prices": {
                         "rawPrice": "1900.00",
                         "price": "₦ 1,900",
-                        "priceEuro": "3.86",
+                        "priceEuro": "3.83",
                         "taxEuro": "0.27",
                         "oldPrice": "₦ 3,500",
-                        "oldPriceEuro": "7.11",
+                        "oldPriceEuro": "7.06",
                         "discount": "46%"
                     }
                 }
             ],
             "selectedVariation": "GE779EA30FKCCNAFAMZ-170539870"
+        },
+        {
+            "sku": "XI363EA2N7245NAFAMZ",
+            "name": "Redmi Note 11/11s 4G 360 Front And Back Transparent Case",
+            "displayName": "XIAOMI Redmi Note 11/11s 4G 360 Front And Back Transparent Case",
+            "brand": "XIAOMI",
+            "sellerId": 279256,
+            "categories": "Phones & Tablets/Accessories/Cases/Cases",
+            "prices": {
+                "rawPrice": "2400.00",
+                "price": "₦ 2,400",
+                "priceEuro": "4.84",
+                "taxEuro": "0.34",
+                "oldPrice": "₦ 6,000",
+                "oldPriceEuro": "12.10",
+                "discount": "60%"
+            },
+            "rating": {
+                "average": 5,
+                "totalRatings": 1
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/8928531/1.jpg?0778",
+            "url": "/xiaomi-redmi-note-1111s-4g-360-front-and-back-transparent-case-135829895.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363EA2N7245NAFAMZ-186087594",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363EA2N7245NAFAMZ-186087594&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "2400.00",
+                        "price": "₦ 2,400",
+                        "priceEuro": "4.84",
+                        "taxEuro": "0.34",
+                        "oldPrice": "₦ 6,000",
+                        "oldPriceEuro": "12.10",
+                        "discount": "60%"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363EA2N7245NAFAMZ-186087594"
+        },
+        {
+            "sku": "XI363MP2IBLX0NAFAMZ",
+            "name": "Redmi Note 11 - 4GB RAM - 64GB ROM - Dual SIM - Blue",
+            "displayName": "XIAOMI Redmi Note 11 - 4GB RAM - 64GB ROM - Dual SIM - Blue",
+            "brand": "XIAOMI",
+            "sellerId": 343,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "165000.00",
+                "price": "₦ 165,000",
+                "priceEuro": "332.81",
+                "taxEuro": "23.22"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/51/7070601/1.jpg?4905",
+            "url": "/xiaomi-redmi-note-11-4gb-ram-64gb-rom-dual-sim-blue-106070715.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP2IBLX0NAFAMZ-144945481",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP2IBLX0NAFAMZ-144945481&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "165000.00",
+                        "price": "₦ 165,000",
+                        "priceEuro": "332.81",
+                        "taxEuro": "23.22"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP2IBLX0NAFAMZ-144945481"
+        },
+        {
+            "sku": "SA948MP3VUEOTNAFAMZ",
+            "name": "Redmi Note 10Pro, 6.67\" (8GB RAM , 256GB ROM) Android 11 (108/8/5/2)MP + 16MP Selfie - 4G LTE - Dual Sim - 5020mAh - Onyx Gray",
+            "displayName": "XIAOMI Redmi Note 10Pro, 6.67\" (8GB RAM , 256GB ROM) Android 11 (108/8/5/2)MP + 16MP Selfie - 4G LTE - Dual Sim - 5020mAh - Onyx Gray",
+            "brand": "XIAOMI",
+            "sellerId": 155923,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "300000.00",
+                "price": "₦ 300,000",
+                "priceEuro": "605.11",
+                "taxEuro": "42.22",
+                "oldPrice": "₦ 350,000",
+                "oldPriceEuro": "705.96",
+                "discount": "14%"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/34/8853412/1.jpg?7403",
+            "url": "/xiaomi-redmi-note-10pro-6.67-8gb-ram-256gb-rom-android-11-108852mp-16mp-selfie-4g-lte-dual-sim-5020mah-onyx-gray-214358843.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "SA948MP3VUEOTNAFAMZ-331658576",
+                    "loginUrl": "/customer/account/login/?tkWl=SA948MP3VUEOTNAFAMZ-331658576&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "...Gray",
+                    "prices": {
+                        "rawPrice": "300000.00",
+                        "price": "₦ 300,000",
+                        "priceEuro": "605.11",
+                        "taxEuro": "42.22",
+                        "oldPrice": "₦ 350,000",
+                        "oldPriceEuro": "705.96",
+                        "discount": "14%"
+                    }
+                }
+            ],
+            "selectedVariation": "SA948MP3VUEOTNAFAMZ-331658576",
+            "variationSelection": true
+        },
+        {
+            "sku": "XI363MP3AFC9PNAFAMZ",
+            "name": "Redmi Note 11 Pro+ - 6.67\"(8GB RAM, 256GB ROM)- Forest Green",
+            "displayName": "XIAOMI Redmi Note 11 Pro+ - 6.67\"(8GB RAM, 256GB ROM)- Forest Green",
+            "brand": "XIAOMI",
+            "sellerId": 366669,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "420000.00",
+                "price": "₦ 420,000",
+                "priceEuro": "847.15",
+                "taxEuro": "59.10",
+                "oldPrice": "₦ 450,000",
+                "oldPriceEuro": "907.66",
+                "discount": "7%"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/98/9104291/1.jpg?1984",
+            "url": "/xiaomi-redmi-note-11-pro-6.678gb-ram-256gb-rom-forest-green-192401989.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP3AFC9PNAFAMZ-292886275",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP3AFC9PNAFAMZ-292886275&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "...Green",
+                    "prices": {
+                        "rawPrice": "420000.00",
+                        "price": "₦ 420,000",
+                        "priceEuro": "847.15",
+                        "taxEuro": "59.10",
+                        "oldPrice": "₦ 450,000",
+                        "oldPriceEuro": "907.66",
+                        "discount": "7%"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP3AFC9PNAFAMZ-292886275",
+            "variationSelection": true
+        },
+        {
+            "sku": "XI363MP35DAQSNAFAMZ",
+            "name": "Redmi Note 11 - 6GB RAM -128GB ROM - Dual SIM - Blue",
+            "displayName": "XIAOMI Redmi Note 11 - 6GB RAM -128GB ROM - Dual SIM - Blue",
+            "brand": "XIAOMI",
+            "sellerId": 343,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "199000.00",
+                "price": "₦ 199,000",
+                "priceEuro": "401.39",
+                "taxEuro": "28.00"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/90/4170601/1.jpg?5985",
+            "url": "/xiaomi-redmi-note-11-6gb-ram-128gb-rom-dual-sim-blue-106071409.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP35DAQSNAFAMZ-144946210",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP35DAQSNAFAMZ-144946210&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "199000.00",
+                        "price": "₦ 199,000",
+                        "priceEuro": "401.39",
+                        "taxEuro": "28.00"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP35DAQSNAFAMZ-144946210"
         },
         {
             "sku": "XI363MP2PPKMQNAFAMZ",
@@ -1284,10 +1129,10 @@
             "prices": {
                 "rawPrice": "199000.00",
                 "price": "₦ 199,000",
-                "priceEuro": "404.31",
-                "taxEuro": "28.21",
+                "priceEuro": "401.39",
+                "taxEuro": "28.00",
                 "oldPrice": "₦ 220,000",
-                "oldPriceEuro": "446.98",
+                "oldPriceEuro": "443.75",
                 "discount": "10%"
             },
             "rating": {
@@ -1310,15 +1155,223 @@
                     "prices": {
                         "rawPrice": "199000.00",
                         "price": "₦ 199,000",
-                        "priceEuro": "404.31",
-                        "taxEuro": "28.21",
+                        "priceEuro": "401.39",
+                        "taxEuro": "28.00",
                         "oldPrice": "₦ 220,000",
-                        "oldPriceEuro": "446.98",
+                        "oldPriceEuro": "443.75",
                         "discount": "10%"
                     }
                 }
             ],
             "selectedVariation": "XI363MP2PPKMQNAFAMZ-151555246"
+        },
+        {
+            "sku": "GE779EA2WXGZPNAFAMZ",
+            "name": "Redmi Note 11 Shockproof Case - Black",
+            "displayName": "XIAOMI Redmi Note 11 Shockproof Case - Black",
+            "brand": "XIAOMI",
+            "sellerId": 230566,
+            "categories": "Phones & Tablets/Accessories/Cases/Cases",
+            "prices": {
+                "rawPrice": "3200.00",
+                "price": "₦ 3,200",
+                "priceEuro": "6.45",
+                "taxEuro": "0.45",
+                "oldPrice": "₦ 4,000",
+                "oldPriceEuro": "8.07",
+                "discount": "20%"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/2417331/1.jpg?4097",
+            "url": "/xiaomi-redmi-note-11-shockproof-case-black-133714267.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "GE779EA2WXGZPNAFAMZ-182664162",
+                    "loginUrl": "/customer/account/login/?tkWl=GE779EA2WXGZPNAFAMZ-182664162&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "3200.00",
+                        "price": "₦ 3,200",
+                        "priceEuro": "6.45",
+                        "taxEuro": "0.45",
+                        "oldPrice": "₦ 4,000",
+                        "oldPriceEuro": "8.07",
+                        "discount": "20%"
+                    }
+                }
+            ],
+            "selectedVariation": "GE779EA2WXGZPNAFAMZ-182664162"
+        },
+        {
+            "sku": "XI363MP1XIFHLNAFAMZ",
+            "name": "Redmi Note 11, 6.43\" (6GB+128GB) Dual SIM -Twilight Blue",
+            "displayName": "XIAOMI Redmi Note 11, 6.43\" (6GB+128GB) Dual SIM -Twilight Blue",
+            "brand": "XIAOMI",
+            "sellerId": 359057,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "208000.00",
+                "price": "₦ 208,000",
+                "priceEuro": "419.54",
+                "taxEuro": "29.27"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/16/7533851/1.jpg?8794",
+            "url": "/xiaomi-redmi-note-11-6.43-6gb128gb-dual-sim-twilight-blue-158335761.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP1XIFHLNAFAMZ-232962805",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP1XIFHLNAFAMZ-232962805&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "208000.00",
+                        "price": "₦ 208,000",
+                        "priceEuro": "419.54",
+                        "taxEuro": "29.27"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP1XIFHLNAFAMZ-232962805"
+        },
+        {
+            "sku": "XI363MP0V3O6PNAFAMZ",
+            "name": "Redmi Note 10 Pro, 6.67-Inch 8GB RAM, 128GB ROM Android 11 (108MP + 8MP + 5MP + 2MP) + 16MP Dual SIM - Onyx Gray",
+            "displayName": "XIAOMI Redmi Note 10 Pro, 6.67-Inch 8GB RAM, 128GB ROM Android 11 (108MP + 8MP + 5MP + 2MP) + 16MP Dual SIM - Onyx Gray",
+            "brand": "XIAOMI",
+            "sellerId": 260660,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "230000.00",
+                "price": "₦ 230,000",
+                "priceEuro": "463.92",
+                "taxEuro": "32.37",
+                "oldPrice": "₦ 300,000",
+                "oldPriceEuro": "605.11",
+                "discount": "23%"
+            },
+            "tags": "Boost",
+            "rating": {
+                "average": 4.6,
+                "totalRatings": 5
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/52/239409/1.jpg?4325",
+            "url": "/redmi-note-10-pro-6.67-inch-8gb-ram-128gb-rom-android-11-108mp-8mp-5mp-2mp-16mp-dual-sim-onyx-gray-xiaomi-mpg1638471.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP0V3O6PNAFAMZ-122646314",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP0V3O6PNAFAMZ-122646314&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "230000.00",
+                        "price": "₦ 230,000",
+                        "priceEuro": "463.92",
+                        "taxEuro": "32.37",
+                        "oldPrice": "₦ 300,000",
+                        "oldPriceEuro": "605.11",
+                        "discount": "23%"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP0V3O6PNAFAMZ-122646314"
+        },
+        {
+            "sku": "XI363MP2M3MQJNAFAMZ",
+            "name": "Redmi Note 11 Pro+ - 6.67\" (8GB RAM, 256GB ROM) Android 11 (108/8/2)MP + 16MP Selfie - 5G - Dual - 4500mAh - Forest Green",
+            "displayName": "XIAOMI Redmi Note 11 Pro+ - 6.67\" (8GB RAM, 256GB ROM) Android 11 (108/8/2)MP + 16MP Selfie - 5G - Dual - 4500mAh - Forest Green",
+            "brand": "XIAOMI",
+            "sellerId": 366669,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "400000.00",
+                "price": "₦ 400,000",
+                "priceEuro": "806.81",
+                "taxEuro": "56.29",
+                "oldPrice": "₦ 490,000",
+                "oldPriceEuro": "988.34",
+                "discount": "18%"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/58/0533391/1.jpg?7614",
+            "url": "/xiaomi-redmi-note-11-pro-6.67-8gb-ram-256gb-rom-android-11-10882mp-16mp-selfie-5g-dual-4500mah-forest-green-193335085.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP2M3MQJNAFAMZ-295175512",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP2M3MQJNAFAMZ-295175512&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "...Green",
+                    "prices": {
+                        "rawPrice": "400000.00",
+                        "price": "₦ 400,000",
+                        "priceEuro": "806.81",
+                        "taxEuro": "56.29",
+                        "oldPrice": "₦ 490,000",
+                        "oldPriceEuro": "988.34",
+                        "discount": "18%"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP2M3MQJNAFAMZ-295175512",
+            "variationSelection": true
+        },
+        {
+            "sku": "XI363MP0FEL1NNAFAMZ",
+            "name": "Redmi Note 11s - 6.43\" (128GB ROM,8GB RAM) Android 11 (108/8/2/2)MP + 16MP Selfie - 4G - Dual - 5000mAh - Twilight Blue",
+            "displayName": "XIAOMI Redmi Note 11s - 6.43\" (128GB ROM,8GB RAM) Android 11 (108/8/2/2)MP + 16MP Selfie - 4G - Dual - 5000mAh - Twilight Blue",
+            "brand": "XIAOMI",
+            "sellerId": 317412,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "249999.00",
+                "price": "₦ 249,999",
+                "priceEuro": "504.25",
+                "taxEuro": "35.18",
+                "oldPrice": "₦ 375,000",
+                "oldPriceEuro": "756.38",
+                "discount": "33%"
+            },
+            "tags": "CP_MT144",
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/25/874699/1.jpg?8042",
+            "url": "/xiaomi-redmi-note-11s-6.43-128gb-rom8gb-ram-android-11-108822mp-16mp-selfie-4g-dual-5000mah-twilight-blue-99647852.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP0FEL1NNAFAMZ-136738348",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP0FEL1NNAFAMZ-136738348&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "Verified001",
+                    "prices": {
+                        "rawPrice": "249999.00",
+                        "price": "₦ 249,999",
+                        "priceEuro": "504.25",
+                        "taxEuro": "35.18",
+                        "oldPrice": "₦ 375,000",
+                        "oldPriceEuro": "756.38",
+                        "discount": "33%"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP0FEL1NNAFAMZ-136738348",
+            "variationSelection": true
         },
         {
             "sku": "XI363MP2TJZLENAFAMZ",
@@ -1330,8 +1383,8 @@
             "prices": {
                 "rawPrice": "175000.00",
                 "price": "₦ 175,000",
-                "priceEuro": "355.55",
-                "taxEuro": "24.81"
+                "priceEuro": "352.98",
+                "taxEuro": "24.63"
             },
             "rating": {
                 "average": 0,
@@ -1349,97 +1402,128 @@
                     "prices": {
                         "rawPrice": "175000.00",
                         "price": "₦ 175,000",
-                        "priceEuro": "355.55",
-                        "taxEuro": "24.81"
+                        "priceEuro": "352.98",
+                        "taxEuro": "24.63"
                     }
                 }
             ],
             "selectedVariation": "XI363MP2TJZLENAFAMZ-139278261"
         },
         {
-            "sku": "XI363MP3AFC9PNAFAMZ",
-            "name": "Redmi Note 11 Pro+ - 6.67\"(8GB RAM, 256GB ROM)- Forest Green",
-            "displayName": "XIAOMI Redmi Note 11 Pro+ - 6.67\"(8GB RAM, 256GB ROM)- Forest Green",
+            "sku": "XI363MP2KB9FINAFAMZ",
+            "name": "Redmi Note 11 Pro: 6.67\", 8/128GB, 108/8/2/2MP+16MP, 5000mAh",
+            "displayName": "XIAOMI Redmi Note 11 Pro: 6.67\", 8/128GB, 108/8/2/2MP+16MP, 5000mAh",
+            "brand": "XIAOMI",
+            "sellerId": 300819,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "350000.00",
+                "price": "₦ 350,000",
+                "priceEuro": "705.96",
+                "taxEuro": "49.25"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/55/0501101/1.jpg?5731",
+            "url": "/xiaomi-redmi-note-11-pro-6.67-8128gb-108822mp16mp-5000mah-101105055.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP2KB9FINAFAMZ-138474867",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP2KB9FINAFAMZ-138474867&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "GRAPHITE GRAY",
+                    "prices": {
+                        "rawPrice": "350000.00",
+                        "price": "₦ 350,000",
+                        "priceEuro": "705.96",
+                        "taxEuro": "49.25"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP2KB9FINAFAMZ-138474867",
+            "variationSelection": true
+        },
+        {
+            "sku": "XI363MP32V1EONAFAMZ",
+            "name": "Redmi Note 11 Pro, 6.67-Inch 8GB RAM,128GB ROM Android 11 (108MP + 8MP + 2MP + 2MP) + 16MP Dual SIM - Graphite Gray",
+            "displayName": "XIAOMI Redmi Note 11 Pro, 6.67-Inch 8GB RAM,128GB ROM Android 11 (108MP + 8MP + 2MP + 2MP) + 16MP Dual SIM - Graphite Gray",
+            "brand": "XIAOMI",
+            "sellerId": 75109,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "280000.00",
+                "price": "₦ 280,000",
+                "priceEuro": "564.77",
+                "taxEuro": "39.40"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/86/2059201/1.jpg?9500",
+            "url": "/xiaomi-redmi-note-11-pro-6.67-inch-8gb-ram128gb-rom-android-11-108mp-8mp-2mp-2mp-16mp-dual-sim-graphite-gray-102950268.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP32V1EONAFAMZ-140758971",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP32V1EONAFAMZ-140758971&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "280000.00",
+                        "price": "₦ 280,000",
+                        "priceEuro": "564.77",
+                        "taxEuro": "39.40"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP32V1EONAFAMZ-140758971"
+        },
+        {
+            "sku": "XI363MP24TCSTNAFAMZ",
+            "name": "Redmi Note 11 Pro+ - 6.67\" (8GB RAM, 256GB ROM) - Gray",
+            "displayName": "XIAOMI Redmi Note 11 Pro+ - 6.67\" (8GB RAM, 256GB ROM) - Gray",
             "brand": "XIAOMI",
             "sellerId": 366669,
             "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
             "prices": {
-                "rawPrice": "420000.00",
-                "price": "₦ 420,000",
-                "priceEuro": "853.32",
-                "taxEuro": "59.53",
-                "oldPrice": "₦ 450,000",
-                "oldPriceEuro": "914.27",
-                "discount": "7%"
+                "rawPrice": "400000.00",
+                "price": "₦ 400,000",
+                "priceEuro": "806.81",
+                "taxEuro": "56.29",
+                "oldPrice": "₦ 490,000",
+                "oldPriceEuro": "988.34",
+                "discount": "18%"
             },
             "rating": {
                 "average": 0,
                 "totalRatings": 0
             },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/98/9104291/1.jpg?1984",
-            "url": "/xiaomi-redmi-note-11-pro-6.678gb-ram-256gb-rom-forest-green-192401989.html",
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/29/0204291/1.jpg?1992",
+            "url": "/xiaomi-redmi-note-11-pro-6.67-8gb-ram-256gb-rom-gray-192402092.html",
             "isBuyable": true,
             "simples": [
                 {
-                    "sku": "XI363MP3AFC9PNAFAMZ-292886275",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP3AFC9PNAFAMZ-292886275&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "sku": "XI363MP24TCSTNAFAMZ-292886822",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP24TCSTNAFAMZ-292886822&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
                     "isBuyable": true,
-                    "name": "...Green",
+                    "name": "...Gray",
                     "prices": {
-                        "rawPrice": "420000.00",
-                        "price": "₦ 420,000",
-                        "priceEuro": "853.32",
-                        "taxEuro": "59.53",
-                        "oldPrice": "₦ 450,000",
-                        "oldPriceEuro": "914.27",
-                        "discount": "7%"
+                        "rawPrice": "400000.00",
+                        "price": "₦ 400,000",
+                        "priceEuro": "806.81",
+                        "taxEuro": "56.29",
+                        "oldPrice": "₦ 490,000",
+                        "oldPriceEuro": "988.34",
+                        "discount": "18%"
                     }
                 }
             ],
-            "selectedVariation": "XI363MP3AFC9PNAFAMZ-292886275",
+            "selectedVariation": "XI363MP24TCSTNAFAMZ-292886822",
             "variationSelection": true
-        },
-        {
-            "sku": "XI363MP4Q94QHNAFAMZ",
-            "name": "Redmi Note 10 Pro, 6.67-Inch 8GB RAM, 256GB ROM Android 11 (108MP + 8MP + 5MP + 2MP) + 16MP Dual SIM - Glacier Blue",
-            "displayName": "XIAOMI Redmi Note 10 Pro, 6.67-Inch 8GB RAM, 256GB ROM Android 11 (108MP + 8MP + 5MP + 2MP) + 16MP Dual SIM - Glacier Blue",
-            "brand": "XIAOMI",
-            "sellerId": 339932,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "220000.00",
-                "price": "₦ 220,000",
-                "priceEuro": "446.98",
-                "taxEuro": "31.18",
-                "oldPrice": "₦ 250,000",
-                "oldPriceEuro": "507.93",
-                "discount": "12%"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/85/9607612/1.jpg?4251",
-            "url": "/xiaomi-redmi-note-10-pro-6.67-inch-8gb-ram-256gb-rom-android-11-108mp-8mp-5mp-2mp-16mp-dual-sim-glacier-blue-216706958.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP4Q94QHNAFAMZ-334311393",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP4Q94QHNAFAMZ-334311393&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "",
-                    "prices": {
-                        "rawPrice": "220000.00",
-                        "price": "₦ 220,000",
-                        "priceEuro": "446.98",
-                        "taxEuro": "31.18",
-                        "oldPrice": "₦ 250,000",
-                        "oldPriceEuro": "507.93",
-                        "discount": "12%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP4Q94QHNAFAMZ-334311393"
         },
         {
             "sku": "XI363MP23L13ANAFAMZ",
@@ -1451,10 +1535,10 @@
             "prices": {
                 "rawPrice": "229999.00",
                 "price": "₦ 229,999",
-                "priceEuro": "467.29",
-                "taxEuro": "32.60",
+                "priceEuro": "463.91",
+                "taxEuro": "32.37",
                 "oldPrice": "₦ 295,099",
-                "oldPriceEuro": "599.55",
+                "oldPriceEuro": "595.22",
                 "discount": "22%"
             },
             "rating": {
@@ -1473,10 +1557,10 @@
                     "prices": {
                         "rawPrice": "229999.00",
                         "price": "₦ 229,999",
-                        "priceEuro": "467.29",
-                        "taxEuro": "32.60",
+                        "priceEuro": "463.91",
+                        "taxEuro": "32.37",
                         "oldPrice": "₦ 295,099",
-                        "oldPriceEuro": "599.55",
+                        "oldPriceEuro": "595.22",
                         "discount": "22%"
                     }
                 }
@@ -1485,536 +1569,46 @@
             "variationSelection": true
         },
         {
-            "sku": "XI363MP25D4X7NAFAMZ",
-            "name": "Redmi Note 10Pro, 6.67\" (6GB, 128 ROM) Android 11 (108/8/5/2)MP + 16MP Selfie - 4G - Dual Sim - 5020mAh - Gradient Broze",
-            "displayName": "XIAOMI Redmi Note 10Pro, 6.67\" (6GB, 128 ROM) Android 11 (108/8/5/2)MP + 16MP Selfie - 4G - Dual Sim - 5020mAh - Gradient Broze",
+            "sku": "XI363MP1QKZXUNAFAMZ",
+            "name": "Redmi Note 11s - 6.43\" (6GB RAM, 128GB ROM) Android 11 (108/8/2/2)MP + 16MP Selfie - 4G - Dual - 5000mAh - Blue",
+            "displayName": "XIAOMI Redmi Note 11s - 6.43\" (6GB RAM, 128GB ROM) Android 11 (108/8/2/2)MP + 16MP Selfie - 4G - Dual - 5000mAh - Blue",
             "brand": "XIAOMI",
-            "sellerId": 366669,
+            "sellerId": 255259,
             "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
             "prices": {
-                "rawPrice": "220000.00",
-                "price": "₦ 220,000",
-                "priceEuro": "446.98",
-                "taxEuro": "31.18",
-                "oldPrice": "₦ 320,000",
-                "oldPriceEuro": "650.15",
-                "discount": "31%"
+                "rawPrice": "200000.00",
+                "price": "₦ 200,000",
+                "priceEuro": "403.41",
+                "taxEuro": "28.14",
+                "oldPrice": "₦ 230,000",
+                "oldPriceEuro": "463.92",
+                "discount": "13%"
             },
             "rating": {
                 "average": 0,
                 "totalRatings": 0
             },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/29/9433391/1.jpg?7616",
-            "url": "/xiaomi-redmi-note-10pro-6.67-6gb-128-rom-android-11-108852mp-16mp-selfie-4g-dual-sim-5020mah-gradient-broze-193334992.html",
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/05/1158901/1.jpg?1342",
+            "url": "/xiaomi-redmi-note-11s-6.43-6gb-ram-128gb-rom-android-11-108822mp-16mp-selfie-4g-dual-5000mah-blue-109851150.html",
             "isBuyable": true,
             "simples": [
                 {
-                    "sku": "XI363MP25D4X7NAFAMZ-295175080",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP25D4X7NAFAMZ-295175080&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "...Bronze",
-                    "prices": {
-                        "rawPrice": "220000.00",
-                        "price": "₦ 220,000",
-                        "priceEuro": "446.98",
-                        "taxEuro": "31.18",
-                        "oldPrice": "₦ 320,000",
-                        "oldPriceEuro": "650.15",
-                        "discount": "31%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP25D4X7NAFAMZ-295175080",
-            "variationSelection": true
-        },
-        {
-            "sku": "XI363EA35QWGLNAFAMZ",
-            "name": "Redmi Note 11/11S  360 Degree Transparent Front And Back Case",
-            "displayName": "XIAOMI Redmi Note 11/11S  360 Degree Transparent Front And Back Case",
-            "brand": "XIAOMI",
-            "sellerId": 321790,
-            "categories": "Phones & Tablets/Accessories/Cases/Cases",
-            "prices": {
-                "rawPrice": "2300.00",
-                "price": "₦ 2,300",
-                "priceEuro": "4.67",
-                "taxEuro": "0.33",
-                "oldPrice": "₦ 8,000",
-                "oldPriceEuro": "16.25",
-                "discount": "71%"
-            },
-            "tags": "XMAS|XMAS22_09|XMAS22_10|XMAS22_11",
-            "rating": {
-                "average": 4.7,
-                "totalRatings": 3
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/91/0517331/1.jpg?0388",
-            "url": "/xiaomi-redmi-note-1111s-360-degree-transparent-front-and-back-case-133715019.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363EA35QWGLNAFAMZ-182665069",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA35QWGLNAFAMZ-182665069&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "sku": "XI363MP1QKZXUNAFAMZ-151555251",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP1QKZXUNAFAMZ-151555251&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
                     "isBuyable": true,
                     "name": "",
                     "prices": {
-                        "rawPrice": "2300.00",
-                        "price": "₦ 2,300",
-                        "priceEuro": "4.67",
-                        "taxEuro": "0.33",
-                        "oldPrice": "₦ 8,000",
-                        "oldPriceEuro": "16.25",
-                        "discount": "71%"
+                        "rawPrice": "200000.00",
+                        "price": "₦ 200,000",
+                        "priceEuro": "403.41",
+                        "taxEuro": "28.14",
+                        "oldPrice": "₦ 230,000",
+                        "oldPriceEuro": "463.92",
+                        "discount": "13%"
                     }
                 }
             ],
-            "selectedVariation": "XI363EA35QWGLNAFAMZ-182665069"
-        },
-        {
-            "sku": "GE779EA2PE96DNAFAMZ",
-            "name": "3d Privacy Protective Tempered Glass For Xiaomi Redmi Note 9,9s,10,10s,11,11s, 8 Pro,9 Pro,10 Pro,11 Pro,redmi A1 Plus +,9A,9C,10A,10C,10,10 Prime",
-            "displayName": "3d Privacy Protective Tempered Glass For Xiaomi Redmi Note 9,9s,10,10s,11,11s, 8 Pro,9 Pro,10 Pro,11 Pro,redmi A1 Plus +,9A,9C,10A,10C,10,10 Prime",
-            "brand": "Generic",
-            "sellerId": 321790,
-            "categories": "Phones & Tablets/Accessories/Fashion Accessories/Screen Protection",
-            "prices": {
-                "rawPrice": "2990.00",
-                "price": "₦ 2,990",
-                "priceEuro": "6.07",
-                "taxEuro": "0.42"
-            },
-            "tags": "XMAS|XMAS22_09|XMAS22_10|XMAS22_11",
-            "rating": {
-                "average": 4.5,
-                "totalRatings": 2
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/63/5878291/1.jpg?3639",
-            "url": "/generic-3d-privacy-protective-tempered-glass-for-xiaomi-redmi-note-99s1010s1111s-8-pro9-pro10-pro11-proredmi-a1-plus-9a9c10a10c1010-prime-192878536.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "GE779EA2PE96DNAFAMZ-293909489",
-                    "loginUrl": "/customer/account/login/?tkWl=GE779EA2PE96DNAFAMZ-293909489&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi 9A/9C/10A",
-                    "prices": {
-                        "rawPrice": "2990.00",
-                        "price": "₦ 2,990",
-                        "priceEuro": "6.07",
-                        "taxEuro": "0.42"
-                    }
-                },
-                {
-                    "sku": "GE779EA2PE96DNAFAMZ-293909494",
-                    "loginUrl": "/customer/account/login/?tkWl=GE779EA2PE96DNAFAMZ-293909494&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi 10/10 prime",
-                    "prices": {
-                        "rawPrice": "2990.00",
-                        "price": "₦ 2,990",
-                        "priceEuro": "6.07",
-                        "taxEuro": "0.42"
-                    }
-                },
-                {
-                    "sku": "GE779EA2PE96DNAFAMZ-293909488",
-                    "loginUrl": "/customer/account/login/?tkWl=GE779EA2PE96DNAFAMZ-293909488&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi 10C",
-                    "prices": {
-                        "rawPrice": "2990.00",
-                        "price": "₦ 2,990",
-                        "priceEuro": "6.07",
-                        "taxEuro": "0.42"
-                    }
-                },
-                {
-                    "sku": "GE779EA2PE96DNAFAMZ-336459513",
-                    "loginUrl": "/customer/account/login/?tkWl=GE779EA2PE96DNAFAMZ-336459513&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi A1 plus +",
-                    "prices": {
-                        "rawPrice": "2990.00",
-                        "price": "₦ 2,990",
-                        "priceEuro": "6.07",
-                        "taxEuro": "0.42"
-                    }
-                },
-                {
-                    "sku": "GE779EA2PE96DNAFAMZ-293909492",
-                    "loginUrl": "/customer/account/login/?tkWl=GE779EA2PE96DNAFAMZ-293909492&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi note 8 pro",
-                    "prices": {
-                        "rawPrice": "2990.00",
-                        "price": "₦ 2,990",
-                        "priceEuro": "6.07",
-                        "taxEuro": "0.42"
-                    }
-                },
-                {
-                    "sku": "GE779EA2PE96DNAFAMZ-293909493",
-                    "loginUrl": "/customer/account/login/?tkWl=GE779EA2PE96DNAFAMZ-293909493&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi note 9",
-                    "prices": {
-                        "rawPrice": "2990.00",
-                        "price": "₦ 2,990",
-                        "priceEuro": "6.07",
-                        "taxEuro": "0.42"
-                    }
-                },
-                {
-                    "sku": "GE779EA2PE96DNAFAMZ-293909495",
-                    "loginUrl": "/customer/account/login/?tkWl=GE779EA2PE96DNAFAMZ-293909495&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi note 9s/9 pro",
-                    "prices": {
-                        "rawPrice": "2990.00",
-                        "price": "₦ 2,990",
-                        "priceEuro": "6.07",
-                        "taxEuro": "0.42"
-                    }
-                },
-                {
-                    "sku": "GE779EA2PE96DNAFAMZ-293909496",
-                    "loginUrl": "/customer/account/login/?tkWl=GE779EA2PE96DNAFAMZ-293909496&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi note 10 pro",
-                    "prices": {
-                        "rawPrice": "2990.00",
-                        "price": "₦ 2,990",
-                        "priceEuro": "6.07",
-                        "taxEuro": "0.42"
-                    }
-                },
-                {
-                    "sku": "GE779EA2PE96DNAFAMZ-293909497",
-                    "loginUrl": "/customer/account/login/?tkWl=GE779EA2PE96DNAFAMZ-293909497&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi note 10/10s 4G/5G",
-                    "prices": {
-                        "rawPrice": "2990.00",
-                        "price": "₦ 2,990",
-                        "priceEuro": "6.07",
-                        "taxEuro": "0.42"
-                    }
-                },
-                {
-                    "sku": "GE779EA2PE96DNAFAMZ-293909490",
-                    "loginUrl": "/customer/account/login/?tkWl=GE779EA2PE96DNAFAMZ-293909490&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi note 11 Pro",
-                    "prices": {
-                        "rawPrice": "2990.00",
-                        "price": "₦ 2,990",
-                        "priceEuro": "6.07",
-                        "taxEuro": "0.42"
-                    }
-                },
-                {
-                    "sku": "GE779EA2PE96DNAFAMZ-293909491",
-                    "loginUrl": "/customer/account/login/?tkWl=GE779EA2PE96DNAFAMZ-293909491&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi note 11/11s",
-                    "prices": {
-                        "rawPrice": "2990.00",
-                        "price": "₦ 2,990",
-                        "priceEuro": "6.07",
-                        "taxEuro": "0.42"
-                    }
-                }
-            ],
-            "variationSelection": true
-        },
-        {
-            "sku": "XI363MP1NWUETNAFAMZ",
-            "name": "Redmi Note 11 Pro - 6.67\" (8GB RAM, 128GB ROM)",
-            "displayName": "XIAOMI Redmi Note 11 Pro - 6.67\" (8GB RAM, 128GB ROM)",
-            "brand": "XIAOMI",
-            "sellerId": 304100,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "355000.00",
-                "price": "₦ 355,000",
-                "priceEuro": "721.26",
-                "taxEuro": "50.32"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/00/6297491/1.jpg?6808",
-            "url": "/xiaomi-redmi-note-11-pro-6.67-8gb-ram-128gb-rom-194792600.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP1NWUETNAFAMZ-300092492",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP1NWUETNAFAMZ-300092492&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "",
-                    "prices": {
-                        "rawPrice": "355000.00",
-                        "price": "₦ 355,000",
-                        "priceEuro": "721.26",
-                        "taxEuro": "50.32"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP1NWUETNAFAMZ-300092492"
-        },
-        {
-            "sku": "XI363EA21LCMBNAFAMZ",
-            "name": "Redmi Note 11 10 9S 9 Pro Max 5G 9A 9C 8 8 8A 8T 9T Full Body Transparent 360 Front  And Back Case",
-            "displayName": "XIAOMI Redmi Note 11 10 9S 9 Pro Max 5G 9A 9C 8 8 8A 8T 9T Full Body Transparent 360 Front  And Back Case",
-            "brand": "XIAOMI",
-            "sellerId": 321790,
-            "categories": "Phones & Tablets/Accessories/Cases/Cases",
-            "prices": {
-                "rawPrice": "2500.00",
-                "price": "₦ 2,500",
-                "priceEuro": "5.08",
-                "taxEuro": "0.35"
-            },
-            "tags": "XMAS|XMAS22_09|XMAS22_10|XMAS22_11",
-            "rating": {
-                "average": 4.5,
-                "totalRatings": 2
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/23/6080991/1.jpg?5648",
-            "url": "/xiaomi-redmi-note-11-10-9s-9-pro-max-5g-9a-9c-8-8-8a-8t-9t-full-body-transparent-360-front-and-back-case-199080632.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411243",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411243&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi 9A",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411245",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411245&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi 9C",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411246",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411246&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi 9T",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411235",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411235&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi 10A",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411230",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411230&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi 10C",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411247",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411247&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi 10X 4G",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411248",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411248&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi Note 8",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411249",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411249&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi Note 8 Pro",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411250",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411250&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi Note 8T",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411234",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411234&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi Note 9",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411238",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411238&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi Note 9 Pro",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411239",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411239&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi Note 9 Pro Max",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411237",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411237&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi Note 9S",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411232",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411232&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi Note 10 Pro",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411233",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411233&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi Note10 Pro Max",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411229",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411229&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi Note 10/10s",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411241",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411241&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi note 11",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411251",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411251&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi Note11 Pro",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                },
-                {
-                    "sku": "XI363EA21LCMBNAFAMZ-308411252",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363EA21LCMBNAFAMZ-308411252&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "Redmi Note 11s",
-                    "prices": {
-                        "rawPrice": "2500.00",
-                        "price": "₦ 2,500",
-                        "priceEuro": "5.08",
-                        "taxEuro": "0.35"
-                    }
-                }
-            ],
-            "variationSelection": true
+            "selectedVariation": "XI363MP1QKZXUNAFAMZ-151555251"
         },
         {
             "sku": "XI363MP45E22TNAFAMZ",
@@ -2026,10 +1620,10 @@
             "prices": {
                 "rawPrice": "229900.00",
                 "price": "₦ 229,900",
-                "priceEuro": "467.09",
-                "taxEuro": "32.59",
+                "priceEuro": "463.71",
+                "taxEuro": "32.35",
                 "oldPrice": "₦ 300,000",
-                "oldPriceEuro": "609.51",
+                "oldPriceEuro": "605.11",
                 "discount": "23%"
             },
             "rating": {
@@ -2048,15 +1642,178 @@
                     "prices": {
                         "rawPrice": "229900.00",
                         "price": "₦ 229,900",
-                        "priceEuro": "467.09",
-                        "taxEuro": "32.59",
+                        "priceEuro": "463.71",
+                        "taxEuro": "32.35",
                         "oldPrice": "₦ 300,000",
-                        "oldPriceEuro": "609.51",
+                        "oldPriceEuro": "605.11",
                         "discount": "23%"
                     }
                 }
             ],
             "selectedVariation": "XI363MP45E22TNAFAMZ-334221331"
+        },
+        {
+            "sku": "XI363MP25D4X7NAFAMZ",
+            "name": "Redmi Note 10Pro, 6.67\" (6GB, 128 ROM) Android 11 (108/8/5/2)MP + 16MP Selfie - 4G - Dual Sim - 5020mAh - Gradient Broze",
+            "displayName": "XIAOMI Redmi Note 10Pro, 6.67\" (6GB, 128 ROM) Android 11 (108/8/5/2)MP + 16MP Selfie - 4G - Dual Sim - 5020mAh - Gradient Broze",
+            "brand": "XIAOMI",
+            "sellerId": 366669,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "220000.00",
+                "price": "₦ 220,000",
+                "priceEuro": "443.75",
+                "taxEuro": "30.96",
+                "oldPrice": "₦ 320,000",
+                "oldPriceEuro": "645.45",
+                "discount": "31%"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/29/9433391/1.jpg?7616",
+            "url": "/xiaomi-redmi-note-10pro-6.67-6gb-128-rom-android-11-108852mp-16mp-selfie-4g-dual-sim-5020mah-gradient-broze-193334992.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP25D4X7NAFAMZ-295175080",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP25D4X7NAFAMZ-295175080&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "...Bronze",
+                    "prices": {
+                        "rawPrice": "220000.00",
+                        "price": "₦ 220,000",
+                        "priceEuro": "443.75",
+                        "taxEuro": "30.96",
+                        "oldPrice": "₦ 320,000",
+                        "oldPriceEuro": "645.45",
+                        "discount": "31%"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP25D4X7NAFAMZ-295175080",
+            "variationSelection": true
+        },
+        {
+            "sku": "GE779EA45BY88NAFAMZ",
+            "name": "Art Crepe Paper Lambskin Leather Phone Case for Xiaomi Redmi 10 10 Prime Note 11 4G Shockproof Soft Back Cover-Black",
+            "displayName": "Art Crepe Paper Lambskin Leather Phone Case for Xiaomi Redmi 10 10 Prime Note 11 4G Shockproof Soft Back Cover-Black",
+            "brand": "Generic",
+            "sellerId": 376951,
+            "isShopGlobal": true,
+            "categories": "Phones & Tablets/Accessories/Cases/Cases",
+            "prices": {
+                "rawPrice": "1816.00",
+                "price": "₦ 1,816",
+                "priceEuro": "3.66",
+                "taxEuro": "0.26",
+                "oldPrice": "₦ 2,464",
+                "oldPriceEuro": "4.97",
+                "discount": "26%"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/50/8203602/1.jpg?3369",
+            "url": "/generic-art-crepe-paper-lambskin-leather-phone-case-for-xiaomi-redmi-10-10-prime-note-11-4g-shockproof-soft-back-cover-black-206302805.html",
+            "isBuyable": true,
+            "shopGlobal": {
+                "identifier": "global",
+                "name": "Shipped from abroad"
+            },
+            "simples": [
+                {
+                    "sku": "GE779EA45BY88NAFAMZ-319431698",
+                    "loginUrl": "/customer/account/login/?tkWl=GE779EA45BY88NAFAMZ-319431698&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "Redmi 10 4G/10 Prime 2021/Note 11 4G",
+                    "prices": {
+                        "rawPrice": "1816.00",
+                        "price": "₦ 1,816",
+                        "priceEuro": "3.66",
+                        "taxEuro": "0.26",
+                        "oldPrice": "₦ 2,464",
+                        "oldPriceEuro": "4.97",
+                        "discount": "26%"
+                    }
+                }
+            ],
+            "selectedVariation": "GE779EA45BY88NAFAMZ-319431698",
+            "variationSelection": true
+        },
+        {
+            "sku": "XI363MP1NWUETNAFAMZ",
+            "name": "Redmi Note 11 Pro - 6.67\" (8GB RAM, 128GB ROM)",
+            "displayName": "XIAOMI Redmi Note 11 Pro - 6.67\" (8GB RAM, 128GB ROM)",
+            "brand": "XIAOMI",
+            "sellerId": 304100,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "355000.00",
+                "price": "₦ 355,000",
+                "priceEuro": "716.04",
+                "taxEuro": "49.96"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/00/6297491/1.jpg?6808",
+            "url": "/xiaomi-redmi-note-11-pro-6.67-8gb-ram-128gb-rom-194792600.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP1NWUETNAFAMZ-300092492",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP1NWUETNAFAMZ-300092492&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "355000.00",
+                        "price": "₦ 355,000",
+                        "priceEuro": "716.04",
+                        "taxEuro": "49.96"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP1NWUETNAFAMZ-300092492"
+        },
+        {
+            "sku": "XI363MP2II944NAFAMZ",
+            "name": "Redmi Note 11 - 4GB RAM - 128GB ROM - Dual SIM - Blue",
+            "displayName": "XIAOMI Redmi Note 11 - 4GB RAM - 128GB ROM - Dual SIM - Blue",
+            "brand": "XIAOMI",
+            "sellerId": 343,
+            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
+            "prices": {
+                "rawPrice": "180000.00",
+                "price": "₦ 180,000",
+                "priceEuro": "363.06",
+                "taxEuro": "25.33"
+            },
+            "rating": {
+                "average": 0,
+                "totalRatings": 0
+            },
+            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/52/0170601/1.jpg?5384",
+            "url": "/xiaomi-redmi-note-11-4gb-ram-128gb-rom-dual-sim-blue-106071025.html",
+            "isBuyable": true,
+            "simples": [
+                {
+                    "sku": "XI363MP2II944NAFAMZ-144945808",
+                    "loginUrl": "/customer/account/login/?tkWl=XI363MP2II944NAFAMZ-144945808&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
+                    "isBuyable": true,
+                    "name": "",
+                    "prices": {
+                        "rawPrice": "180000.00",
+                        "price": "₦ 180,000",
+                        "priceEuro": "363.06",
+                        "taxEuro": "25.33"
+                    }
+                }
+            ],
+            "selectedVariation": "XI363MP2II944NAFAMZ-144945808"
         },
         {
             "sku": "XI363MP1X6R4YNAFAMZ",
@@ -2068,10 +1825,10 @@
             "prices": {
                 "rawPrice": "189999.00",
                 "price": "₦ 189,999",
-                "priceEuro": "386.02",
-                "taxEuro": "26.93",
+                "priceEuro": "383.23",
+                "taxEuro": "26.74",
                 "oldPrice": "₦ 250,000",
-                "oldPriceEuro": "507.93",
+                "oldPriceEuro": "504.26",
                 "discount": "24%"
             },
             "rating": {
@@ -2090,58 +1847,15 @@
                     "prices": {
                         "rawPrice": "189999.00",
                         "price": "₦ 189,999",
-                        "priceEuro": "386.02",
-                        "taxEuro": "26.93",
+                        "priceEuro": "383.23",
+                        "taxEuro": "26.74",
                         "oldPrice": "₦ 250,000",
-                        "oldPriceEuro": "507.93",
+                        "oldPriceEuro": "504.26",
                         "discount": "24%"
                     }
                 }
             ],
             "selectedVariation": "XI363MP1X6R4YNAFAMZ-139091666",
-            "variationSelection": true
-        },
-        {
-            "sku": "XI363MP0NMZN1NAFAMZ",
-            "name": "Redmi Note 11 - 6.5\" (128GB ROM,4GB RAM)-  Android 11 (50MP/8MP/2MP/MP)+ 13MP Selfie - Dual Sim-4G LTE - 5000mAh- Blue",
-            "displayName": "XIAOMI Redmi Note 11 - 6.5\" (128GB ROM,4GB RAM)-  Android 11 (50MP/8MP/2MP/MP)+ 13MP Selfie - Dual Sim-4G LTE - 5000mAh- Blue",
-            "brand": "XIAOMI",
-            "sellerId": 317412,
-            "categories": "Phones & Tablets/Mobile Phones/Smartphones/Android Phones",
-            "prices": {
-                "rawPrice": "199999.00",
-                "price": "₦ 199,999",
-                "priceEuro": "406.34",
-                "taxEuro": "28.35",
-                "oldPrice": "₦ 250,000",
-                "oldPriceEuro": "507.93",
-                "discount": "20%"
-            },
-            "rating": {
-                "average": 0,
-                "totalRatings": 0
-            },
-            "image": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/39/703789/1.jpg?9831",
-            "url": "/xiaomi-redmi-note-11-6.5-128gb-rom4gb-ram-android-11-50mp8mp2mpmp-13mp-selfie-dual-sim-4g-lte-5000mah-blue-98730793.html",
-            "isBuyable": true,
-            "simples": [
-                {
-                    "sku": "XI363MP0NMZN1NAFAMZ-135411628",
-                    "loginUrl": "/customer/account/login/?tkWl=XI363MP0NMZN1NAFAMZ-135411628&return=%2Fcatalog%2F%3Fq%3Dredmi%2Bnote%2B11",
-                    "isBuyable": true,
-                    "name": "BLUE",
-                    "prices": {
-                        "rawPrice": "199999.00",
-                        "price": "₦ 199,999",
-                        "priceEuro": "406.34",
-                        "taxEuro": "28.35",
-                        "oldPrice": "₦ 250,000",
-                        "oldPriceEuro": "507.93",
-                        "discount": "20%"
-                    }
-                }
-            ],
-            "selectedVariation": "XI363MP0NMZN1NAFAMZ-135411628",
             "variationSelection": true
         }
     ],
@@ -2195,4 +1909,3 @@
         }
     }
 }
- 
