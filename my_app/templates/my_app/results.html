@@ -1,0 +1,31 @@
+{% extends 'my_app/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block header %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 bg-dark">
+            <h1>My Result page</h1>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-9">
+            {% for item in jumia_data %}
+                <p>
+                    {{ item['product_name'] }}
+                </p>
+            {% endfor %}
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock header %}

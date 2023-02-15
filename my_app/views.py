@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import SearchForm
 from bs4 import BeautifulSoup
 import requests
@@ -9,55 +9,66 @@ import json
 
 def getHTMLkonga(link):
     response = requests.get(link)
-    print("scraping HTML......")
+    # print("scraping Konga HTML......")
     # print(response.text.pre)
     soup = BeautifulSoup(response.text, "html.parser" )
     # print(doc.prettify())
     # print(response.text)
-    print("print out...")
+    # print("print out...")
     content = soup.find('script', {"id": "__NEXT_DATA__"}).string
     dictionary = json.loads(content) 
     check = dictionary["props"]["initialProps"]["pageProps"]["resultsState"]["content"]["hits"]
-    for item in check:
-        print("===============================================================")
-        print(item['name'])
-        print(item['price'])
-        print(item['product_type'])
-        print(item['url_key'])
-        print(item['price'])
-        print(item['description'])
-        print(item['rating'])
-        print(item['image_thumbnail_path'])
-        print("===============================================================")
-        print("      ")
+    data_dict = {}
+    check = check[:4]
+    for index, item  in enumerate(check):
+        sub_dict = {}
+        sub_dict["product_name"] = item['name']
+        sub_dict["product_price"] = item['price']
+        sub_dict["image_url"] = "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product" + item['image_thumbnail_path']
+        sub_dict["product_url"] = "https://www.konga.com/product/" + item['url_key']
+        sub_dict["rating"] = item['rating']
+        data_dict[index] = sub_dict
+    # print(data_dict)
+    # for i in data_dict:
+    #     print("=====================")
+    #     print(data_dict[i])
+    #     print("=====================")
+    return data_dict
     # print(check)
-    return soup.find('script', {"id": "__NEXT_DATA__"}).finc
+    # return soup.find('script', {"id": "__NEXT_DATA__"}).finc
     # return soup.prettify("utf-8")
 
 def getHTMLjumia(link):
     response = requests.get(link)
     soup = BeautifulSoup(response.text, "html.parser")
     # print("printing all script tags")
-    article_tags = soup.find_all('article', {"class": "c-prd"})[:10]
+    article_tags = soup.find_all('article', {"class": "c-prd"})[:4]
     # print(scripts_tags[3].string)
-    for item in article_tags:
-        print("--------------------------------------------")
-        url = "https://www.jumia.com.ng" + item.findChild("a", {"class": "core"}).get("href")
+    data_dict = {}
+    for index, item in enumerate(article_tags):
+        sub_dict = {}
+        # print("--------------------------------------------")
+        product_url = "https://www.jumia.com.ng" + item.findChild("a", {"class": "core"}).get("href")
         image_url = item.findChild("div", {"class", "img-c"}).findChild("img", {"class": "img"}).get("data-src") 
         product_name = item.findChild("div", {"class", "info"}).findChild("h3", {"class": "name"}).text 
         product_price = item.findChild("div", {"class", "info"}).findChild("div", {"class": "prc"}).text
         # old_price = item.findChild("div", {"class", "info"}).findChild("div", {"class": "s-prc-w"}).findChild("div", {"class": "old"}).text
 
-        print(url)
-        print(image_url)
-        print(product_name)
-        print(product_price)
-        print("--------------------------------------------")
-    print(len(article_tags))
+
+        sub_dict['product_name'] = product_name 
+        sub_dict['product_price'] = product_price 
+        sub_dict['image_url'] = image_url 
+        sub_dict['product_url'] = product_url 
+        data_dict[index] = sub_dict
+    for i in data_dict:
+        print("=====================")
+        print(data_dict[i])
+        print("=====================")
+    return data_dict
     # print(soup.text)
     # return soup.text
-    return soup.prettify("utf-8")
-
+    # return soup.prettify("utf-8")
+    return data_dict
 
 # getHTML("https://www.jumia.com.ng/catalog/?q=tecno+camon+19")
 # jumia_search = "https://www.jumia.com.ng/catalog/?q=tecno+camon+19"
@@ -68,19 +79,12 @@ def home(request):
         form = SearchForm(request.POST)
         if form.is_valid():
             data = form.cleaned_data.get('search_field')
-            jumia_search_string = data.replace(' ', '+')
-            konga_search_string = data.replace(' ', '%20')
-            jumia_url = "https://www.jumia.com.ng/catalog/?q="
-            konga_url = "https://www.konga.com/search?search="
-            jumia_purl = jumia_url + jumia_search_string
-            konga_purl = konga_url + konga_search_string
-            # print(rdata)
-            # print(data)
-            j = getHTMLjumia(jumia_purl)
-            # k = getHTMLkonga(konga_purl)
-            print("form submitted")
-            getHTMLjumia(jumia_purl)
-            # print(k)
+            return redirect('results', key= data)
+            
+            
+            
+            # return redirect('')
+            
             # with open('konga.html', 'wb') as f:
             #     f.write(k)
             #     f.close()
@@ -93,4 +97,18 @@ def home(request):
         form = SearchForm()        
     return render(request, 'my_app/home.html', {'form': form})
 
-
+def results(request, key):
+    data  = key
+    jumia_search_string = data.replace(' ', '+')
+    konga_search_string = data.replace(' ', '%20')
+    jumia_url = "https://www.jumia.com.ng/catalog/?q="
+    konga_url = "https://www.konga.com/search?search="
+    jumia_purl = jumia_url + jumia_search_string 
+    konga_purl = konga_url + konga_search_string
+    jumia_data = getHTMLjumia(jumia_purl)
+    konga_data = getHTMLkonga(konga_purl)
+    context = {'jumia_data': jumia_data, 'konga_data': konga_data}
+    print(key)
+    print(jumia_data)
+    print(konga_data)
+    return render(request, 'my_app/results.html', context)
