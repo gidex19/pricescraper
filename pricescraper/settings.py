@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+AUTH_USER_MODEL = 'my_app.Customuser'
 ROOT_URLCONF = 'pricescraper.urls'
 
 TEMPLATES = [
