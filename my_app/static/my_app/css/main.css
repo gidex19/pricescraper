@@ -194,3 +194,11 @@ body{
   
     line-height: 14px;
   }
+
+  p{
+    font-size: 12px !important;
+  }
+
+  .small-p{
+    font-size: 11px;
+  }

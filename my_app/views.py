@@ -5,6 +5,7 @@ import requests
 import re
 import json
 
+
 # Create your views here.
 
 def getHTMLkonga(link):
@@ -59,16 +60,17 @@ def getHTMLjumia(link):
         sub_dict['product_price'] = product_price 
         sub_dict['image_url'] = image_url 
         sub_dict['product_url'] = product_url 
+        sub_dict['tester'] = "result" 
         data_dict[index] = sub_dict
-    for i in data_dict:
-        print("=====================")
-        print(data_dict[i])
-        print("=====================")
+    # for i in data_dict:
+    #     print("=====================")
+    #     print(data_dict[i])
+    #     print("=====================")
     return data_dict
     # print(soup.text)
     # return soup.text
     # return soup.prettify("utf-8")
-    return data_dict
+    # return data_dict
 
 # getHTML("https://www.jumia.com.ng/catalog/?q=tecno+camon+19")
 # jumia_search = "https://www.jumia.com.ng/catalog/?q=tecno+camon+19"
@@ -108,7 +110,23 @@ def results(request, key):
     jumia_data = getHTMLjumia(jumia_purl)
     konga_data = getHTMLkonga(konga_purl)
     context = {'jumia_data': jumia_data, 'konga_data': konga_data}
-    print(key)
-    print(jumia_data)
-    print(konga_data)
+    # print(key)
+    # print(jumia_data)
+    # print(konga_data)
+    # for item in jumia_data:
+    #     print(konga_data[item]['product_name'])
+    # #     print("----------------------------------")
+    # for key, value in jumia_data.items():
+    #     # print(key)
+    #     # print(value.tester)
+    #     print('-------------------------------')
+    #     # for key, value in value.items():
+    #     #     print(key)
+    #     #     print(value)
+    #     #     print('-------------------------------')
     return render(request, 'my_app/results.html', context)
+
+
+
+
+
