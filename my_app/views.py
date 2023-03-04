@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
-from .forms import SearchForm
+from .forms import SearchForm, LoginForm, SignUpForm
+from .models import Customuser
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 from bs4 import BeautifulSoup
+from django.contrib.auth.hashers import *
 import requests
 import re
 import json
@@ -126,7 +130,71 @@ def results(request, key):
     #     #     print('-------------------------------')
     return render(request, 'my_app/results.html', context)
 
+#login function for the login page
+def loginpage(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data.get('email_address')
+            password = form.cleaned_data.get('password')
+            email = email.lower()
+            if Customuser.objects.filter(email = email).exists():
+                custom_user = authenticate(request, username = email , password=password)
+                if custom_user is not None:
+                    # messages.success(request, 'Login Succesful')
+                    login(request, custom_user)
+                    print("login suuccessful")
+                    messages.success(request, f'Hello {custom_user.full_name} \n, You have been logged in successfully...would you love to fill in your interests?')
+                    #print('user has been logged in')
+                    
+                    
+                    return redirect('homepage')
+                elif custom_user is None:
+                    #print('message section')
+                    messages.warning(request, 'Incorrect email address or password')
+            else:
+                messages.warning(request, 'Incorrect email address or password')
+                return redirect('login_page')
+    else:
+        form = LoginForm()
+    return render(request, 'my_app/login.html', {'form': form})
 
+#signup function for the signup page
+def signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            full_name = form.cleaned_data.get('full_name')
+            email = form.cleaned_data.get('email')
+            phone_number = form.cleaned_data.get('phone_number')
+            password1 = form.cleaned_data.get('password1')
+            password2 = form.cleaned_data.get('password2')
+            def verify_doesnt_exists():
+                if Customuser.objects.filter(email = email).exists():
+                    messages.warning(request, 'This email has been used already')
+                    print("email address already exists")
+                    return False
+                elif Customuser.objects.filter(phone_number = phone_number).exists():
+                    messages.warning(request, 'This phone number has already been used before')
+                    print("phone_number already exists")
+                    return False
+                else:
+                    return True
+            if password1 == password2:
+                if verify_doesnt_exists():
+                    hashed = make_password(password1, salt = None, hasher='default')
+                    
+                    Customuser.objects.create(username=email, full_name=full_name, email=email, phone_number=phone_number, password = hashed)
+                    custom_user = authenticate(username=email, password=password1,)
+                    current_user = Customuser.objects.filter(email=email).first()
+                    current_instance = Customuser.objects.filter(email=email)
+                    messages.success(request, 'Account Successfully Created')
+                    return redirect('login_page')
+            else:
+                messages.warning(request, 'Passwords Don\'t Match')
+    else:
+        form = SignUpForm()
+    return render(request, 'my_app/signup.html', {'form': form})
 
 
 
