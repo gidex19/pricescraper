@@ -1,10 +1,12 @@
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from .forms import SearchForm, LoginForm, SignUpForm
-from .models import Customuser
+from .models import Customuser, SavedProduct
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from bs4 import BeautifulSoup
 from django.contrib.auth.hashers import *
+from django.contrib.auth.decorators import login_required
 import requests
 import re
 import json
@@ -27,6 +29,7 @@ def getHTMLkonga(link):
     check = check[:4]
     for index, item  in enumerate(check):
         sub_dict = {}
+        sub_dict["product_id"] = item['sku']
         sub_dict["product_name"] = item['name']
         sub_dict["product_price"] = item['price']
         sub_dict["image_url"] = "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product" + item['image_thumbnail_path']
@@ -54,17 +57,17 @@ def getHTMLjumia(link):
         sub_dict = {}
         # print("--------------------------------------------")
         product_url = "https://www.jumia.com.ng" + item.findChild("a", {"class": "core"}).get("href")
+        product_id = item.findChild("a", {"class": "core"}).get("data-id")
         image_url = item.findChild("div", {"class", "img-c"}).findChild("img", {"class": "img"}).get("data-src") 
         product_name = item.findChild("div", {"class", "info"}).findChild("h3", {"class": "name"}).text 
         product_price = item.findChild("div", {"class", "info"}).findChild("div", {"class": "prc"}).text
         # old_price = item.findChild("div", {"class", "info"}).findChild("div", {"class": "s-prc-w"}).findChild("div", {"class": "old"}).text
-
-
+        # print(product_id)
+        sub_dict["product_id"] = product_id
         sub_dict['product_name'] = product_name 
         sub_dict['product_price'] = product_price 
         sub_dict['image_url'] = image_url 
-        sub_dict['product_url'] = product_url 
-        sub_dict['tester'] = "result" 
+        sub_dict['product_url'] = product_url  
         data_dict[index] = sub_dict
     # for i in data_dict:
     #     print("=====================")
@@ -114,6 +117,29 @@ def results(request, key):
     jumia_data = getHTMLjumia(jumia_purl)
     konga_data = getHTMLkonga(konga_purl)
     context = {'jumia_data': jumia_data, 'konga_data': konga_data}
+    product_id = request.GET.get('product_id')
+    product_name = request.GET.get('product_name')
+    product_url = request.GET.get('product_url')
+    product_price = request.GET.get('product_price')
+    product_image_url = request.GET.get('product_image_url')
+    # text_url = request.GET.get('product_url')
+    if request.is_ajax():
+        if request.user.is_authenticated:
+            user = request.user
+            print("-----------------------------------")
+            print(product_id)
+            print(product_name)
+            print(product_url)
+            print(product_price)
+            print(product_image_url)
+            print("-----------------------------------")
+            SavedProduct.objects.create(product_id = product_id, name = product_name,
+                                         price = product_price, image_url = product_image_url,
+                                         product_url = product_url, owner = user, vendor='Jumia') 
+            print("saved object created successfully")
+            return JsonResponse({'status':'saved completely'})
+    
+
     # print(key)
     # print(jumia_data)
     # print(konga_data)
@@ -130,6 +156,28 @@ def results(request, key):
     #     #     print('-------------------------------')
     return render(request, 'my_app/results.html', context)
 
+@login_required
+def cartpage(request):
+    user = request.user
+    carts = SavedProduct.objects.filter(owner = user)
+    # for item in carts:
+    #     print(item.name)
+    # print(carts)
+    # print(len(carts))
+    return render(request, 'my_app/cart_list.html', {'carts': carts})
+
+@login_required
+def delete_cart(request, id):
+    user = request.user
+    if SavedProduct.objects.filter(owner=user, id = id).exists():
+        SavedProduct.objects.filter(owner=user, id = id).delete()
+        messages.success(request, 'Product deleted from cart')
+    else:
+        messages.success(request, 'Product does not exist')    
+        return redirect('cartpage')
+    return redirect('cartpage')
+
+
 #login function for the login page
 def loginpage(request):
     if request.method == 'POST':
@@ -144,7 +192,7 @@ def loginpage(request):
                     # messages.success(request, 'Login Succesful')
                     login(request, custom_user)
                     print("login suuccessful")
-                    messages.success(request, f'Hello {custom_user.full_name} \n, You have been logged in successfully...would you love to fill in your interests?')
+                    # messages.success(request, f'Hello {custom_user.full_name} \n, You have been logged in successfully...would you love to fill in your interests?')
                     #print('user has been logged in')
                     
                     
@@ -158,6 +206,12 @@ def loginpage(request):
     else:
         form = LoginForm()
     return render(request, 'my_app/login.html', {'form': form})
+
+
+def logout_view(request):
+    logout(request)
+    messages.warning(request, 'Logout successfully')
+    return redirect('login_page')
 
 #signup function for the signup page
 def signup(request):

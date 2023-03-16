@@ -16,48 +16,97 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-9">
+        <div class="col-9 m-auto">
             {% for key, value in jumia_data.items %}
 
-            <div class="col-10 m-1" style="border-radius: 15px; background-color: azure;">
+            <div id="{{value.product_id}}-div" class="col-10 mb-4 mt-1" style=" border-left: 2px solid greenyellow; ">
                 <div class="row ">
 
-
-                    <div class="col-4">
-                        <img src={{value.image_url}} style="width: 80%; height: 80%;">
+                    <div class="col-3 ">
+                        <img id="{{value.product_id}}-image_url" src={{value.image_url}} style="width: 100%; height: 100%;">
                     </div>
-                    <div class="col-6 m-2">
-                        <p class="small-p" style="font-size: 10px;">{{ value.product_name }}</p>
-                        <p>{{value.product_price}}</p>
-                        <a class="btn btn-sm btn-outline-info" href={{value.product_url}}>Buy Now</a>
-                        <a href="#" class="search-icon"><i class="fa-regular fa-heart"></i></a>
+                    <div class="col-7 m-2">
+                        <p id="{{value.product_id}}-name" class="small-p product_name" style="font-size: 10px; font-weight: 400;">{{ value.product_name }}</p>
+                        <p id="{{value.product_id}}-price" >{{value.product_price}}</p>
+                        <a id="{{value.product_id}}-url" class="btn btn-sm btn-outline-info" href={{value.product_url}}>Buy Now</a>
+                        <a id="{{value.product_id}}-url" class=" save-btn btn btn-sm btn-info" href="#" id={{value.product_id}}-btn product-id="{{value.product_id}}">
+                            <i class="fa fa-heart"></i> </a>
+                        <!-- <a href="#" class="save-btn search-icon btn btn-sm btn-outline-info" product-id="{{value.product_id}}" id={{value.product_id}}-btn ><i class="fa-regular fa-heart"></i>hyhy</a> -->
                     </div>
                 </div>
             </div>
-            <p>
-
-            </p>
+            
             {% endfor %}
-            <h2>konga data</h2>
-            {% for key, value in konga_data.items %}
-
-            <div class="col-6">
-                <div>
-                    <img src={{value.image_url}}>
-                </div>
-                <p>{{ value.product_name }}</p>
-                <p>N{{value.product_price}}</p>
-                <a style="font-size: 12px !important;" class="btn btn-sm btn-outline-info"
-                    href={{value.product_url}}>Buy Now</a>
-                <a href="#" class="search-icon"> <i class="fa fa-search"></i> </a>
-            </div>
-            <p>
-
-            </p>
-            {% endfor %}
+            
         </div>
 
     </div>
 </div>
 
 {% endblock header %}
+
+{% block js %}
+
+<script>
+$(document).ready(function(){
+console.log("js working");
+
+// function ajaxfunc(name, price, url, image_url){
+//         $.ajax({
+//         url: '',
+//         type: 'get',
+//         data: {
+//             product_name: "Product Name"
+//             product_price: price,
+//             product_url: url,
+//             product_image_url: image_url
+//         },
+//         success: function(response){
+//             console.log(response)
+            
+//             }
+//         })
+//     }
+
+var save_btns = document.querySelectorAll(".save-btn")
+save_btns.forEach((btn)=>{
+    let p_id;
+    btn.addEventListener('click', function(){
+        console.log("button clicked");
+        p_id = btn.getAttribute('product-id');
+        
+        var p_name = document.getElementById(p_id+'-name').innerText;
+        var p_price = document.getElementById(p_id+'-price').innerText;
+        var p_url = $("#"+p_id+"-url").attr("href"); 
+        var p_image_url =  $("#"+p_id+"-image_url").attr("src");
+        $.ajax({
+        url: '',
+        type: 'get',
+        data: {
+            product_id: String(p_id),
+            product_name: String(p_name),
+            product_price: String(p_price),
+            product_url: String(p_url),
+            product_image_url: String(p_image_url)
+        },
+        success: function(response){
+            console.log(response)
+            }
+        })
+        // ajaxfunc(name= p_name, price = p_price, url = p_url, image_url = p_image_url )
+        
+        console.log(p_name);
+        console.log(p_price);
+        console.log(p_url);
+        console.log(p_image_url);
+        console.log("ajax function completed");
+
+
+    })
+})
+
+});
+</script>
+
+
+{% endblock js %}

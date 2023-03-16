@@ -1,0 +1,56 @@
+{% extends 'my_app/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block header %}
+<div class="container">
+    <div class="row">
+        <div class="col-8 bg-dark">
+            <h1>My Cart page</h1>
+
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock header %}
+
+
+{% block main-content %}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-9 m-auto">
+            <h2>Cart list Page</h2>
+            {% for item in carts %}
+
+            <div id="{{item.product_id}}-div" class="col-10 mb-4 mt-1" style=" border-left: 2px solid greenyellow; ">
+                <div class="row ">
+
+                    <div class="col-3 ">
+                        <img id="{{item.product_id}}-image_url" src={{item.image_url}} style="width: 100%; height: 100%;">
+                    </div>
+                    <div class="col-7 m-2">
+                        <p id="{{item.product_id}}-name" class="small-p product_name" style="font-size: 10px; font-weight: 400;">{{ item.name }}</p>
+                        <p id="{{item.product_id}}-price" >{{item.price}}</p>
+                        <a id="{{item.product_id}}-url" class="btn btn-sm btn-outline-info" href={{item.product_url}}>Buy Now</a>
+                        <a id="{{item.product_id}}-url" class=" save-btn btn btn-sm btn-info" href="#" id={{item.product_id}}-btn product-id="{{item.product_id}}">
+                            <i class="fa fa-heart"></i> </a>
+                        <a class="btn btn-sm btn-outline-danger" href="">Delete</a>    
+                        <!-- <a href="#" class="save-btn search-icon btn btn-sm btn-outline-info" product-id="{{value.product_id}}" id={{value.product_id}}-btn ><i class="fa-regular fa-heart"></i>hyhy</a> -->
+                    </div>
+                </div>
+            </div>
+            
+            {% endfor %}
+            
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock main-content %}
