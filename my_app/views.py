@@ -26,7 +26,7 @@ def getHTMLkonga(link):
     dictionary = json.loads(content) 
     check = dictionary["props"]["initialProps"]["pageProps"]["resultsState"]["content"]["hits"]
     data_dict = {}
-    check = check[:4]
+    check = check[:2]
     for index, item  in enumerate(check):
         sub_dict = {}
         sub_dict["product_id"] = item['sku']
@@ -35,6 +35,7 @@ def getHTMLkonga(link):
         sub_dict["image_url"] = "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product" + item['image_thumbnail_path']
         sub_dict["product_url"] = "https://www.konga.com/product/" + item['url_key']
         sub_dict["rating"] = item['rating']
+        sub_dict['product_store'] = 'Konga'  
         data_dict[index] = sub_dict
     # print(data_dict)
     # for i in data_dict:
@@ -50,7 +51,7 @@ def getHTMLjumia(link):
     response = requests.get(link)
     soup = BeautifulSoup(response.text, "html.parser")
     # print("printing all script tags")
-    article_tags = soup.find_all('article', {"class": "c-prd"})[:4]
+    article_tags = soup.find_all('article', {"class": "c-prd"})[:2]
     # print(scripts_tags[3].string)
     data_dict = {}
     for index, item in enumerate(article_tags):
@@ -63,25 +64,73 @@ def getHTMLjumia(link):
         product_price = item.findChild("div", {"class", "info"}).findChild("div", {"class": "prc"}).text
         # old_price = item.findChild("div", {"class", "info"}).findChild("div", {"class": "s-prc-w"}).findChild("div", {"class": "old"}).text
         # print(product_id)
-        sub_dict["product_id"] = product_id
+        sub_dict["product_id"] = product_id 
         sub_dict['product_name'] = product_name 
         sub_dict['product_price'] = product_price 
         sub_dict['image_url'] = image_url 
         sub_dict['product_url'] = product_url  
+        sub_dict['product_store'] = 'Jumia'  
         data_dict[index] = sub_dict
-    # for i in data_dict:
-    #     print("=====================")
-    #     print(data_dict[i])
-    #     print("=====================")
+    
     return data_dict
-    # print(soup.text)
-    # return soup.text
-    # return soup.prettify("utf-8")
-    # return data_dict
+    
+def getHTMLkara(link):
+    response = requests.get(link)
+    soup = BeautifulSoup(response.text, "html.parser")
+    li_tags = soup.find_all('li', {"class": "item product product-item"})[:2]
+    data_dict = {}
+    for index, item in enumerate(li_tags):
+        sub_dict = {}
+        product_id = item.findChild("div", {"class", "price-final_price"}).get("data-product-id").strip()
+        product_name = item.findChild("a", {"class", "product-item-link"}).text[1:]
+        product_url = item.findChild("a", {"class", "product-item-link"}).get("href")
+        image_url = item.findChild("img", {"class", "product-image-photo"}).get("data-original")
+        product_price = item.findChild("span", {"class", "price-wrapper"}).text
+        product_price = product_price[4:-3]
 
-# getHTML("https://www.jumia.com.ng/catalog/?q=tecno+camon+19")
-# jumia_search = "https://www.jumia.com.ng/catalog/?q=tecno+camon+19"
-# https://www.konga.com/search?search=redmi%20note%2010
+
+        sub_dict["product_id"] = product_id 
+        sub_dict['product_name'] = product_name 
+        sub_dict['product_price'] = product_price 
+        sub_dict['image_url'] = image_url 
+        sub_dict['product_url'] = product_url  
+        sub_dict['product_store'] = 'Kara'  
+        data_dict[index] = sub_dict
+
+    return data_dict
+        # print("--------------------------------------------------------------")
+        # print(product_id)
+        # print(product_price)
+        # print(product_url)
+        # print(image_url)
+        # print(product_name)
+        # print("--------------------------------------------------------------")
+
+def getHTMLkiaglo(link):
+    response = requests.get(link)
+    soup = BeautifulSoup(response.text, "html.parser")
+    li_tags = soup.find_all('li', {"class": "item product product-item"})[:2]
+    data_dict = {}
+    for index, item in enumerate(li_tags):
+        sub_dict = {}
+        product_id = item.findChild("div", {"class", "price-final_price"}).get("data-product-id").strip()
+        product_name = item.findChild("a", {"class", "product-item-link"}).text[1:]
+        product_url = item.findChild("a", {"class", "product-item-link"}).get("href")
+        image_url = item.findChild("img", {"class", "product-image-photo"}).get("data-original")
+        product_price = item.findChild("span", {"class", "price-wrapper"}).text
+        product_price = product_price[4:-3]
+
+
+        sub_dict["product_id"] = product_id 
+        sub_dict['product_name'] = product_name 
+        sub_dict['product_price'] = product_price 
+        sub_dict['image_url'] = image_url 
+        sub_dict['product_url'] = product_url  
+        sub_dict['product_store'] = 'Kara'  
+        data_dict[index] = sub_dict
+
+    return data_dict
+
 
 def home(request):
     if request.method == 'POST':
@@ -110,13 +159,19 @@ def results(request, key):
     data  = key
     jumia_search_string = data.replace(' ', '+')
     konga_search_string = data.replace(' ', '%20')
+    kara_search_string = data.replace(' ', '+')
     jumia_url = "https://www.jumia.com.ng/catalog/?q="
     konga_url = "https://www.konga.com/search?search="
+    kara_url = "https://kara.com.ng/catalogsearch/result/?q="
     jumia_purl = jumia_url + jumia_search_string 
     konga_purl = konga_url + konga_search_string
+    kara_purl = kara_url + kara_search_string
+
     jumia_data = getHTMLjumia(jumia_purl)
     konga_data = getHTMLkonga(konga_purl)
-    context = {'jumia_data': jumia_data, 'konga_data': konga_data}
+    kara_data = getHTMLkara(kara_purl)
+
+    context = {'jumia_data': jumia_data, 'konga_data': konga_data, 'kara_data': kara_data}
     product_id = request.GET.get('product_id')
     product_name = request.GET.get('product_name')
     product_url = request.GET.get('product_url')
@@ -137,6 +192,7 @@ def results(request, key):
                                          price = product_price, image_url = product_image_url,
                                          product_url = product_url, owner = user, vendor='Jumia') 
             print("saved object created successfully")
+            messages.success(request, "Product Saved !!!")
             return JsonResponse({'status':'saved completely'})
     
 
@@ -172,6 +228,8 @@ def delete_cart(request, id):
     if SavedProduct.objects.filter(owner=user, id = id).exists():
         SavedProduct.objects.filter(owner=user, id = id).delete()
         messages.success(request, 'Product deleted from cart')
+        print("item successfully deleted")
+        return redirect('cartpage')
     else:
         messages.success(request, 'Product does not exist')    
         return redirect('cartpage')
