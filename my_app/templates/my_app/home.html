@@ -10,8 +10,12 @@
         <h1 class="header-text" style="font-weight: bolder; color: white; z-index: 20;"> Compare product prices</h1>
         <p class=" text-white mb-4">compare product over multiple ecommerce stores for optimal shopping decisons</p>
         <div class="mt-4 col-12">
-            <a href="#" class="button-large-dark ">Get Started </a>
-            <a href="#" class="button-large-transparent ml-1">Sermons</a>
+            <a href="#searchform" class="button-large-dark ">Search </a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'signup_page' %}" class="button-large-transparent ml-1">Sign Up</a>
+            {% else %}
+            <a href="{% url 'login_page' %}" class="button-large-transparent ml-1">Login</a>
+            {% endif %}
         </div>
         <!-- <p class="mt-4 white-text">Keee<i style="color: white;" class="fas fa-long-arrow-alt-right"></i></p> -->
     </section>
@@ -21,7 +25,7 @@
 
 {% block main-content %}
 
-<div class="container bg-dark" style="height: 10vh; ">
+<div class="container" style="height: 10vh; ">
     <div class="row ">
         <div class="col-11 ">
 
@@ -35,7 +39,7 @@
 
 <div class="container mt-4 mb-4">
     <div class="row d-flex justify-content-center">
-        <div class="col-8 bg-dark m-auto">
+        <div class="col-8 m-auto">
             <!-- <form method="POST" class="p-4">
                 <div>
                     
@@ -52,13 +56,13 @@
 </div>
 
 
-<div class="container  mt-4 mb-4">
+<div class="container  mt-4 mb-4" id="searchform">
     <div class="row d-flex justify-content-center">
-        <div class="col-md-9">
-            <div class="card p-4 mt-3">
+        <div class="col-md-9" >
+            <div class="card p-4 mt-3" >
                 
                 <div class="d-flex justify-content-center px-5">
-                    <div class="col-10 bg-dark m-auto" style="border-radius: 10px;">
+                    <div class="col-10 bg-dark m-auto"  style="border-radius: 10px;">
                         <form method="POST" class="p-4 ">
                             <div>
                                 

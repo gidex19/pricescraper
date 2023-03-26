@@ -48,7 +48,17 @@ body{
     border: 2px solid black;
     font-size: 12px;
 }
-
+.anchor-block{
+    display: block;
+    color: white;
+    /* font-weight: bold; */
+    font-size: 13px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.white-text{
+    color: white;
+}
 .button-small-dark{
     width: 140px;
     height: 50px;

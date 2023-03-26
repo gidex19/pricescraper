@@ -45,8 +45,8 @@
                     <div class="collapse navbar-collapse " id="navbarCollapse">
         
                         <div class="navbar-nav ">
-                            <a href="#" class="nav-item nav-link active bold-anchor mr-2">HOME</a>
-                            <a href="#" class="nav-item nav-link bold-anchor mr-2">SAVED-PRODUCTS</a>
+                            <a href="{% url 'homepage' %}" class="nav-item nav-link active bold-anchor mr-2">HOME</a>
+                            <a href="{% url 'cartpage' %}" class="nav-item nav-link bold-anchor mr-2">SAVED-PRODUCTS</a>
                             <a href="#" class="nav-item nav-link bold-anchor mr-2 ">CATEGORIES</a>
                             {% if user.is_authenticated%}
                             <a href="{% url 'signup_page' %}" class=" nav-item nav-link bold-anchor mr-2 ">SIGNUP</a>
@@ -76,56 +76,40 @@
     <footer>
         <div class="container-fluid" style="background-color: #2a1947;">
             <div class="row m-auto" >
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mx-auto" >
-                    <div class="" style="padding: 40px 2px;">
-                        <p class="footer-header-p green-text" style=" font-size: 14px; font-weight: bold;">ABOUT THE CHURCH</p>
-                        <p class="white-text">
-                            We are a people of Intimacy, the Koinonia that keeps us in the Will of God, who's our Father and Values Relationship above Service.
-                        </p>
-                    </div>
-    
+                <div class="col-2">
+
                 </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mx-auto" >
+                
+                <div class="col-4 mx-auto" >
                     <div class="m-auto" style="padding: 40px 2px;">
-                        <p class="footer-header-p green-text" style=" font-size: 14px; font-weight: bold;">CONNECT TO US</p>
-                        <a class="mr-3" style="color: white;" target="_blank" href="#" class="text-center m-auto "><i class="fas fa-envelope fa-2x"></i></a>
-                        <a class="mr-3" style="color: white;" target="_blank" href="#" class="text-center m-auto "><i class="fab fa-instagram fa-2x"></i></a>
-                        <a class="mr-3" style="color: white;" target="_blank" href="#" class="text-center m-auto "><i class="fab fa-facebook fa-2x"></i></a>
-                        <a class="mr-3" style="color: white;" target="_blank" href="#" class="text-center m-auto "><i class="fab fa-tiktok fa-2x"></i></a>
-                        <p class="white-text mt-3">
-                            Intimate Vessels' Church Conference Centre
-                            27 Oby Okoli Avenue, Awka
-                            Anambra, Nigeria
-                        </p>
-                        <p class="white-text">
-                            <span><i class="fas fa-phone-alt"></i></span> +234 8124 482 256
-                        </p>
-                        
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mx-auto" >
-                    <div class="m-auto" style="padding: 40px 2px;">
-                        <p class="footer-header-p green-text" style="font-size: 14px; font-weight: bold;">QUICK LINKS</p>
+                        <p class=" white-text" style="font-size: 14px; font-weight: bold;">QUICK LINKS</p>
                         <a class="mr-3 anchor-block" style="color: white;"  href="#" class="text-center m-auto ">HOME</a>
-                        <a class="mr-3 anchor-block" style="color: white;"  href="#" class="text-center m-auto ">MINISTRIES</a>
-                        <a class="mr-3 anchor-block" style="color: white;" href="#" class="text-center m-auto ">DEVOTIONAL</a>
-                        <a class="mr-3 anchor-block" style="color: white;" href="#" class="text-center m-auto ">BRANCHES</a>
-                        <a class="mr-3 anchor-block" style="color: white;" href="#" class="text-center m-auto ">ABOUT</a>
+                        <a class="mr-3 anchor-block" style="color: white;"  href="{% url 'cartpage' %}" class="text-center m-auto ">SAVED PRODUCTS</a>
+                        <a class="mr-3 anchor-block" style="color: white;" href="#" class="text-center m-auto ">CATEGORIES</a>
+                        {% if user.is_authenticated %}
+                        <a class="mr-3 anchor-block" style="color: white;" href="{% url 'signup_page' %}" class="text-center m-auto ">SIGNUP</a>
+                        <a class="mr-3 anchor-block" style="color: white;" href="{% url 'logout_page' %}" class="text-center m-auto ">LOGOUT</a>
+                        {% else %}
+                        <a class="mr-3 anchor-block" style="color: white;" href="{% url 'login_page' %}" class="text-center m-auto ">LOGOUT</a>
+                        {% endif %}
                         
                     
                     </div>
     
     
                 </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mx-auto" >
+                <div class="col-4 mx-auto" >
                     <div class="m-auto" style="padding: 40px 2px;">
-                        <p class="footer-header-p green-text" style= "font-size: 14px; font-weight: bold;">MISSION</p>
+                        <p class=" white-text" style= "font-size: 14px; font-weight: bold;">ABOUT</p>
                         <p class="white-text">
-                            To raise believers into a place of intimacy and yieldedness with the holyspirit. 
-                            Where believers will know God for themselves 
+A Web scraper tool that help its users compare products across multiple e-commerce stores seamlessly. The Application is built for both vendors and online shoppers.
                         </p> 
                     </div>
     
+                </div>
+
+                <div class="col-2">
+
                 </div>
     
             </div>
