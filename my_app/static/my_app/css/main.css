@@ -186,7 +186,10 @@ body{
       cursor: pointer;
       transition: all 2s;
   }
-  
+  .light-bg{
+    background-color: rgba(190, 178, 178, 0.24);
+    margin-bottom: 60px !important;
+  }
   
   .card-inner:hover{
   
