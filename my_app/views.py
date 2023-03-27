@@ -131,29 +131,79 @@ def getHTMLkiaglo(link):
 
     return data_dict
 
+slide_data = {
+    1:{
+    'name': 'Men Athletic Sneaker Elastic Running Casual Shoes',
+    'price': 'N3,800',
+    'image_url' : 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/14/160244/1.jpg?0532', 
+    'vendor': 'Jumia',
+    },
+    2:{
+    'name': '2 In 1 Men\'s Short Sleeve Shorts Set - White',
+    'price': 'N3,000',
+    'image_url' : 'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/76/202776/1.jpg?0581', 
+    'vendor': 'Jumia',
+    },
+    3:{
+    'name': 'APC Back-UPS 1400VA,230V, AVR,IEC Sockets(BX1400UI)',
+    'price': 'N89,120',
+    'image_url' : 'https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/Q/M/_1622031731.jpg', 
+    'vendor': 'Konga',
+    },
+    4:{
+    'name': 'HP LaserJet M443NDA Multifunction Printer-8AF72A',
+    'price': 'N839,500',
+    'image_url' : 'https://kara.com.ng/media/catalog/product/cache/3d615c6d9644c5c38c7d599cf735420f/h/p/hp_m443nda_printer_2.jpg', 
+    'vendor': 'Kara',
+    },
+
+    5:{
+    'name': 'elepaq roller item',
+    'price': 'N120, 000',
+    'image_url' : 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/14/160244/1.jpg?0532', 
+    'vendor': 'Jumia',
+    },
+    6:{
+    'name': 'elepaq roller item',
+    'price': 'N120, 000',
+    'image_url' : 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/14/160244/1.jpg?0532', 
+    'vendor': 'Jumia',
+    },
+    7:{
+    'name': 'elepaq roller item',
+    'price': 'N120, 000',
+    'image_url' : 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/14/160244/1.jpg?0532', 
+    'vendor': 'Jumia',
+    },
+    8:{
+    'name': 'elepaq roller item',
+    'price': 'N120, 000',
+    'image_url' : 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/14/160244/1.jpg?0532', 
+    'vendor': 'Jumia',
+    },
+    9:{
+    'name': 'elepaq roller item',
+    'price': 'N120, 000',
+    'image_url' : 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/14/160244/1.jpg?0532', 
+    'vendor': 'Jumia',
+    },
+}
+
 
 def home(request):
     if request.method == 'POST':
+        jumia_deals_url = 'https://www.jumia.com.ng'
+        konga_deals_url = 'https://www.konga.com/search?search=ProductOfTheWeek'
+        kara_deals_url = 'https://kara.com.ng'
+        kiaglo_deals_url = ''
         form = SearchForm(request.POST)
         if form.is_valid():
             data = form.cleaned_data.get('search_field')
             return redirect('results', key= data)
             
-            
-            
-            # return redirect('')
-            
-            # with open('konga.html', 'wb') as f:
-            #     f.write(k)
-            #     f.close()
-            #     print("konga file saved")
-            # with open('jumia.html', 'wb') as f:
-            #     f.write(j)
-            #     f.close()    
-            #     print("jumia file saved")
     else:
         form = SearchForm()        
-    return render(request, 'my_app/home.html', {'form': form})
+    return render(request, 'my_app/home.html', {'form': form, 'deals': slide_data})
 
 def results(request, key):
     data  = key

@@ -117,4 +117,97 @@
     </div>
 </div>
 
+
+<div class="container mt-4">
+    <h3 class="bold-text m-auto text-center" style="color: #3c43ad;">Hot Deals</h3>
+    <hr class="m-auto text-center mb-4"
+        style="size: 20%; color: white !important; width: 10%; border: 3px solid #3c43ad; align-self: center;">
+    <div class="row g-0 slide-div single-item" style=" position: relative !important;">
+        
+        {% for index, news in deals.items %}
+
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mt-3 d-flex align-items-stretch ">
+            <div class="card techcard mt-4 mb-4 " style="width: 100%;">
+                <div class="card-img-div" style="overflow: hidden; position: relative;">
+                    <img class="card-img-top zoom" src="{{news.image_url}}" alt="Card image cap">
+
+                </div>
+                <div class="card-body">
+                    <h6 class="card-title post-heading">{{news.name}}</h6>
+                    <h6 class="card-text post-body" style="font-weight: bold;">{{news.price}}</h6>
+                    <p style="color: rgb(98, 0, 128)">Sold by {{news.vendor}}</p>
+                </div>
+                <div style="text-align: center;">
+                    
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+    <div style="margin-top: 10%; text-align: center;" class="m-auto text-center ">
+
+        <!-- <a style="text-align: center;" class="m-auto button outline-button text-center mt-4" href="#">View more...</a> -->
+    </div>
+</div>
+
 {% endblock main-content %}
+
+{% block js %}
+<script>
+
+    $(document).ready(function(){
+    
+        $('.single-item').slick({
+            dots: true,
+            useTransform: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: true,
+            speed: 1000,
+            cssEase: 'ease-out',
+  
+  responsive: [
+  
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+        });
+    
+    });
+
+</script>
+
+
+
+
+
+{% endblock js %}
