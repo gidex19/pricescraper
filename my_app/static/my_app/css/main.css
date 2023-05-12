@@ -108,11 +108,18 @@ body{
 
 
 .card{
-  
-    border: none;
+    /* background-color: var(--postbg) !important; */
+    box-shadow: 0px 8px 15px rgb(94, 90, 90);
+    /* border: purple; */
     background: #eee;
+    border-radius: 15px;
   
   }
+.slick-prev:before, .slick-next:before{
+    color: black !important;
+}
+
+  
   .search {
     width: 100%;
         margin-bottom: auto;
