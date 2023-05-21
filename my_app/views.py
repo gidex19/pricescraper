@@ -363,7 +363,7 @@ def loginpage(request):
                 if custom_user is not None:
                     # messages.success(request, 'Login Succesful')
                     login(request, custom_user)
-                    print("login suuccessful")
+                    print("login successful")
                     # messages.success(request, f'Hello {custom_user.full_name} \n, You have been logged in successfully...would you love to fill in your interests?')
                     #print('user has been logged in')
 
