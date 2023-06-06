@@ -8,47 +8,25 @@ from django.contrib import messages
 from bs4 import BeautifulSoup
 from django.contrib.auth.hashers import *
 from django.contrib.auth.decorators import login_required
+from scrapingbee import ScrapingBeeClient
 import requests
 import re
 import json
+from sslproxies import ProxyManager
+from sslproxies import get_proxy
+from fp.fp import FreeProxy
+
+
+# payload = {'api_key': '647db17e4b69347cd45bbbd7', 'url': 'https://www.jumia.com.ng/catalog/?q=elepaq+generator', 'dynamic':'false'}
+# resp = requests.get('https://api.scrapingdog.com/scrape', params=payload)
+# print("----------------------------------------------")
+# print (resp.text)
+# print("----------------------------------------------")
+
 
 
 # Create your views here.
 
-def getHTMLkonga(link):
-    response = requests.get(link)
-    # print("scraping Konga HTML......")
-    # print(response.text.pre)
-    soup = BeautifulSoup(response.text, "html.parser")
-    # print(doc.prettify())
-    # print(response.text)
-    # print("print out...")
-    content = soup.find('script', {"id": "__NEXT_DATA__"}).string
-    dictionary = json.loads(content)
-    check = dictionary["props"]["initialProps"]["pageProps"]["resultsState"]["content"]["hits"]
-    data_dict = {}
-    check = check[:2]
-    for index, item in enumerate(check):
-        sub_dict = {}
-        sub_dict["product_id"] = item['sku']
-        sub_dict["product_name"] = item['name']
-        sub_dict["product_price"] = item['price']
-        sub_dict["image_url"] = "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product" + \
-            item['image_thumbnail_path']
-        sub_dict["product_url"] = "https://www.konga.com/product/" + \
-            item['url_key']
-        sub_dict["rating"] = item['rating']
-        sub_dict['product_store'] = 'Konga'
-        data_dict[index] = sub_dict
-    # print(data_dict)
-    # for i in data_dict:
-    #     print("=====================")
-    #     print(data_dict[i])
-    #     print("=====================")
-    return data_dict
-    # print(check)
-    # return soup.find('script', {"id": "__NEXT_DATA__"}).finc
-    # return soup.prettify("utf-8")
 
 
 proxy = '103.69.108.78'
@@ -81,21 +59,34 @@ headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
 }
 
+validproxies = ['3.226.79.79:80', '20.241.236.196:3128', '20.241.236.196:3128', '20.241.236.196:3128', '186.121.235.66:8080', '128.14.140.2:11772', '128.14.140.2:11772', '20.241.236.196:3128', '51.159.0.236:3128', '51.159.0.236:3128']
+newproxies = []
+ppr = {"http": "http://3.226.79.79:80", "https": "http://20.241.236.196:3128", "https": "http://186.121.235.66:8080", "https": "http://128.14.140.2:11772"}
+new_ppr = {"http": "http://197.253.40.162:80", "https": "http://105.112.130.186:8080"}
+
+user_agent = random.choice(user_agent_list)
+print(user_agent)
+
+
+def scrapingBeefunc(link):
+    client = ScrapingBeeClient(api_key='PPC6P70AHM5GYZGZ15H1C3S1S1NFY6E7V1E1QUZ1AAOZ2UM1PK8CFPD0RX2HZH2YAMBCKJBL7EMUPNJ5')
+    response = client.get(link)
+    return response.text
 
 def getHTMLjumia(link):
-    user_agent = random.choice(user_agent_list)
-    response = requests.get(link, headers={'User-Agent': user_agent})
+    # user_agent = random.choice(user_agent_list)
+    # response = requests.get(link, headers={'User-Agent': user_agent}, proxies=new_ppr)
 
-    print("printing out the status of the request")
-    print("--------------------------------")
-    print(response.status_code)
-    print(user_agent)
-    print('--------------------------------')
-    # print(response)
-    # print("headers here")
-    # print(response.headers)
-    # print("done with HTMl")
-    soup = BeautifulSoup(response.text, "html.parser")
+    # payload = {'api_key': '647db17e4b69347cd45bbbd7', 'url': link, 'dynamic':'false'}
+    # response = requests.get('https://api.scrapingdog.com/scrape', params=payload)
+
+    # client = ScrapingBeeClient(api_key='PPC6P70AHM5GYZGZ15H1C3S1S1NFY6E7V1E1QUZ1AAOZ2UM1PK8CFPD0RX2HZH2YAMBCKJBL7EMUPNJ5')
+    # response = client.get(link)
+
+    response_text = scrapingBeefunc(link)
+    
+    soup = BeautifulSoup(response_text, "html.parser")
+    # soup = BeautifulSoup(response.text, "html.parser")
     # print("printing all script tags")
     article_tags = soup.find_all('article', {"class": "c-prd"})[:2]
     # print(scripts_tags[3].string)
@@ -125,9 +116,62 @@ def getHTMLjumia(link):
     return data_dict
 
 
+def getHTMLkonga(link):
+    # response = requests.get(link)
+    # print("scraping Konga HTML......")
+    # print(response.text.pre)
+
+    # payload = {'api_key': '647db17e4b69347cd45bbbd7', 'url': link, 'dynamic':'false'}
+    # response = requests.get('https://api.scrapingdog.com/scrape', params=payload)
+
+    # client = ScrapingBeeClient(api_key='PPC6P70AHM5GYZGZ15H1C3S1S1NFY6E7V1E1QUZ1AAOZ2UM1PK8CFPD0RX2HZH2YAMBCKJBL7EMUPNJ5')
+    # response = client.get(link)
+
+    response_text = scrapingBeefunc(link)
+    # soup = BeautifulSoup(response.text, "html.parser")
+    # print(doc.prettify())
+    # print(response.text)
+    # print("print out...")
+    soup = BeautifulSoup(response_text, "html.parser")
+    content = soup.find('script', {"id": "__NEXT_DATA__"}).string
+    dictionary = json.loads(content)
+    check = dictionary["props"]["initialProps"]["pageProps"]["resultsState"]["content"]["hits"]
+    data_dict = {}
+    check = check[:2]
+    for index, item in enumerate(check):
+        sub_dict = {}
+        sub_dict["product_id"] = item['sku']
+        sub_dict["product_name"] = item['name']
+        sub_dict["product_price"] = item['price']
+        sub_dict["image_url"] = "https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product" + \
+            item['image_thumbnail_path']
+        sub_dict["product_url"] = "https://www.konga.com/product/" + \
+            item['url_key']
+        sub_dict["rating"] = item['rating']
+        sub_dict['product_store'] = 'Konga'
+        data_dict[index] = sub_dict
+    # print(data_dict)
+    # for i in data_dict:
+    #     print("=====================")
+    #     print(data_dict[i])
+    #     print("=====================")
+    return data_dict
+    
+
+
 def getHTMLkara(link):
-    response = requests.get(link)
-    soup = BeautifulSoup(response.text, "html.parser")
+    # response = requests.get(link, headers={'User-Agent': user_agent}, )
+    # soup = BeautifulSoup(response.text, "html.parser")
+
+    # payload = {'api_key': '647db17e4b69347cd45bbbd7', 'url': link, 'dynamic':'false'}
+    # response = requests.get('https://api.scrapingdog.com/scrape', params=payload)
+
+    # client = ScrapingBeeClient(api_key='PPC6P70AHM5GYZGZ15H1C3S1S1NFY6E7V1E1QUZ1AAOZ2UM1PK8CFPD0RX2HZH2YAMBCKJBL7EMUPNJ5')
+    # response = client.get(link)
+    
+
+    response_text = scrapingBeefunc(link)
+    soup = BeautifulSoup(response_text, "html.parser")
     li_tags = soup.find_all('li', {"class": "item product product-item"})[:2]
     data_dict = {}
     for index, item in enumerate(li_tags):
@@ -161,9 +205,19 @@ def getHTMLkara(link):
     # print("--------------------------------------------------------------")
 
 
-def getHTMLkiaglo(link):
-    response = requests.get(link)
-    soup = BeautifulSoup(response.text, "html.parser")
+def getHTMLkiaglo(link, headers={'User-Agent': user_agent},):
+    # response = requests.get(link)
+    # soup = BeautifulSoup(response.text, "html.parser")
+
+    # payload = {'api_key': '647db17e4b69347cd45bbbd7', 'url': link, 'dynamic':'false'}
+    # response = requests.get('https://api.scrapingdog.com/scrape', params=payload)
+
+    # client = ScrapingBeeClient(api_key='PPC6P70AHM5GYZGZ15H1C3S1S1NFY6E7V1E1QUZ1AAOZ2UM1PK8CFPD0RX2HZH2YAMBCKJBL7EMUPNJ5')
+    # response = client.get(link)
+    
+    response_text = scrapingBeefunc(link)
+    soup = BeautifulSoup(response_text, "html.parser")
+
     li_tags = soup.find_all('li', {"class": "item product product-item"})[:2]
     data_dict = {}
     for index, item in enumerate(li_tags):
@@ -261,6 +315,14 @@ def home(request):
             return redirect('results', key=data)
 
     else:
+        print("blank home page")
+        # for i in range(5):
+        #     proxy = get_proxy(countries=['US'], verify=True).ip_and_port
+        #     # proxy = ProxyManager().get_new_proxy()
+        #     # proxy = FreeProxy().get()
+        #     newproxies.append(proxy)
+        # print("newproxies")
+        # print(newproxies)
         form = SearchForm()
     return render(request, 'my_app/home.html', {'form': form, 'deals': slide_data})
 
@@ -276,8 +338,10 @@ def results(request, key):
     jumia_purl = jumia_url + jumia_search_string
     konga_purl = konga_url + konga_search_string
     kara_purl = kara_url + kara_search_string
+    
 
     jumia_data = getHTMLjumia(jumia_purl)
+    print("jumia func completed")
     konga_data = getHTMLkonga(konga_purl)
     kara_data = getHTMLkara(kara_purl)
 
