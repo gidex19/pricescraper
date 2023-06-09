@@ -65,11 +65,11 @@ ppr = {"http": "http://3.226.79.79:80", "https": "http://20.241.236.196:3128", "
 new_ppr = {"http": "http://197.253.40.162:80", "https": "http://105.112.130.186:8080"}
 
 user_agent = random.choice(user_agent_list)
-print(user_agent)
+# print(user_agent)
 
 
 def scrapingBeefunc(link):
-    client = ScrapingBeeClient(api_key='PPC6P70AHM5GYZGZ15H1C3S1S1NFY6E7V1E1QUZ1AAOZ2UM1PK8CFPD0RX2HZH2YAMBCKJBL7EMUPNJ5')
+    client = ScrapingBeeClient(api_key='BNJ7W1VCKRLUIIJL9DDFM5GQWJ6OU4ZWZOVP2TWAUNDO2W9WB6XWZQ1FWE1T91RX2ZV9JC231Z2N2QFW')
     response = client.get(link)
     return response.text
 
@@ -304,6 +304,42 @@ slide_data = {
 
 
 def home(request):
+    jumia_response = requests.get('https://www.jumia.com.ng')
+    konga_response = requests.get('https://www.konga.com')
+    soup = BeautifulSoup(jumia_response.text, "html.parser")
+    holder = soup.find('div', {"class": "-pvxs"}).findChildren("article", {"class", "prd"})[:14]
+    slide_info = {}
+    for index, item in enumerate(holder):
+        product_url = "https://www.jumia.com.ng" + item.findChild("a", {"class": "core"}).get("href")
+        product_id = item.findChild("a", {"class": "core"}).get("data-id")
+        image_url = item.findChild("a", {"class": "core"}).findChild("img", {"class": "img"}).get("data-src")
+        product_price = item.findChild("a", {"class": "core"}).findChild("div", {"class": "prc"}).text
+        product_name = item.findChild("a", {"class": "core"}).get("data-name")
+        # image_url = item.findChild(
+        #     "div", {"class", "img-c"}).findChild("img", {"class": "img"}).get("data-src")
+        # product_price = item.findChild("div", {"class", "info"}).findChild(
+        #     "div", {"class": "prc"}).text
+        sub_dict = {}
+        # inner = item.findChild("article", {"class", "prd"})
+        print("-----------------------------------------------------------")
+        print(index)
+        print(product_id)
+        print(product_name)
+        print(product_price)
+        print(product_url)
+        print(image_url)
+        print("-----------------------------------------------------------")
+
+        sub_dict["product_id"] = product_id
+        sub_dict['product_name'] = product_name
+        sub_dict['product_price'] = product_price
+        sub_dict['image_url'] = image_url
+        sub_dict['product_url'] = product_url
+        sub_dict['product_store'] = 'Jumia'
+        slide_info[index] = sub_dict
+    
+    print(slide_info)
+     
     if request.method == 'POST':
         jumia_deals_url = 'https://www.jumia.com.ng'
         konga_deals_url = 'https://www.konga.com/search?search=ProductOfTheWeek'
@@ -324,7 +360,7 @@ def home(request):
         # print("newproxies")
         # print(newproxies)
         form = SearchForm()
-    return render(request, 'my_app/home.html', {'form': form, 'deals': slide_data})
+    return render(request, 'my_app/home.html', {'form': form, 'deals': slide_info})
 
 
 def results(request, key):

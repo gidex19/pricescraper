@@ -1,46 +1,47 @@
-{% extends 'my_app/base.html' %}
-{% load crispy_forms_tags %}
-{% load static %}
-
+{% extends 'my_app/base.html' %} {% load crispy_forms_tags %} {% load static %}
 {% block header %}
 
 <header class="bg-light">
-    <img class="bg-img" src="{% static 'my_app/images/home-header.jpg' %}">
-    <section class="hero-section col-11 col-sm-11 col-md-5 col-lg-5  ">
-        <h1 class="header-text" style="font-weight: bolder; color: white; z-index: 20;"> Compare product prices</h1>
-        <p class=" text-white mb-4">compare product over multiple ecommerce stores for optimal shopping decisons</p>
-        <div class="mt-4 col-12">
-            <a href="#searchform" class="button-large-dark ">Search </a>
-            {% if user.is_authenticated %}
-            <a href="{% url 'signup_page' %}" class="button-large-transparent ml-1">Sign Up</a>
-            {% else %}
-            <a href="{% url 'login_page' %}" class="button-large-transparent ml-1">Login</a>
-            {% endif %}
-        </div>
-        <!-- <p class="mt-4 white-text">Keee<i style="color: white;" class="fas fa-long-arrow-alt-right"></i></p> -->
-    </section>
+  <img class="bg-img" src="{% static 'my_app/images/home-header.jpg' %}" />
+  <section class="hero-section col-11 col-sm-11 col-md-5 col-lg-5">
+    <h1
+      class="header-text"
+      style="font-weight: bolder; color: white; z-index: 20"
+    >
+      Compare product prices
+    </h1>
+    <p class="text-white mb-4">
+      compare product over multiple ecommerce stores for optimal shopping
+      decisons
+    </p>
+    <div class="mt-4 col-12">
+      <a href="#searchform" class="button-large-dark">Search </a>
+      {% if user.is_authenticated %}
+      <a href="{% url 'signup_page' %}" class="button-large-transparent ml-1"
+        >Sign Up</a
+      >
+      {% else %}
+      <a href="{% url 'login_page' %}" class="button-large-transparent ml-1"
+        >Login</a
+      >
+      {% endif %}
+    </div>
+    <!-- <p class="mt-4 white-text">Keee<i style="color: white;" class="fas fa-long-arrow-alt-right"></i></p> -->
+  </section>
 </header>
 
-{% endblock header %}
+{% endblock header %} {% block main-content %}
 
-{% block main-content %}
-
-<div class="container" style="height: 10vh; ">
-    <div class="row ">
-        <div class="col-11 ">
-
-        </div>
-
-
-    </div>
-
-
+<div class="container" style="height: 10vh">
+  <div class="row">
+    <div class="col-11"></div>
+  </div>
 </div>
 
 <div class="container mt-4 mb-4">
-    <div class="row d-flex justify-content-center">
-        <div class="col-8 m-auto">
-            <!-- <form method="POST" class="p-4">
+  <div class="row d-flex justify-content-center">
+    <div class="col-8 m-auto">
+      <!-- <form method="POST" class="p-4">
                 <div>
                     
                     <span>{{ form|crispy }}
@@ -49,165 +50,197 @@
                    
                 </div>
             </form> -->
-        </div>
-
     </div>
-
+  </div>
 </div>
 
-
-<div class="container  mt-4 mb-4" id="searchform">
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-9" >
-            <div class="card p-4 mt-3" >
-                
-                <div class="d-flex justify-content-center px-5">
-                    <div class="col-10 bg-dark m-auto"  style="border-radius: 10px;">
-                        <form method="POST" class="p-4 ">
-                            <div>
-                                
-                                <span>{{ form|crispy }}
-                                {% csrf_token %}
-                                <button type="submit"  class="btn btn-sm btn-outline-info"> <i class="fa fa-search"></i> </button></span>
-                                <!-- <div class="d-flex justify-content-center px-5">
+<div class="container mt-4 mb-4" id="searchform">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-9">
+      <div class="card p-4 mt-3">
+        <div class="d-flex justify-content-center px-5">
+          <div class="col-10 bg-dark m-auto" style="border-radius: 10px">
+            <form method="POST" class="p-4">
+              <div>
+                <span
+                  >{{ form|crispy }} {% csrf_token %}
+                  <button type="submit" class="btn btn-sm btn-outline-info">
+                    <i class="fa fa-search"></i></button
+                ></span>
+                <!-- <div class="d-flex justify-content-center px-5">
                                     <div class="search"><input type="text" class="search-input" placeholder="Search..." name="sinput"> <a
                                              type="submit" class="search-icon"> <i class="fa fa-search"></i> </a> </div>
                                 </div> -->
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <h3 class="heading mt-5 text-center">Top Categories</h3>
-                
-                <div class="row mt-4 g-1 px-4 mb-5">
-                    <div class="col-md-2">
-                        <div class="card-inner p-3 d-flex flex-column align-items-center" style="height: 80px;"> 
-                            <div class="text-center mg-text"> <span class="mg-text">Phones and Tablets</span> </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="card-inner p-3 d-flex flex-column align-items-center" style="height: 80px; background-color: rgba(60, 63, 60, 0.1);"> 
-                            <div class="text-center mg-text"> <span class="mg-text">Home Appliances</span> </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="card-inner p-3 d-flex flex-column align-items-center" style="height: 80px; background-color: rgba(205, 148, 90, 0.5);"> 
-                            <div class="text-center mg-text"> <span class="mg-text">Computers and accessories</span> </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="card-inner p-3 d-flex flex-column align-items-center" style="height: 80px; background-color: rgba(143, 152, 213, 0.6);"> 
-                            <div class="text-center mg-text"> <span class="mg-text">Electronics</span> </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="card-inner p-3 d-flex flex-column align-items-center" style="height: 80px; background-color: rgba(113, 208, 113, 0.6);"> 
-                            <div class="text-center mg-text"> <span class="mg-text">Health and Beauty</span> </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="card-inner p-3 d-flex flex-column align-items-center" style="height: 80px; background-color: rgb(230, 162, 174, 0.6);">
-                            <div class="text-center mg-text"> <span class="mg-text">Fashion</span> </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              </div>
+            </form>
+          </div>
         </div>
-    </div>
-</div>
 
+        <!-- <h3 class="heading mt-5 text-center">Top Categories</h3>
+
+        <div class="row mt-4 g-1 px-4 mb-5">
+          <div class="col-md-2">
+            <div
+              class="card-inner p-3 d-flex flex-column align-items-center"
+              style="height: 80px"
+            >
+              <div class="text-center mg-text">
+                <span class="mg-text">Phones and Tablets</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div
+              class="card-inner p-3 d-flex flex-column align-items-center"
+              style="height: 80px; background-color: rgba(60, 63, 60, 0.1)"
+            >
+              <div class="text-center mg-text">
+                <span class="mg-text">Home Appliances</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div
+              class="card-inner p-3 d-flex flex-column align-items-center"
+              style="height: 80px; background-color: rgba(205, 148, 90, 0.5)"
+            >
+              <div class="text-center mg-text">
+                <span class="mg-text">Computers and accessories</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div
+              class="card-inner p-3 d-flex flex-column align-items-center"
+              style="height: 80px; background-color: rgba(143, 152, 213, 0.6)"
+            >
+              <div class="text-center mg-text">
+                <span class="mg-text">Electronics</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div
+              class="card-inner p-3 d-flex flex-column align-items-center"
+              style="height: 80px; background-color: rgba(113, 208, 113, 0.6)"
+            >
+              <div class="text-center mg-text">
+                <span class="mg-text">Health and Beauty</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div
+              class="card-inner p-3 d-flex flex-column align-items-center"
+              style="height: 80px; background-color: rgb(230, 162, 174, 0.6)"
+            >
+              <div class="text-center mg-text">
+                <span class="mg-text">Fashion</span>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="container mt-4">
-    <h3 class="bold-text m-auto text-center" style="color: #3c43ad;">Hot Deals</h3>
-    <hr class="m-auto text-center mb-4"
-        style="size: 20%; color: white !important; width: 10%; border: 3px solid #3c43ad; align-self: center;">
-    <div class="row g-0 slide-div single-item" style=" position: relative !important;">
-        
-        {% for index, news in deals.items %}
+  <h3 class="bold-text m-auto text-center" style="color: #3c43ad">Hot Deals</h3>
+  <hr
+    class="m-auto text-center mb-4"
+    style="
+      size: 20%;
+      color: white !important;
+      width: 10%;
+      border: 3px solid #3c43ad;
+      align-self: center;
+    "
+  />
+  <div
+    class="row g-0 slide-div single-item"
+    style="position: relative !important"
+  >
+    {% for index, news in deals.items %}
 
-        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mt-3 d-flex align-items-stretch ">
-            <div class="card techcard mt-4 mb-4 " style="width: 100%;">
-                <div class="card-img-div" style="overflow: hidden; position: relative;">
-                    <img class="card-img-top zoom" src="{{news.image_url}}" alt="Card image cap">
-
-                </div>
-                <div class="card-body">
-                    <h6 class="card-title post-heading">{{news.name}}</h6>
-                    <h6 class="card-text post-body" style="font-weight: bold;">{{news.price}}</h6>
-                    <p style="color: rgb(98, 0, 128)">Sold by {{news.vendor}}</p>
-                </div>
-                <div style="text-align: center;">
-                    
-                </div>
-            </div>
+    <div
+      class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mt-3 d-flex align-items-stretch"
+    >
+      <div class="card techcard mt-4 mb-4" style="width: 100%">
+        <div class="card-img-div" style="overflow: hidden; position: relative">
+          <img
+            class="card-img-top zoom"
+            src="{{news.image_url}}"
+            alt="Card image cap"
+          />
         </div>
-
-        {% endfor %}
+        <div class="card-body">
+          <!-- <h6 class="card-title post-heading">{{news.product_name}}</h6> -->
+          <a class="card-title post-heading" href="{{news.product_url}}"
+            >{{news.product_name}}</a
+          >
+          <h6 class="card-text post-body" style="font-weight: bold">
+            {{news.product_price}}
+          </h6>
+          <!-- <p style="color: rgb(98, 0, 128)">Sold by {{news.vendor}}</p> -->
+        </div>
+        <div style="text-align: center"></div>
+      </div>
     </div>
-    <div style="margin-top: 10%; text-align: center;" class="m-auto text-center ">
 
-        <!-- <a style="text-align: center;" class="m-auto button outline-button text-center mt-4" href="#">View more...</a> -->
-    </div>
+    {% endfor %}
+  </div>
+  <div style="margin-top: 10%; text-align: center" class="m-auto text-center">
+    <!-- <a style="text-align: center;" class="m-auto button outline-button text-center mt-4" href="#">View more...</a> -->
+  </div>
 </div>
 
-{% endblock main-content %}
-
-{% block js %}
+{% endblock main-content %} {% block js %}
 <script>
+  $(document).ready(function () {
+    $(".single-item").slick({
+      dots: true,
+      useTransform: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      arrows: true,
+      speed: 1000,
+      cssEase: "ease-out",
 
-    $(document).ready(function(){
-    
-        $('.single-item').slick({
-            dots: true,
-            useTransform: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 4,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
             slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            arrows: true,
-            speed: 1000,
-            cssEase: 'ease-out',
-  
-  responsive: [
-  
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-        });
-    
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ],
     });
-
+  });
 </script>
-
-
-
-
 
 {% endblock js %}
