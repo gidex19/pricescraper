@@ -1,7 +1,4 @@
-{% extends 'my_app/base.html' %}
-{% load crispy_forms_tags %}
-{% load static %}
-
+{% extends 'my_app/base.html' %} {% load crispy_forms_tags %} {% load static %}
 {% block header %}
 
 <!-- <div class="container">
@@ -14,156 +11,278 @@
     </div>
 </div> -->
 
-<div class="container-fluid " style="background-color: #f7eeee; margin-top: 150px;" >
-    <div class="row">
-        <div class="col-7 m-auto "  >
+<div
+  class="container-fluid"
+  style="background-color: #f7eeee; margin-top: 150px"
+>
+  <div class="row">
+    <div class="col-7 m-auto">
+      {% if messages %} {% for message in messages %}
+      <div class="col-6 alert alert-{{message.tags }}">
+        <p
+          style="
+            font-size: 14px;
+            font-weight: 800;
+            color: rgb(253, 251, 251) !important;
+          "
+        >
+          {{ message }}
+        </p>
+      </div>
+      {% endfor %} {% endif %} {% for key, value in jumia_data.items %}
 
-            {% if messages %}
-            {% for message in messages %}
-            <div class="col-6 alert alert-{{message.tags }}">
-                <p style="font-size: 14px; font-weight: 800; color: rgb(253, 251, 251) !important;">{{ message }}</p>
-            </div>
-            {% endfor %}
-            {% endif %}
+      <div
+        id="{{value.product_id}}-div"
+        class="col-10 mb-4 mt-1 p-1"
+        style="
+          background-color: white;
+          border-left: 2px solid greenyellow;
+          border-radius: 0px 35px 35px 0px;
+        "
+      >
+        <div class="row">
+          <div class="col-3">
+            <img
+              id="{{value.product_id}}-image_url"
+              src="{{value.image_url}}"
+              style="width: 100%; height: 100%"
+            />
+          </div>
+          <div class="col-7 m-2">
+            <p
+              id="{{value.product_id}}-name"
+              class="small-p product_name"
+              style="font-size: 10px; font-weight: 400"
+            >
+              {{ value.product_name }}
+            </p>
+            <p id="{{value.product_id}}-price">
+              {{value.product_price}}
+              <span class="badge badge-primary">{{value.product_store}}</span>
+            </p>
 
-
-
-            {% for key, value in jumia_data.items %}
-
-            <div id="{{value.product_id}}-div" class="col-10 mb-4 mt-1 p-1" style="background-color: white;
-              border-left: 2px solid greenyellow; border-radius: 0px 35px 35px 0px; ">
-                <div class="row ">
-
-                    <div class="col-3 ">
-                        <img id="{{value.product_id}}-image_url" src={{value.image_url}}
-                            style="width: 100%; height: 100%;">
-                        </div>
-                        <div class="col-7 m-2">
-                            <p id="{{value.product_id}}-name" class="small-p product_name"
-                            style="font-size: 10px; font-weight: 400;">{{ value.product_name }}</p>
-                            <p id="{{value.product_id}}-price">{{value.product_price}} <span class="badge badge-primary">{{value.product_store}}</span></p>
-                            
-                            <a id="{{value.product_id}}-url" class="btn btn-sm btn-outline-info"
-                            href={{value.product_url}}>Buy Now</a>
-                        <a id="{{value.product_id}}-url" class=" save-btn btn btn-sm btn-info" href="#"
-                            id={{value.product_id}}-btn product-id="{{value.product_id}}">
-                            <i class="fa fa-heart"></i> </a>
-                        <!-- <a href="#" class="save-btn search-icon btn btn-sm btn-outline-info" product-id="{{value.product_id}}" id={{value.product_id}}-btn ><i class="fa-regular fa-heart"></i>hyhy</a> -->
-                    </div>
-                </div>
-            </div>
-
-            {% endfor %}
-
-            {% for key, value in konga_data.items %}
-
-            <div id="{{value.product_id}}-div" class="col-10 mb-4 mt-1 p-1" style="background-color: white;
-            border-radius: 0px 35px 35px 0px; border-left: 2px solid greenyellow; ">
-                <div class="row ">
-
-                    <div class="col-3 ">
-                        <img id="{{value.product_id}}-image_url" src={{value.image_url}}
-                            style="width: 100%; height: 100%;">
-                        </div>
-                        <div class="col-7 m-2">
-                            <p id="{{value.product_id}}-name" class="small-p product_name"
-                            style="font-size: 10px; font-weight: 400;">{{ value.product_name }}</p>
-                            <p id="{{value.product_id}}-price">{{value.product_price}} <span class="badge badge-primary">{{value.product_store}}</span></p>
-                            
-                            <a id="{{value.product_id}}-url" class="btn btn-sm btn-outline-info"
-                            href={{value.product_url}}>Buy Now</a>
-                        <a id="{{value.product_id}}-url" class=" save-btn btn btn-sm btn-info" href="#"
-                            id={{value.product_id}}-btn product-id="{{value.product_id}}">
-                            <i class="fa fa-heart"></i> </a>
-                        <!-- <a href="#" class="save-btn search-icon btn btn-sm btn-outline-info" product-id="{{value.product_id}}" id={{value.product_id}}-btn ><i class="fa-regular fa-heart"></i>hyhy</a> -->
-                    </div>
-                </div>
-            </div>
-
-            {% endfor %}
-
-            {% for key, value in kara_data.items %}
-
-            <div id="{{value.product_id}}-div" class="col-10 mb-4 mt-1" style="background-color: white;
-            border-radius: 0px 35px 35px 0px; border-left: 2px solid greenyellow; ">
-                <div class="row ">
-
-                    <div class="col-3 ">
-                        <img id="{{value.product_id}}-image_url" src={{value.image_url}}
-                            style="width: 100%; height: 100%;">
-                        </div>
-                        <div class="col-7 m-2">
-                            <p id="{{value.product_id}}-name" class="small-p product_name"
-                            style="font-size: 10px; font-weight: 400;">{{ value.product_name }}</p>
-                            <p id="{{value.product_id}}-price">{{value.product_price}} <span class="badge badge-primary">{{value.product_store}}</span></p>
-                            
-                            <a id="{{value.product_id}}-url" class="btn btn-sm btn-outline-info"
-                            href={{value.product_url}}>Buy Now</a>
-                        <a id="{{value.product_id}}-url" class=" save-btn btn btn-sm btn-info" href="#"
-                            id={{value.product_id}}-btn product-id="{{value.product_id}}">
-                            <i class="fa fa-heart"></i> </a>
-                        <!-- <a href="#" class="save-btn search-icon btn btn-sm btn-outline-info" product-id="{{value.product_id}}" id={{value.product_id}}-btn ><i class="fa-regular fa-heart"></i>hyhy</a> -->
-                    </div>
-                </div>
-            </div>
-
-            {% endfor %}
-
-
+            <a
+              id="{{value.product_id}}-url"
+              class="btn btn-sm btn-outline-info"
+              href="{{value.product_url}}"
+              >Buy Now</a
+            >
+            <a
+              id="{{value.product_id}}-url"
+              class="save-btn btn btn-sm btn-info"
+              href="#"
+              id="{{value.product_id}}-btn"
+              product-id="{{value.product_id}}"
+            >
+              <i class="fa fa-heart"></i>
+            </a>
+            <!-- <a href="#" class="save-btn search-icon btn btn-sm btn-outline-info" product-id="{{value.product_id}}" id={{value.product_id}}-btn ><i class="fa-regular fa-heart"></i>hyhy</a> -->
+          </div>
         </div>
+      </div>
 
+      {% endfor %} {% for key, value in konga_data.items %}
+
+      <div
+        id="{{value.product_id}}-div"
+        class="col-10 mb-4 mt-1 p-1"
+        style="
+          background-color: white;
+          border-radius: 0px 35px 35px 0px;
+          border-left: 2px solid greenyellow;
+        "
+      >
+        <div class="row">
+          <div class="col-3">
+            <img
+              id="{{value.product_id}}-image_url"
+              src="{{value.image_url}}"
+              style="width: 100%; height: 100%"
+            />
+          </div>
+          <div class="col-7 m-2">
+            <p
+              id="{{value.product_id}}-name"
+              class="small-p product_name"
+              style="font-size: 10px; font-weight: 400"
+            >
+              {{ value.product_name }}
+            </p>
+            <p id="{{value.product_id}}-price">
+              {{value.product_price}}
+              <span class="badge badge-primary">{{value.product_store}}</span>
+            </p>
+
+            <a
+              id="{{value.product_id}}-url"
+              class="btn btn-sm btn-outline-info"
+              href="{{value.product_url}}"
+              >Buy Now</a
+            >
+            <a
+              id="{{value.product_id}}-url"
+              class="save-btn btn btn-sm btn-info"
+              href="#"
+              id="{{value.product_id}}-btn"
+              product-id="{{value.product_id}}"
+            >
+              <i class="fa fa-heart"></i>
+            </a>
+            <!-- <a href="#" class="save-btn search-icon btn btn-sm btn-outline-info" product-id="{{value.product_id}}" id={{value.product_id}}-btn ><i class="fa-regular fa-heart"></i>hyhy</a> -->
+          </div>
+        </div>
+      </div>
+
+      {% endfor %} {% for key, value in kara_data.items %}
+
+      <div
+        id="{{value.product_id}}-div"
+        class="col-10 mb-4 mt-1"
+        style="
+          background-color: white;
+          border-radius: 0px 35px 35px 0px;
+          border-left: 2px solid greenyellow;
+        "
+      >
+        <div class="row">
+          <div class="col-3">
+            <img
+              id="{{value.product_id}}-image_url"
+              src="{{value.image_url}}"
+              style="width: 100%; height: 100%"
+            />
+          </div>
+          <div class="col-7 m-2">
+            <p
+              id="{{value.product_id}}-name"
+              class="small-p product_name"
+              style="font-size: 10px; font-weight: 400"
+            >
+              {{ value.product_name }}
+            </p>
+            <p id="{{value.product_id}}-price">
+              {{value.product_price}}
+              <span class="badge badge-primary">{{value.product_store}}</span>
+            </p>
+
+            <a
+              id="{{value.product_id}}-url"
+              class="btn btn-sm btn-outline-info"
+              href="{{value.product_url}}"
+              >Buy Now</a
+            >
+            <a
+              id="{{value.product_id}}-url"
+              class="save-btn btn btn-sm btn-info"
+              href="#"
+              id="{{value.product_id}}-btn"
+              product-id="{{value.product_id}}"
+            >
+              <i class="fa fa-heart"></i>
+            </a>
+            <!-- <a href="#" class="save-btn search-icon btn btn-sm btn-outline-info" product-id="{{value.product_id}}" id={{value.product_id}}-btn ><i class="fa-regular fa-heart"></i>hyhy</a> -->
+          </div>
+        </div>
+      </div>
+
+      {% endfor %} {% for key, value in slot_data.items %}
+
+      <div
+        id="{{value.product_id}}-div"
+        class="col-10 mb-4 mt-1"
+        style="
+          background-color: white;
+          border-radius: 0px 35px 35px 0px;
+          border-left: 2px solid greenyellow;
+        "
+      >
+        <div class="row">
+          <div class="col-3">
+            <img
+              id="{{value.product_id}}-image_url"
+              src="{{value.image_url}}"
+              style="width: 100%; height: 100%"
+            />
+          </div>
+          <div class="col-7 m-2">
+            <p
+              id="{{value.product_id}}-name"
+              class="small-p product_name"
+              style="font-size: 10px; font-weight: 400"
+            >
+              {{ value.product_name }}
+            </p>
+            <p id="{{value.product_id}}-price">
+              {{value.product_price}}
+              <span class="badge badge-primary">{{value.product_store}}</span>
+            </p>
+
+            <a
+              id="{{value.product_id}}-url"
+              class="btn btn-sm btn-outline-info"
+              href="{{value.product_url}}"
+              >Buy Now</a
+            >
+            <a
+              id="{{value.product_id}}-url"
+              class="save-btn btn btn-sm btn-info"
+              href="#"
+              id="{{value.product_id}}-btn"
+              product-id="{{value.product_id}}"
+            >
+              <i class="fa fa-heart"></i>
+            </a>
+            <!-- <a href="#" class="save-btn search-icon btn btn-sm btn-outline-info" product-id="{{value.product_id}}" id={{value.product_id}}-btn ><i class="fa-regular fa-heart"></i>hyhy</a> -->
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
     </div>
+  </div>
 </div>
 
-{% endblock header %}
-
-{% block js %}
+{% endblock header %} {% block js %}
 
 <script>
-    $(document).ready(function () {
-        console.log("js working");
+  $(document).ready(function () {
+    console.log("js working");
 
-       
+    var save_btns = document.querySelectorAll(".save-btn");
+    save_btns.forEach((btn) => {
+      let p_id;
+      btn.addEventListener("click", function () {
+        console.log("button clicked");
+        p_id = btn.getAttribute("product-id");
 
-        var save_btns = document.querySelectorAll(".save-btn")
-        save_btns.forEach((btn) => {
-            let p_id;
-            btn.addEventListener('click', function () {
-                console.log("button clicked");
-                p_id = btn.getAttribute('product-id');
+        var p_name = document.getElementById(p_id + "-name").innerText;
+        var p_price = document.getElementById(p_id + "-price").innerText;
+        var p_url = $("#" + p_id + "-url").attr("href");
+        var p_image_url = $("#" + p_id + "-image_url").attr("src");
+        $.ajax({
+          url: "",
+          type: "get",
+          data: {
+            product_id: String(p_id),
+            product_name: String(p_name),
+            product_price: String(p_price),
+            product_url: String(p_url),
+            product_image_url: String(p_image_url),
+          },
+          success: function (response) {
+            console.log(response);
+          },
+        });
+        // ajaxfunc(name= p_name, price = p_price, url = p_url, image_url = p_image_url )
 
-                var p_name = document.getElementById(p_id + '-name').innerText;
-                var p_price = document.getElementById(p_id + '-price').innerText;
-                var p_url = $("#" + p_id + "-url").attr("href");
-                var p_image_url = $("#" + p_id + "-image_url").attr("src");
-                $.ajax({
-                    url: '',
-                    type: 'get',
-                    data: {
-                        product_id: String(p_id),
-                        product_name: String(p_name),
-                        product_price: String(p_price),
-                        product_url: String(p_url),
-                        product_image_url: String(p_image_url)
-                    },
-                    success: function (response) {
-                        console.log(response)
-                    }
-                })
-                // ajaxfunc(name= p_name, price = p_price, url = p_url, image_url = p_image_url )
-
-                console.log(p_name);
-                console.log(p_price);
-                console.log(p_url);
-                console.log(p_image_url);
-                console.log("ajax function completed");
-
-
-            })
-        })
-
+        console.log(p_name);
+        console.log(p_price);
+        console.log(p_url);
+        console.log(p_image_url);
+        console.log("ajax function completed");
+      });
     });
+  });
 </script>
-
 
 {% endblock js %}

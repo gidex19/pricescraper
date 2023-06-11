@@ -1,4 +1,4 @@
-import random
+import random, time
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from .forms import SearchForm, LoginForm, SignUpForm
@@ -10,11 +10,13 @@ from django.contrib.auth.hashers import *
 from django.contrib.auth.decorators import login_required
 from scrapingbee import ScrapingBeeClient
 import requests
-import re
+from msedge.selenium_tools import EdgeOptions
+from msedge.selenium_tools import Edge
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 import json
-from sslproxies import ProxyManager
-from sslproxies import get_proxy
-from fp.fp import FreeProxy
+
 
 
 # payload = {'api_key': '647db17e4b69347cd45bbbd7', 'url': 'https://www.jumia.com.ng/catalog/?q=elepaq+generator', 'dynamic':'false'}
@@ -75,7 +77,7 @@ def scrapingBeefunc(link):
 
 def getHTMLjumia(link):
     # user_agent = random.choice(user_agent_list)
-    # response = requests.get(link, headers={'User-Agent': user_agent}, proxies=new_ppr)
+    response_text = requests.get(link, headers={'User-Agent': user_agent}).text
 
     # payload = {'api_key': '647db17e4b69347cd45bbbd7', 'url': link, 'dynamic':'false'}
     # response = requests.get('https://api.scrapingdog.com/scrape', params=payload)
@@ -83,7 +85,7 @@ def getHTMLjumia(link):
     # client = ScrapingBeeClient(api_key='PPC6P70AHM5GYZGZ15H1C3S1S1NFY6E7V1E1QUZ1AAOZ2UM1PK8CFPD0RX2HZH2YAMBCKJBL7EMUPNJ5')
     # response = client.get(link)
 
-    response_text = scrapingBeefunc(link)
+    # response_text = scrapingBeefunc(link)
     
     soup = BeautifulSoup(response_text, "html.parser")
     # soup = BeautifulSoup(response.text, "html.parser")
@@ -117,7 +119,7 @@ def getHTMLjumia(link):
 
 
 def getHTMLkonga(link):
-    # response = requests.get(link)
+    response_text = requests.get(link).text
     # print("scraping Konga HTML......")
     # print(response.text.pre)
 
@@ -160,7 +162,7 @@ def getHTMLkonga(link):
 
 
 def getHTMLkara(link):
-    # response = requests.get(link, headers={'User-Agent': user_agent}, )
+    response_text = requests.get(link, headers={'User-Agent': user_agent}, ).text
     # soup = BeautifulSoup(response.text, "html.parser")
 
     # payload = {'api_key': '647db17e4b69347cd45bbbd7', 'url': link, 'dynamic':'false'}
@@ -170,7 +172,7 @@ def getHTMLkara(link):
     # response = client.get(link)
     
 
-    response_text = scrapingBeefunc(link)
+    # response_text = scrapingBeefunc(link)
     soup = BeautifulSoup(response_text, "html.parser")
     li_tags = soup.find_all('li', {"class": "item product product-item"})[:2]
     data_dict = {}
@@ -205,8 +207,8 @@ def getHTMLkara(link):
     # print("--------------------------------------------------------------")
 
 
-def getHTMLkiaglo(link, headers={'User-Agent': user_agent},):
-    # response = requests.get(link)
+def getHTMLkaiglo(link, headers={'User-Agent': user_agent},):
+    response_text = requests.get(link).text
     # soup = BeautifulSoup(response.text, "html.parser")
 
     # payload = {'api_key': '647db17e4b69347cd45bbbd7', 'url': link, 'dynamic':'false'}
@@ -215,7 +217,7 @@ def getHTMLkiaglo(link, headers={'User-Agent': user_agent},):
     # client = ScrapingBeeClient(api_key='PPC6P70AHM5GYZGZ15H1C3S1S1NFY6E7V1E1QUZ1AAOZ2UM1PK8CFPD0RX2HZH2YAMBCKJBL7EMUPNJ5')
     # response = client.get(link)
     
-    response_text = scrapingBeefunc(link)
+    # response_text = scrapingBeefunc(link)
     soup = BeautifulSoup(response_text, "html.parser")
 
     li_tags = soup.find_all('li', {"class": "item product product-item"})[:2]
@@ -243,70 +245,67 @@ def getHTMLkiaglo(link, headers={'User-Agent': user_agent},):
 
     return data_dict
 
+def getHTMLslot(link):
+    response_text = requests.get(link, headers={'User-Agent': user_agent}, ).text
+    # soup = BeautifulSoup(response.text, "html.parser")
 
-slide_data = {
-    1: {
-        'name': 'Men Athletic Sneaker Elastic Running Casual Shoes',
-        'price': 'N3,800',
-        'image_url': 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/14/160244/1.jpg?0532',
-        'vendor': 'Jumia',
-    },
-    2: {
-        'name': '2 In 1 Men\'s Short Sleeve Shorts Set - White',
-        'price': 'N3,000',
-        'image_url': 'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/76/202776/1.jpg?0581',
-        'vendor': 'Jumia',
-    },
-    3: {
-        'name': 'APC Back-UPS 1400VA,230V, AVR,IEC Sockets(BX1400UI)',
-        'price': 'N89,120',
-        'image_url': 'https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/Q/M/_1622031731.jpg',
-        'vendor': 'Konga',
-    },
-    4: {
-        'name': 'HP LaserJet M443NDA Multifunction Printer-8AF72A',
-        'price': 'N839,500',
-        'image_url': 'https://kara.com.ng/media/catalog/product/cache/3d615c6d9644c5c38c7d599cf735420f/h/p/hp_m443nda_printer_2.jpg',
-        'vendor': 'Kara',
-    },
+    # payload = {'api_key': '647db17e4b69347cd45bbbd7', 'url': link, 'dynamic':'false'}
+    # response = requests.get('https://api.scrapingdog.com/scrape', params=payload)
 
-    5: {
-        'name': 'elepaq roller item',
-        'price': 'N120, 000',
-        'image_url': 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/14/160244/1.jpg?0532',
-        'vendor': 'Jumia',
-    },
-    6: {
-        'name': 'elepaq roller item',
-        'price': 'N120, 000',
-        'image_url': 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/14/160244/1.jpg?0532',
-        'vendor': 'Jumia',
-    },
-    7: {
-        'name': 'elepaq roller item',
-        'price': 'N120, 000',
-        'image_url': 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/14/160244/1.jpg?0532',
-        'vendor': 'Jumia',
-    },
-    8: {
-        'name': 'elepaq roller item',
-        'price': 'N120, 000',
-        'image_url': 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/14/160244/1.jpg?0532',
-        'vendor': 'Jumia',
-    },
-    9: {
-        'name': 'elepaq roller item',
-        'price': 'N120, 000',
-        'image_url': 'https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/14/160244/1.jpg?0532',
-        'vendor': 'Jumia',
-    },
-}
+    # client = ScrapingBeeClient(api_key='PPC6P70AHM5GYZGZ15H1C3S1S1NFY6E7V1E1QUZ1AAOZ2UM1PK8CFPD0RX2HZH2YAMBCKJBL7EMUPNJ5')
+    # response = client.get(link)
+    
+
+    # response_text = scrapingBeefunc(link)
+    soup = BeautifulSoup(response_text, "html.parser")
+    product_holders = soup.findChildren('div', {"class": "item-product"})[:2]
+    data_dict = {}
+    for index, item in enumerate(product_holders):
+        sub_dict = {}
+        product_id = "slot" + item.findChild("a", {"class": "quickview-link"}).get("data-id")
+        product_name = item.findChild("img", {"class": "product-image-photo"}).get("alt")
+        product_url = item.findChild("a", {"class": "product-thumb-link"}).get("href")
+        image_url = item.findChild("img", {"class": "product-image-photo"}).get("src")
+        product_price = item.findChild("span", {"class": "price"}).text
+        # product_price = product_price[4:-3]
+
+        sub_dict["product_id"] = product_id
+        sub_dict['product_name'] = product_name
+        sub_dict['product_price'] = product_price
+        sub_dict['image_url'] = image_url
+        sub_dict['product_url'] = product_url
+        sub_dict['product_store'] = 'Slot Ng'
+        data_dict[index] = sub_dict
+
+    return data_dict
+
 
 
 def home(request):
+    url = 'https://slot.ng/catalogsearch/result/?q=infinix'
+
     jumia_response = requests.get('https://www.jumia.com.ng')
     konga_response = requests.get('https://www.konga.com')
+    slot_response_text = requests.get(url).text
     soup = BeautifulSoup(jumia_response.text, "html.parser")
+    slot_soup = BeautifulSoup(slot_response_text, "html.parser")
+
+    slot_holder = slot_soup.findChildren('div', {"class": "item-product"})[:3]
+    print("slot_holder")
+    print(slot_holder)
+    for index, item in enumerate(slot_holder):
+        p_url = item.findChild("a", {"class": "product-thumb-link"}).get("href")
+        p_name = item.findChild("img", {"class": "product-image-photo"}).get("alt")
+        image_url = item.findChild("img", {"class": "product-image-photo"}).get("src")
+        price = item.findChild("span", {"class": "price"}).text
+        p_id = "slot" + item.findChild("a", {"class": "quickview-link"}).get("data-id")
+        print("-------------------------------------------------\n\n")
+        print(p_url)
+        print(p_name)
+        print(p_id)
+        print(image_url)
+        print(price[:-3])
+        print("-------------------------------------------------\n\n")
     holder = soup.find('div', {"class": "-pvxs"}).findChildren("article", {"class", "prd"})[:14]
     slide_info = {}
     for index, item in enumerate(holder):
@@ -315,21 +314,9 @@ def home(request):
         image_url = item.findChild("a", {"class": "core"}).findChild("img", {"class": "img"}).get("data-src")
         product_price = item.findChild("a", {"class": "core"}).findChild("div", {"class": "prc"}).text
         product_name = item.findChild("a", {"class": "core"}).get("data-name")
-        # image_url = item.findChild(
-        #     "div", {"class", "img-c"}).findChild("img", {"class": "img"}).get("data-src")
-        # product_price = item.findChild("div", {"class", "info"}).findChild(
-        #     "div", {"class": "prc"}).text
+        
         sub_dict = {}
-        # inner = item.findChild("article", {"class", "prd"})
-        print("-----------------------------------------------------------")
-        print(index)
-        print(product_id)
-        print(product_name)
-        print(product_price)
-        print(product_url)
-        print(image_url)
-        print("-----------------------------------------------------------")
-
+        
         sub_dict["product_id"] = product_id
         sub_dict['product_name'] = product_name
         sub_dict['product_price'] = product_price
@@ -338,13 +325,13 @@ def home(request):
         sub_dict['product_store'] = 'Jumia'
         slide_info[index] = sub_dict
     
-    print(slide_info)
+    
      
     if request.method == 'POST':
-        jumia_deals_url = 'https://www.jumia.com.ng'
-        konga_deals_url = 'https://www.konga.com/search?search=ProductOfTheWeek'
-        kara_deals_url = 'https://kara.com.ng'
-        kiaglo_deals_url = ''
+        # jumia_deals_url = 'https://www.jumia.com.ng'
+        # konga_deals_url = 'https://www.konga.com/search?search=ProductOfTheWeek'
+        # kara_deals_url = 'https://kara.com.ng'
+        # kiaglo_deals_url = 'https://www.kaiglo.com/'
         form = SearchForm(request.POST)
         if form.is_valid():
             data = form.cleaned_data.get('search_field')
@@ -371,18 +358,24 @@ def results(request, key):
     jumia_url = "https://www.jumia.com.ng/catalog/?q="
     konga_url = "https://www.konga.com/search?search="
     kara_url = "https://kara.com.ng/catalogsearch/result/?q="
+    kaiglo_url = "https://www.kaiglo.com/category/search?search="
+    slot_url = "https://slot.ng/catalogsearch/result/?q="
     jumia_purl = jumia_url + jumia_search_string
     konga_purl = konga_url + konga_search_string
     kara_purl = kara_url + kara_search_string
+    kaiglo_purl = kaiglo_url + kara_search_string
+    slot_purl = slot_url + jumia_search_string
     
 
     jumia_data = getHTMLjumia(jumia_purl)
     print("jumia func completed")
     konga_data = getHTMLkonga(konga_purl)
     kara_data = getHTMLkara(kara_purl)
+    slot_data = getHTMLslot(slot_purl)
+    # kaiglo_data = getHTMLkaiglo(kaiglo_purl)
 
     context = {'jumia_data': jumia_data,
-               'konga_data': konga_data, 'kara_data': kara_data
+               'konga_data': konga_data, 'kara_data': kara_data, 'slot_data': slot_data
                }
     product_id = request.GET.get('product_id')
     product_name = request.GET.get('product_name')
