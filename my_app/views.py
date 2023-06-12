@@ -10,11 +10,11 @@ from django.contrib.auth.hashers import *
 from django.contrib.auth.decorators import login_required
 from scrapingbee import ScrapingBeeClient
 import requests
-from msedge.selenium_tools import EdgeOptions
-from msedge.selenium_tools import Edge
+# from msedge.selenium_tools import EdgeOptions
+# from msedge.selenium_tools import Edge
 
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+# from selenium import webdriver
+# from selenium.webdriver.chrome.options import Options
 import json
 
 
@@ -152,11 +152,7 @@ def getHTMLkonga(link):
         sub_dict["rating"] = item['rating']
         sub_dict['product_store'] = 'Konga'
         data_dict[index] = sub_dict
-    # print(data_dict)
-    # for i in data_dict:
-    #     print("=====================")
-    #     print(data_dict[i])
-    #     print("=====================")
+   
     return data_dict
     
 
@@ -198,13 +194,7 @@ def getHTMLkara(link):
         data_dict[index] = sub_dict
 
     return data_dict
-    # print("--------------------------------------------------------------")
-    # print(product_id)
-    # print(product_price)
-    # print(product_url)
-    # print(image_url)
-    # print(product_name)
-    # print("--------------------------------------------------------------")
+    
 
 
 def getHTMLkaiglo(link, headers={'User-Agent': user_agent},):
@@ -339,13 +329,7 @@ def home(request):
 
     else:
         print("blank home page")
-        # for i in range(5):
-        #     proxy = get_proxy(countries=['US'], verify=True).ip_and_port
-        #     # proxy = ProxyManager().get_new_proxy()
-        #     # proxy = FreeProxy().get()
-        #     newproxies.append(proxy)
-        # print("newproxies")
-        # print(newproxies)
+      
         form = SearchForm()
     return render(request, 'my_app/home.html', {'form': form, 'deals': slide_info})
 
@@ -400,20 +384,6 @@ def results(request, key):
             messages.success(request, "Product Saved !!!")
             return JsonResponse({'status': 'saved completely'})
 
-    # print(key)
-    # print(jumia_data)
-    # print(konga_data)
-    # for item in jumia_data:
-    #     print(konga_data[item]['product_name'])
-    # #     print("----------------------------------")
-    # for key, value in jumia_data.items():
-    #     # print(key)
-    #     # print(value.tester)
-    #     print('-------------------------------')
-    #     # for key, value in value.items():
-    #     #     print(key)
-    #     #     print(value)
-    #     #     print('-------------------------------')
     return render(request, 'my_app/results.html', context)
 
 
