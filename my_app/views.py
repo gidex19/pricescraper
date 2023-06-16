@@ -10,6 +10,8 @@ from django.contrib.auth.hashers import *
 from django.contrib.auth.decorators import login_required
 from scrapingbee import ScrapingBeeClient
 import requests
+from concurrent.futures import ThreadPoolExecutor
+import time
 # from msedge.selenium_tools import EdgeOptions
 # from msedge.selenium_tools import Edge
 
@@ -84,6 +86,7 @@ def getHTMLjumia(link):
 
     # client = ScrapingBeeClient(api_key='PPC6P70AHM5GYZGZ15H1C3S1S1NFY6E7V1E1QUZ1AAOZ2UM1PK8CFPD0RX2HZH2YAMBCKJBL7EMUPNJ5')
     # response = client.get(link)
+    
 
     # response_text = scrapingBeefunc(link)
     
@@ -129,7 +132,7 @@ def getHTMLkonga(link):
     # client = ScrapingBeeClient(api_key='PPC6P70AHM5GYZGZ15H1C3S1S1NFY6E7V1E1QUZ1AAOZ2UM1PK8CFPD0RX2HZH2YAMBCKJBL7EMUPNJ5')
     # response = client.get(link)
 
-    response_text = scrapingBeefunc(link)
+    # response_text = scrapingBeefunc(link)
     # soup = BeautifulSoup(response.text, "html.parser")
     # print(doc.prettify())
     # print(response.text)
@@ -198,7 +201,7 @@ def getHTMLkara(link):
 
 
 def getHTMLkaiglo(link, headers={'User-Agent': user_agent},):
-    response_text = requests.get(link).text
+    # response_text = requests.get(link).text
     # soup = BeautifulSoup(response.text, "html.parser")
 
     # payload = {'api_key': '647db17e4b69347cd45bbbd7', 'url': link, 'dynamic':'false'}
@@ -207,7 +210,7 @@ def getHTMLkaiglo(link, headers={'User-Agent': user_agent},):
     # client = ScrapingBeeClient(api_key='PPC6P70AHM5GYZGZ15H1C3S1S1NFY6E7V1E1QUZ1AAOZ2UM1PK8CFPD0RX2HZH2YAMBCKJBL7EMUPNJ5')
     # response = client.get(link)
     
-    # response_text = scrapingBeefunc(link)
+    response_text = scrapingBeefunc(link)
     soup = BeautifulSoup(response_text, "html.parser")
 
     li_tags = soup.find_all('li', {"class": "item product product-item"})[:2]
@@ -236,7 +239,7 @@ def getHTMLkaiglo(link, headers={'User-Agent': user_agent},):
     return data_dict
 
 def getHTMLslot(link):
-    response_text = requests.get(link, headers={'User-Agent': user_agent}, ).text
+    # response_text = requests.get(link, headers={'User-Agent': user_agent}, ).text
     # soup = BeautifulSoup(response.text, "html.parser")
 
     # payload = {'api_key': '647db17e4b69347cd45bbbd7', 'url': link, 'dynamic':'false'}
@@ -245,8 +248,7 @@ def getHTMLslot(link):
     # client = ScrapingBeeClient(api_key='PPC6P70AHM5GYZGZ15H1C3S1S1NFY6E7V1E1QUZ1AAOZ2UM1PK8CFPD0RX2HZH2YAMBCKJBL7EMUPNJ5')
     # response = client.get(link)
     
-
-    # response_text = scrapingBeefunc(link)
+    response_text = scrapingBeefunc(link)
     soup = BeautifulSoup(response_text, "html.parser")
     product_holders = soup.findChildren('div', {"class": "item-product"})[:2]
     data_dict = {}
@@ -275,28 +277,32 @@ def home(request):
     url = 'https://slot.ng/catalogsearch/result/?q=infinix'
 
     jumia_response = requests.get('https://www.jumia.com.ng')
-    konga_response = requests.get('https://www.konga.com')
-    slot_response_text = requests.get(url).text
+    # konga_response = requests.get('https://www.konga.com')
+    # slot_response_text = requests.get(url).text
     soup = BeautifulSoup(jumia_response.text, "html.parser")
-    slot_soup = BeautifulSoup(slot_response_text, "html.parser")
+    # print(soup)
+    # slot_soup = BeautifulSoup(slot_response_text, "html.parser")
 
-    slot_holder = slot_soup.findChildren('div', {"class": "item-product"})[:3]
-    print("slot_holder")
-    print(slot_holder)
-    for index, item in enumerate(slot_holder):
-        p_url = item.findChild("a", {"class": "product-thumb-link"}).get("href")
-        p_name = item.findChild("img", {"class": "product-image-photo"}).get("alt")
-        image_url = item.findChild("img", {"class": "product-image-photo"}).get("src")
-        price = item.findChild("span", {"class": "price"}).text
-        p_id = "slot" + item.findChild("a", {"class": "quickview-link"}).get("data-id")
-        print("-------------------------------------------------\n\n")
-        print(p_url)
-        print(p_name)
-        print(p_id)
-        print(image_url)
-        print(price[:-3])
-        print("-------------------------------------------------\n\n")
-    holder = soup.find('div', {"class": "-pvxs"}).findChildren("article", {"class", "prd"})[:14]
+    # slot_holder = slot_soup.findChildren('div', {"class": "item-product"})[:3]
+    # print("slot_holder")
+    # print(slot_holder)
+    # for index, item in enumerate(slot_holder):
+    #     p_url = item.findChild("a", {"class": "product-thumb-link"}).get("href")
+    #     p_name = item.findChild("img", {"class": "product-image-photo"}).get("alt")
+    #     image_url = item.findChild("img", {"class": "product-image-photo"}).get("src")
+    #     price = item.findChild("span", {"class": "price"}).text
+    #     p_id = "slot" + item.findChild("a", {"class": "quickview-link"}).get("data-id")
+    #     # print("-------------------------------------------------\n\n")
+    #     # print(p_url)
+    #     # print(p_name)
+    #     # print(p_id)
+    #     # print(image_url)
+    #     # print(price[:-3])
+    #     # print("-------------------------------------------------\n\n")
+    # holder = soup.find('div', {"class": "-pvxs"}).findChildren("article", {"class", "prd"})[:14]
+    holder = soup.findChildren('div', {"class": "-pvxs"})[1].findChildren("article", {"class", "prd"})[:14]
+    
+    
     slide_info = {}
     for index, item in enumerate(holder):
         product_url = "https://www.jumia.com.ng" + item.findChild("a", {"class": "core"}).get("href")
@@ -314,8 +320,6 @@ def home(request):
         sub_dict['product_url'] = product_url
         sub_dict['product_store'] = 'Jumia'
         slide_info[index] = sub_dict
-    
-    
      
     if request.method == 'POST':
         # jumia_deals_url = 'https://www.jumia.com.ng'
@@ -328,13 +332,12 @@ def home(request):
             return redirect('results', key=data)
 
     else:
-        print("blank home page")
-      
         form = SearchForm()
     return render(request, 'my_app/home.html', {'form': form, 'deals': slide_info})
 
 
 def results(request, key):
+    start_time = time.time()
     data = key
     jumia_search_string = data.replace(' ', '+')
     konga_search_string = data.replace(' ', '%20')
@@ -350,12 +353,25 @@ def results(request, key):
     kaiglo_purl = kaiglo_url + kara_search_string
     slot_purl = slot_url + jumia_search_string
     
-
+    # multithreading
+    # with ThreadPoolExecutor(max_workers=40) as p:
+    #     jumia_data = p.map(getHTMLjumia(jumia_purl))
+    # print("jumia func completed")
+    # with ThreadPoolExecutor(max_workers=40) as q:
+    #     konga_data = q.map(getHTMLkonga(konga_purl))
+    # with ThreadPoolExecutor(max_workers=100) as r:
+    #     kara_data = r.map(getHTMLkara(kara_purl))
+    # with ThreadPoolExecutor(max_workers=100) as s:
+    #     slot_data = s.map(getHTMLslot(slot_purl))
+    
     jumia_data = getHTMLjumia(jumia_purl)
     print("jumia func completed")
     konga_data = getHTMLkonga(konga_purl)
+    print("konga func completed")
     kara_data = getHTMLkara(kara_purl)
+    print("kara func completed")
     slot_data = getHTMLslot(slot_purl)
+    print("slot func completed")
     # kaiglo_data = getHTMLkaiglo(kaiglo_purl)
 
     context = {'jumia_data': jumia_data,
@@ -370,20 +386,20 @@ def results(request, key):
     if request.is_ajax():
         if request.user.is_authenticated:
             user = request.user
-            print("-----------------------------------")
-            print(product_id)
-            print(product_name)
-            print(product_url)
-            print(product_price)
-            print(product_image_url)
-            print("-----------------------------------")
+            # print("-----------------------------------")
+            # print(product_id)
+            # print(product_name)
+            # print(product_url)
+            # print(product_price)
+            # print(product_image_url)
+            # print("-----------------------------------")
             SavedProduct.objects.create(product_id=product_id, name=product_name,
                                         price=product_price, image_url=product_image_url,
                                         product_url=product_url, owner=user, vendor='Jumia')
             print("saved object created successfully")
             messages.success(request, "Product Saved !!!")
             return JsonResponse({'status': 'saved completely'})
-
+    print(f"{(time.time() - start_time):.2f} seconds")
     return render(request, 'my_app/results.html', context)
 
 
