@@ -1,5 +1,5 @@
 {% extends 'my_app/base.html' %} {% load crispy_forms_tags %} {% load static %}
-{% block header %}
+{% load humanize %} {% block header %}
 
 <header class="bg-light">
   <img class="bg-img" src="{% static 'my_app/images/home-header.jpg' %}" />
@@ -10,7 +10,7 @@
     >
       Compare product prices
     </h1>
-    <p class="text-white mb-4">
+    <p class="text-white mb-4" style="font-size: 18px !important; color: white">
       compare product over multiple ecommerce stores for optimal shopping
       decisons
     </p>
@@ -60,7 +60,7 @@
       <div class="card p-4 mt-3">
         <div class="d-flex justify-content-center px-5">
           <div class="col-10 bg-dark m-auto" style="border-radius: 10px">
-            <form method="POST" class="p-4">
+            <form method="POST" id="productsearchform" class="p-4">
               <div>
                 <span
                   >{{ form|crispy }} {% csrf_token %}
@@ -147,6 +147,7 @@
 
 <div class="container mt-4">
   <h3 class="bold-text m-auto text-center" style="color: #3c43ad">Hot Deals</h3>
+  <div id="my-loader" class="text-danger ldld full"></div>
   <hr
     class="m-auto text-center mb-4"
     style="
@@ -196,8 +197,20 @@
 </div>
 
 {% endblock main-content %} {% block js %}
+<!-- <script>
+  var ldld = new ldLoader({ root: "#my-loader" });
+  ldld.on();
+</script> -->
 <script>
   $(document).ready(function () {
+    var ldld = new ldLoader({ root: "#my-loader" });
+    ldld.off();
+    console.log("loader turned off");
+    var productsearchform = document.getElementById("productsearchform");
+    productsearchform.addEventListener("submit", (event) => {
+      ldld.on();
+    });
+    ldld.off();
     $(".single-item").slick({
       dots: true,
       useTransform: true,

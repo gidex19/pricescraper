@@ -73,7 +73,8 @@ user_agent = random.choice(user_agent_list)
 
 
 def scrapingBeefunc(link):
-    client = ScrapingBeeClient(api_key='BNJ7W1VCKRLUIIJL9DDFM5GQWJ6OU4ZWZOVP2TWAUNDO2W9WB6XWZQ1FWE1T91RX2ZV9JC231Z2N2QFW')
+    # client = ScrapingBeeClient(api_key='BNJ7W1VCKRLUIIJL9DDFM5GQWJ6OU4ZWZOVP2TWAUNDO2W9WB6XWZQ1FWE1T91RX2ZV9JC231Z2N2QFW')
+    client = ScrapingBeeClient(api_key='ZV5NR5CBXOI4EXUANM8KSY03M36R8MEGILSF300K5WG8DTBOFWHVGET2Z94RSL1A7P2Q8G34FFWH6L4I')
     response = client.get(link)
     return response.text
 
@@ -93,7 +94,7 @@ def getHTMLjumia(link):
     soup = BeautifulSoup(response_text, "html.parser")
     # soup = BeautifulSoup(response.text, "html.parser")
     # print("printing all script tags")
-    article_tags = soup.find_all('article', {"class": "c-prd"})[:2]
+    article_tags = soup.find_all('article', {"class": "c-prd"})[:4]
     # print(scripts_tags[3].string)
     data_dict = {}
     for index, item in enumerate(article_tags):
@@ -142,7 +143,7 @@ def getHTMLkonga(link):
     dictionary = json.loads(content)
     check = dictionary["props"]["initialProps"]["pageProps"]["resultsState"]["content"]["hits"]
     data_dict = {}
-    check = check[:2]
+    check = check[:4]
     for index, item in enumerate(check):
         sub_dict = {}
         sub_dict["product_id"] = item['sku']
@@ -173,7 +174,7 @@ def getHTMLkara(link):
 
     # response_text = scrapingBeefunc(link)
     soup = BeautifulSoup(response_text, "html.parser")
-    li_tags = soup.find_all('li', {"class": "item product product-item"})[:2]
+    li_tags = soup.find_all('li', {"class": "item product product-item"})[:4]
     data_dict = {}
     for index, item in enumerate(li_tags):
         sub_dict = {}
@@ -213,7 +214,7 @@ def getHTMLkaiglo(link, headers={'User-Agent': user_agent},):
     response_text = scrapingBeefunc(link)
     soup = BeautifulSoup(response_text, "html.parser")
 
-    li_tags = soup.find_all('li', {"class": "item product product-item"})[:2]
+    li_tags = soup.find_all('li', {"class": "item product product-item"})[:4]
     data_dict = {}
     for index, item in enumerate(li_tags):
         sub_dict = {}
@@ -250,7 +251,7 @@ def getHTMLslot(link):
     
     response_text = scrapingBeefunc(link)
     soup = BeautifulSoup(response_text, "html.parser")
-    product_holders = soup.findChildren('div', {"class": "item-product"})[:2]
+    product_holders = soup.findChildren('div', {"class": "item-product"})[:4]
     data_dict = {}
     for index, item in enumerate(product_holders):
         sub_dict = {}
@@ -320,6 +321,34 @@ def home(request):
         sub_dict['product_url'] = product_url
         sub_dict['product_store'] = 'Jumia'
         slide_info[index] = sub_dict
+
+    
+    # text_url = request.GET.get('product_url')
+    if request.is_ajax():
+        product_id = request.GET.get('product_id')
+        product_name = request.GET.get('product_name')
+        product_url = request.GET.get('product_url')
+        product_price = request.GET.get('product_price')
+        product_image_url = request.GET.get('product_image_url')
+        if request.user.is_authenticated:
+            user = request.user
+            print("--------------homepage-----------")
+            print(product_id)
+            print(product_name)
+            print(product_url)
+            print(product_price)
+            print(product_image_url)
+            print("--------------homepage------------")
+            SavedProduct.objects.create(product_id=product_id, name=product_name,
+                                        price=product_price, image_url=product_image_url,
+                                        product_url=product_url, owner=user, vendor='Jumia')
+            print("saved object created successfully")
+            messages.success(request, "Product Saved !!!")
+            return JsonResponse({'status': 'saved completely'})
+        else:
+            messages.success(request, "Login to save products")
+            return redirect('login_page')
+
      
     if request.method == 'POST':
         # jumia_deals_url = 'https://www.jumia.com.ng'
@@ -337,6 +366,34 @@ def home(request):
 
 
 def results(request, key):
+    if request.is_ajax():
+        print("ajax request sent")
+        if request.user.is_authenticated:
+            user = request.user
+            product_id = request.GET.get('product_id')
+            product_name = request.GET.get('product_name')
+            product_url = request.GET.get('product_url')
+            product_price = request.GET.get('product_price')
+            product_image_url = request.GET.get('product_image_url')
+            # text_url = request.GET.get('product_url')
+            print("-------result-page-----------")
+            print(product_id)
+            print(product_name)
+            print(product_url)
+            print(product_price)
+            print(product_image_url)
+            print("-------result-page-----------")
+            SavedProduct.objects.create(product_id=product_id, name=product_name,
+                                        price=product_price, image_url=product_image_url,
+                                        product_url=product_url, owner=user, vendor='Jumia')
+            print("saved object created successfully")
+            messages.success(request, "Product Saved !!!")
+            return JsonResponse({'status': 'saved completely'})
+        else:
+            print("user not logged In")
+            messages.success(request, "Login to save products")
+            return JsonResponse({'status': 'reditect to loginpage'})
+            # return redirect('http://127.0.0.1:8000/login')
     start_time = time.time()
     data = key
     jumia_search_string = data.replace(' ', '+')
@@ -377,28 +434,7 @@ def results(request, key):
     context = {'jumia_data': jumia_data,
                'konga_data': konga_data, 'kara_data': kara_data, 'slot_data': slot_data
                }
-    product_id = request.GET.get('product_id')
-    product_name = request.GET.get('product_name')
-    product_url = request.GET.get('product_url')
-    product_price = request.GET.get('product_price')
-    product_image_url = request.GET.get('product_image_url')
-    # text_url = request.GET.get('product_url')
-    if request.is_ajax():
-        if request.user.is_authenticated:
-            user = request.user
-            # print("-----------------------------------")
-            # print(product_id)
-            # print(product_name)
-            # print(product_url)
-            # print(product_price)
-            # print(product_image_url)
-            # print("-----------------------------------")
-            SavedProduct.objects.create(product_id=product_id, name=product_name,
-                                        price=product_price, image_url=product_image_url,
-                                        product_url=product_url, owner=user, vendor='Jumia')
-            print("saved object created successfully")
-            messages.success(request, "Product Saved !!!")
-            return JsonResponse({'status': 'saved completely'})
+
     print(f"{(time.time() - start_time):.2f} seconds")
     return render(request, 'my_app/results.html', context)
 

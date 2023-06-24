@@ -1,5 +1,5 @@
 {% extends 'my_app/base.html' %} {% load crispy_forms_tags %} {% load static %}
-{% block header %}
+{% load humanize %} {% block header %}
 
 <!-- <div class="container">
     <div class="row">
@@ -29,7 +29,10 @@
           {{ message }}
         </p>
       </div>
-      {% endfor %} {% endif %} {% for key, value in jumia_data.items %}
+      {% endfor %} {% endif %}
+      <div id="my-loader" class="text-danger ldld full"></div>
+
+      {% for key, value in jumia_data.items %}
 
       <div
         id="{{value.product_id}}-div"
@@ -57,7 +60,7 @@
               {{ value.product_name }}
             </p>
             <p id="{{value.product_id}}-price">
-              {{value.product_price}}
+              {{value.product_price|intcomma}}
               <span class="badge badge-primary">{{value.product_store}}</span>
             </p>
 
@@ -70,7 +73,7 @@
             <a
               id="{{value.product_id}}-url"
               class="save-btn btn btn-sm btn-info"
-              href="#"
+              type="button"
               id="{{value.product_id}}-btn"
               product-id="{{value.product_id}}"
             >
@@ -109,7 +112,7 @@
               {{ value.product_name }}
             </p>
             <p id="{{value.product_id}}-price">
-              {{value.product_price}}
+              {{value.product_price|intcomma}}
               <span class="badge badge-primary">{{value.product_store}}</span>
             </p>
 
@@ -161,7 +164,7 @@
               {{ value.product_name }}
             </p>
             <p id="{{value.product_id}}-price">
-              {{value.product_price}}
+              {{value.product_price|intcomma}}
               <span class="badge badge-primary">{{value.product_store}}</span>
             </p>
 
@@ -213,7 +216,7 @@
               {{ value.product_name }}
             </p>
             <p id="{{value.product_id}}-price">
-              {{value.product_price}}
+              {{value.product_price|intcomma}}
               <span class="badge badge-primary">{{value.product_store}}</span>
             </p>
 
@@ -245,6 +248,14 @@
 {% endblock header %} {% block js %}
 
 <script>
+  // var ldld = new ldLoader({ root: "#my-loader" });
+  // ldld.on();
+  // console.log("loader turned on");
+
+  // window.onload(){
+  //   ldld.off();
+  // }
+
   $(document).ready(function () {
     console.log("js working");
 
@@ -270,7 +281,10 @@
             product_image_url: String(p_image_url),
           },
           success: function (response) {
-            console.log(response);
+            console.log(response.status);
+            if (response.status == "reditect to loginpage") {
+              window.location.assign("{% url 'login_page' %}");
+            }
           },
         });
         // ajaxfunc(name= p_name, price = p_price, url = p_url, image_url = p_image_url )
