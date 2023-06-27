@@ -64,7 +64,58 @@
               <div>
                 <span
                   >{{ form|crispy }} {% csrf_token %}
-                  <button type="submit" class="btn btn-sm btn-outline-info">
+
+                  <!-- starts here -->
+                  <div class="col-sm-12 col-md-10 col-lg-8 col-12">
+                    <div class="price-input">
+                      <div class="field">
+                        <span style="color: white !important">Min</span>
+                        <input
+                          type="number"
+                          class="input-min"
+                          value="1000"
+                          name="input-min"
+                        />
+                      </div>
+                      <div class="separator">-</div>
+                      <div class="field">
+                        <span style="color: white !important">Max</span>
+                        <input
+                          type="number"
+                          class="input-max"
+                          value="5000000"
+                          name="input-max"
+                        />
+                      </div>
+                    </div>
+                    <div class="slider">
+                      <div class="progress"></div>
+                    </div>
+                    <div class="range-input">
+                      <input
+                        type="range"
+                        class="range-min"
+                        min="1000"
+                        max="10000000"
+                        value="0"
+                        step="1000"
+                      />
+                      <input
+                        type="range"
+                        class="range-max"
+                        min="1400"
+                        max="10000000"
+                        value="0"
+                        step="1000"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- ends here -->
+                  <button
+                    type="submit"
+                    class="btn btn-sm btn-outline-info mt-4"
+                  >
                     <i class="fa fa-search"></i></button
                 ></span>
                 <!-- <div class="d-flex justify-content-center px-5">
@@ -255,5 +306,6 @@
     });
   });
 </script>
+<script src="{% static 'my_app/js/script.js' %}"></script>
 
 {% endblock js %}

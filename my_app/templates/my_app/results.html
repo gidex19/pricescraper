@@ -84,58 +84,6 @@
         </div>
       </div>
 
-      {% endfor %} {% for key, value in konga_data.items %}
-
-      <div
-        id="{{value.product_id}}-div"
-        class="col-10 mb-4 mt-1 p-1"
-        style="
-          background-color: white;
-          border-radius: 0px 35px 35px 0px;
-          border-left: 2px solid greenyellow;
-        "
-      >
-        <div class="row">
-          <div class="col-3">
-            <img
-              id="{{value.product_id}}-image_url"
-              src="{{value.image_url}}"
-              style="width: 100%; height: 100%"
-            />
-          </div>
-          <div class="col-7 m-2">
-            <p
-              id="{{value.product_id}}-name"
-              class="small-p product_name"
-              style="font-size: 10px; font-weight: 400"
-            >
-              {{ value.product_name }}
-            </p>
-            <p id="{{value.product_id}}-price">
-              {{value.product_price|intcomma}}
-              <span class="badge badge-primary">{{value.product_store}}</span>
-            </p>
-
-            <a
-              id="{{value.product_id}}-url"
-              class="btn btn-sm btn-outline-info"
-              href="{{value.product_url}}"
-              >Buy Now</a
-            >
-            <a
-              id="{{value.product_id}}-url"
-              class="save-btn btn btn-sm btn-info"
-              href="#"
-              id="{{value.product_id}}-btn"
-              product-id="{{value.product_id}}"
-            >
-              <i class="fa fa-heart"></i>
-            </a>
-            <!-- <a href="#" class="save-btn search-icon btn btn-sm btn-outline-info" product-id="{{value.product_id}}" id={{value.product_id}}-btn ><i class="fa-regular fa-heart"></i>hyhy</a> -->
-          </div>
-        </div>
-      </div>
-
       {% endfor %} {% for key, value in kara_data.items %}
 
       <div
@@ -193,6 +141,58 @@
       <div
         id="{{value.product_id}}-div"
         class="col-10 mb-4 mt-1"
+        style="
+          background-color: white;
+          border-radius: 0px 35px 35px 0px;
+          border-left: 2px solid greenyellow;
+        "
+      >
+        <div class="row">
+          <div class="col-3">
+            <img
+              id="{{value.product_id}}-image_url"
+              src="{{value.image_url}}"
+              style="width: 100%; height: 100%"
+            />
+          </div>
+          <div class="col-7 m-2">
+            <p
+              id="{{value.product_id}}-name"
+              class="small-p product_name"
+              style="font-size: 10px; font-weight: 400"
+            >
+              {{ value.product_name }}
+            </p>
+            <p id="{{value.product_id}}-price">
+              {{value.product_price|intcomma}}
+              <span class="badge badge-primary">{{value.product_store}}</span>
+            </p>
+
+            <a
+              id="{{value.product_id}}-url"
+              class="btn btn-sm btn-outline-info"
+              href="{{value.product_url}}"
+              >Buy Now</a
+            >
+            <a
+              id="{{value.product_id}}-url"
+              class="save-btn btn btn-sm btn-info"
+              href="#"
+              id="{{value.product_id}}-btn"
+              product-id="{{value.product_id}}"
+            >
+              <i class="fa fa-heart"></i>
+            </a>
+            <!-- <a href="#" class="save-btn search-icon btn btn-sm btn-outline-info" product-id="{{value.product_id}}" id={{value.product_id}}-btn ><i class="fa-regular fa-heart"></i>hyhy</a> -->
+          </div>
+        </div>
+      </div>
+
+      {% endfor %} {% for key, value in konga_data.items %}
+
+      <div
+        id="{{value.product_id}}-div"
+        class="col-10 mb-4 mt-1 p-1"
         style="
           background-color: white;
           border-radius: 0px 35px 35px 0px;

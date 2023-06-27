@@ -82,13 +82,6 @@ def getHTMLjumia(link):
     # user_agent = random.choice(user_agent_list)
     response_text = requests.get(link, headers={'User-Agent': user_agent}).text
 
-    # payload = {'api_key': '647db17e4b69347cd45bbbd7', 'url': link, 'dynamic':'false'}
-    # response = requests.get('https://api.scrapingdog.com/scrape', params=payload)
-
-    # client = ScrapingBeeClient(api_key='PPC6P70AHM5GYZGZ15H1C3S1S1NFY6E7V1E1QUZ1AAOZ2UM1PK8CFPD0RX2HZH2YAMBCKJBL7EMUPNJ5')
-    # response = client.get(link)
-    
-
     # response_text = scrapingBeefunc(link)
     
     soup = BeautifulSoup(response_text, "html.parser")
@@ -281,26 +274,7 @@ def home(request):
     # konga_response = requests.get('https://www.konga.com')
     # slot_response_text = requests.get(url).text
     soup = BeautifulSoup(jumia_response.text, "html.parser")
-    # print(soup)
-    # slot_soup = BeautifulSoup(slot_response_text, "html.parser")
-
-    # slot_holder = slot_soup.findChildren('div', {"class": "item-product"})[:3]
-    # print("slot_holder")
-    # print(slot_holder)
-    # for index, item in enumerate(slot_holder):
-    #     p_url = item.findChild("a", {"class": "product-thumb-link"}).get("href")
-    #     p_name = item.findChild("img", {"class": "product-image-photo"}).get("alt")
-    #     image_url = item.findChild("img", {"class": "product-image-photo"}).get("src")
-    #     price = item.findChild("span", {"class": "price"}).text
-    #     p_id = "slot" + item.findChild("a", {"class": "quickview-link"}).get("data-id")
-    #     # print("-------------------------------------------------\n\n")
-    #     # print(p_url)
-    #     # print(p_name)
-    #     # print(p_id)
-    #     # print(image_url)
-    #     # print(price[:-3])
-    #     # print("-------------------------------------------------\n\n")
-    # holder = soup.find('div', {"class": "-pvxs"}).findChildren("article", {"class", "prd"})[:14]
+   
     holder = soup.findChildren('div', {"class": "-pvxs"})[1].findChildren("article", {"class", "prd"})[:14]
     
     
@@ -358,14 +332,17 @@ def home(request):
         form = SearchForm(request.POST)
         if form.is_valid():
             data = form.cleaned_data.get('search_field')
-            return redirect('results', key=data)
+            min = request.POST.get('input-min')
+            max = request.POST.get('input-max')
+           
+            return redirect('results', key=data, min = min, max = max)
 
     else:
         form = SearchForm()
     return render(request, 'my_app/home.html', {'form': form, 'deals': slide_info})
 
 
-def results(request, key):
+def results(request, key, min, max):
     if request.is_ajax():
         print("ajax request sent")
         if request.user.is_authenticated:
@@ -401,15 +378,21 @@ def results(request, key):
     kara_search_string = data.replace(' ', '+')
     jumia_url = "https://www.jumia.com.ng/catalog/?q="
     konga_url = "https://www.konga.com/search?search="
-    kara_url = "https://kara.com.ng/catalogsearch/result/?q="
-    kaiglo_url = "https://www.kaiglo.com/category/search?search="
+    # kara_url = "https://kara.com.ng/catalogsearch/result/?q="
+    kara_url = f"https://kara.com.ng/catalogsearch/result/index/?price={min}-{max}&q="
+    kaiglo_url = "https://www.kaiglo.com/category/search?search=" 
     slot_url = "https://slot.ng/catalogsearch/result/?q="
-    jumia_purl = jumia_url + jumia_search_string
-    konga_purl = konga_url + konga_search_string
+    #  &price=0-324999#catalog-listing
+    # https://www.konga.com/search?search=tecno&max=200000&min=150000
+    # https://kara.com.ng/catalogsearch/result/index/?price=100000-150000&q=tecno
+    jumia_purl = jumia_url + jumia_search_string + "&price=" + min +"-"+ max +"#catalog-listing"
+    konga_purl = konga_url + konga_search_string + "&max="+ max + "&min=" + min
     kara_purl = kara_url + kara_search_string
     kaiglo_purl = kaiglo_url + kara_search_string
     slot_purl = slot_url + jumia_search_string
-    
+    # print(jumia_purl)    
+    # print(konga_purl)    
+    # print(kara_purl)    
     # multithreading
     # with ThreadPoolExecutor(max_workers=40) as p:
     #     jumia_data = p.map(getHTMLjumia(jumia_purl))

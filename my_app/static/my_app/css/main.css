@@ -1,224 +1,312 @@
-
-
-html{
-    overflow-x: hidden !important;
-    scroll-behavior: smooth;
+html {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
 }
-body{
-    font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    padding: 0;
-    margin: 0;
-    background-color: #f7eeee;
-    width: 100%;
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  background-color: #f7eeee;
+  width: 100%;
 }
 
-.nav-item{
-    font-size: 13px;
-    color: white !important;
-    /* font-weight: 600; */
+.nav-item {
+  font-size: 13px;
+  color: white !important;
+  /* font-weight: 600; */
 }
-.anchor-button{
-    /* background-color: limegreen; */
-    padding: 7px 40px;
-    border: 1px solid black;
-    border-radius: 7px;
-    width: 150px !important;
+.anchor-button {
+  /* background-color: limegreen; */
+  padding: 7px 40px;
+  border: 1px solid black;
+  border-radius: 7px;
+  width: 150px !important;
 }
-.bg-img{
-    object-fit: cover; 
-    /* opacity: 0.6; */
-    width: 100vw;
-    height: 100vh;
+.bg-img {
+  object-fit: cover;
+  /* opacity: 0.6; */
+  width: 100vw;
+  height: 100vh;
 }
-.hero-section{
-    margin-top: -50vh;
-    margin-left: 7%;
-    z-index: 5;
-}
-
-.button-large-dark{
-    width: 200px;
-    height: 50px;
-    background: black;
-    color: white !important;
-    padding: 18px 50px;
-    border-radius: 8px 8px 8px 8px;
-    border: 2px solid black;
-    font-size: 12px;
-}
-.anchor-block{
-    display: block;
-    color: white;
-    /* font-weight: bold; */
-    font-size: 13px;
-    margin-top: 10px;
-    text-decoration: none;
-}
-.white-text{
-    color: white;
-}
-.button-small-dark{
-    width: 140px;
-    height: 50px;
-    background: black;
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 8px 8px 8px 8px;
-    border: 2px solid black;
-    font-size: 12px;
-}
-.header-text{
-    font-size: 50px;
-    font-weight: bolder;
+.hero-section {
+  margin-top: -50vh;
+  margin-left: 7%;
+  z-index: 5;
 }
 
-.button-large-white{
-    width: 200px;
-    height: 50px;
-    background: white;
-    color: black !important;
-    padding: 16px 50px;
-    border-radius: 8px 8px 8px 8px;
-    border: 2px solid black;
-    font-size: 12px;
+.button-large-dark {
+  width: 200px;
+  height: 50px;
+  background: black;
+  color: white !important;
+  padding: 18px 50px;
+  border-radius: 8px 8px 8px 8px;
+  border: 2px solid black;
+  font-size: 12px;
 }
-.button-large-transparent{
-    width: 200px;
-    height: 50px;
-    background: transparent;
-    color: white !important;
-    padding: 16px 50px;
-    border-radius: 8px 8px 8px 8px;
-    border: 2px solid white;
-    font-size: 12px;
+.anchor-block {
+  display: block;
+  color: white;
+  /* font-weight: bold; */
+  font-size: 13px;
+  margin-top: 10px;
+  text-decoration: none;
 }
-.button-small-color{
-    width: 200px;
-    height: 50px;
-    background: limegreen;
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 7px 7px 7px 7px;
-    border: 2px solid limegreen;
-    font-size: 12px;
+.white-text {
+  color: white;
 }
-
-
-
-.card{
-    /* background-color: var(--postbg) !important; */
-    box-shadow: 0px 8px 15px rgb(94, 90, 90);
-    /* border: purple; */
-    background: #eee;
-    border-radius: 15px;
-  
-  }
-.slick-prev:before, .slick-next:before{
-    color: black !important;
+.button-small-dark {
+  width: 140px;
+  height: 50px;
+  background: black;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 8px 8px 8px 8px;
+  border: 2px solid black;
+  font-size: 12px;
+}
+.header-text {
+  font-size: 50px;
+  font-weight: bolder;
 }
 
-  
-  .search {
-    width: 100%;
-        margin-bottom: auto;
-      margin-top: 20px;
-      height: 50px;
-          background-color: #fff;
-      padding: 10px;
-      border-radius: 5px;
-  }
-  
-  .search-input {
-      color: white;
-      border: 0;
-      outline: 0;
-      background: none;
-      width: 0;
-      margin-top: 5px;
-      caret-color: transparent;
-      line-height: 20px;
-      transition: width 0.4s linear
-  }
-  
-  .search .search-input {
-      padding: 0 10px;
-      width: 100%;
-      caret-color: #536bf6;
-      font-size: 19px;
-      font-weight: 300;
-      color: black;
-      transition: width 0.4s linear;
-  }
-  
-  
-  .search-icon {
-          height: 34px;
-      width: 34px;
-      float: right;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      background-color: #536bf6;
-      font-size: 10px;
-          bottom: 30px;
-          position: relative;
-          border-radius: 5px;
-  }
-  
-  .search-icon:hover{
-  
-    color: #fff !important;
-  }
-  
-  a:link {
-      text-decoration: none
-  }
-  
-  
-  
-  .card-inner {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      word-wrap: break-word;
-      background-color: #fff;
-      background-clip: border-box;
-      border: 1px solid rgba(0,0,0,.125);
-      border-radius: .25rem;
-      border:none;
-      cursor: pointer;
-      transition: all 2s;
-  }
-  .light-bg{
-    background-color: rgba(190, 178, 178, 0.24);
-    margin-bottom: 60px !important;
-  }
-  
-  .card-inner:hover{
-  
-     transform: scale(1.1);
-  
-  }
-  
-  .mg-text span{
-  
-    font-size: 12px;
-  
-  }
-  
-  .mg-text{
-  
-    line-height: 14px;
-  }
+/* css for slider range starts here */
 
-  p{
-    font-size: 12px !important;
-  }
+.price-input {
+  width: 100%;
+  display: flex;
+  margin: 30px 0 35px;
+}
 
-  .small-p{
-    font-size: 11px;
-  }
+.price-input .field {
+  display: flex;
+  width: 100%;
+  height: 45px;
+  align-items: center;
+}
+
+.field input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 14px;
+  margin-left: 12px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #999;
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.price-input .separator {
+  width: 130px;
+  display: flex;
+  font-size: 19px;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  height: 5px;
+  position: relative;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.slider .progress {
+  height: 100%;
+  left: 25%;
+  right: 25%;
+  position: absolute;
+  border-radius: 5px;
+  background: #17a2b8;
+}
+
+.range-input {
+  position: relative;
+}
+
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #17a2b8;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border: none;
+  border-radius: 50%;
+  background: #17a2b8;
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+input {
+  font-size: 14px;
+}
+
+.form-select {
+  font-size: 13px;
+}
+
+/* css for slider range ends here */
+
+.button-large-white {
+  width: 200px;
+  height: 50px;
+  background: white;
+  color: black !important;
+  padding: 16px 50px;
+  border-radius: 8px 8px 8px 8px;
+  border: 2px solid black;
+  font-size: 12px;
+}
+.button-large-transparent {
+  width: 200px;
+  height: 50px;
+  background: transparent;
+  color: white !important;
+  padding: 16px 50px;
+  border-radius: 8px 8px 8px 8px;
+  border: 2px solid white;
+  font-size: 12px;
+}
+.button-small-color {
+  width: 200px;
+  height: 50px;
+  background: limegreen;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 7px 7px 7px 7px;
+  border: 2px solid limegreen;
+  font-size: 12px;
+}
+
+.card {
+  /* background-color: var(--postbg) !important; */
+  box-shadow: 0px 8px 15px rgb(94, 90, 90);
+  /* border: purple; */
+  background: #eee;
+  border-radius: 15px;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}
+
+.search {
+  width: 100%;
+  margin-bottom: auto;
+  margin-top: 20px;
+  height: 50px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search-input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  margin-top: 5px;
+  caret-color: transparent;
+  line-height: 20px;
+  transition: width 0.4s linear;
+}
+
+.search .search-input {
+  padding: 0 10px;
+  width: 100%;
+  caret-color: #536bf6;
+  font-size: 19px;
+  font-weight: 300;
+  color: black;
+  transition: width 0.4s linear;
+}
+
+.search-icon {
+  height: 34px;
+  width: 34px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #536bf6;
+  font-size: 10px;
+  bottom: 30px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.search-icon:hover {
+  color: #fff !important;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.card-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: all 2s;
+}
+.light-bg {
+  background-color: rgba(190, 178, 178, 0.24);
+  margin-bottom: 60px !important;
+}
+
+.card-inner:hover {
+  transform: scale(1.1);
+}
+
+.mg-text span {
+  font-size: 12px;
+}
+
+.mg-text {
+  line-height: 14px;
+}
+
+p {
+  font-size: 12px !important;
+}
+
+.small-p {
+  font-size: 11px;
+}
