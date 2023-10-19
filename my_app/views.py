@@ -330,6 +330,7 @@ def home(request):
         # kara_deals_url = 'https://kara.com.ng'
         # kiaglo_deals_url = 'https://www.kaiglo.com/'
         form = SearchForm(request.POST)
+        
         if form.is_valid():
             data = form.cleaned_data.get('search_field')
             min = request.POST.get('input-min')
