@@ -25,7 +25,7 @@ SECRET_KEY = '-1nz40lm5x2mz&3ipweu8l@-p0z2xdq+g%wif^7f7(^ny$=%85'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['5f27-197-210-78-156.ngrok-free.app','127.0.0.1', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['4c57-197-210-53-120.ngrok-free.app', 'c5fb-102-89-34-41.ngrok-free.app', '0ad8-197-210-71-95.ngrok-free.app', '127.0.0.1', '127.0.0.1:8000']
 
 
 # Application definition
@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['5f27-197-210-78-156.ngrok-free.app','127.0.0.1', '127.0.0.1:80
 INSTALLED_APPS = [
     'my_app.apps.MyAppConfig',
     'crispy_forms',
+    'crispy_bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -116,7 +117,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/

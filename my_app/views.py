@@ -71,6 +71,9 @@ new_ppr = {"http": "http://197.253.40.162:80", "https": "http://105.112.130.186:
 user_agent = random.choice(user_agent_list)
 # print(user_agent)
 
+# def is_ajax(request):
+#     return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
+
 
 def scrapingBeefunc(link):
     # client = ScrapingBeeClient(api_key='BNJ7W1VCKRLUIIJL9DDFM5GQWJ6OU4ZWZOVP2TWAUNDO2W9WB6XWZQ1FWE1T91RX2ZV9JC231Z2N2QFW')
@@ -298,7 +301,9 @@ def home(request):
 
     
     # text_url = request.GET.get('product_url')
-    if request.is_ajax():
+    # changed ajax here
+    # if request.is_ajax():
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
         product_id = request.GET.get('product_id')
         product_name = request.GET.get('product_name')
         product_url = request.GET.get('product_url')
@@ -344,7 +349,9 @@ def home(request):
 
 
 def results(request, key, min, max):
-    if request.is_ajax():
+    # changed ajax here
+    # if request.is_ajax():
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':    
         print("ajax request sent")
         if request.user.is_authenticated:
             user = request.user
